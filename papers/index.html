@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="常用Bash命令整理之文本处理, quantum chemitry, condensed materials, computer science, quantum computation">
+    <meta name="keywords" content="学术文章, quantum chemitry, condensed materials, computer science, quantum computation">
     <meta name="description" content="做平凡的事儿，做快乐的自己">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>常用Bash命令整理之文本处理 | null</title>
+    <title>学术文章 | null</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -248,12 +248,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://statics.sh1a.qingstor.com/2018/10/11/bash.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">常用Bash命令整理之文本处理</h1>
+                    <h1 class="description center-align post-title">学术文章</h1>
                 </div>
             </div>
         </div>
@@ -367,25 +367,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/computer/" class="post-category">
-                                computer
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -394,7 +381,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-06-29
+                    2018-12-13
                 </div>
                 
 
@@ -403,14 +390,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    235
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -430,122 +417,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-sort-文本排序"><a href="#1-sort-文本排序" class="headerlink" title="1. sort - 文本排序"></a>1. sort - 文本排序</h2><p><code>sort</code>命令用于将文本文件的行排序。默认情况下，<code>sort</code>命令是按照字符串的字母顺序排序。</p>
-<p>sort 的常用命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 将文本内容按字母顺序排序</span>
-<span class="token function">sort</span> example.txt
-
-<span class="token comment"># 使用 -u 选项，移除所有重复行后排序</span>
-<span class="token function">sort</span> -u example.txt
-
-<span class="token comment"># 使用 -n 选项，将令数字按数值的大小排序</span>
-<span class="token function">sort</span> -n example.txt
-
-<span class="token comment"># 使用 -r 选项，以倒序方式排序</span>
-<span class="token function">sort</span> -n -r example.txt
-
-<span class="token comment"># 同时将 file1、file2 的内容排序</span>
-<span class="token function">sort</span> file1 file2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2-uniq-文本去重"><a href="#2-uniq-文本去重" class="headerlink" title="2.uniq - 文本去重"></a>2.uniq - 文本去重</h2><p><code>uniq</code>命令用于移除或发现文件中重复的条目。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 它将移除文件中重复的行并显示单一行</span>
-<span class="token function">uniq</span> example.txt
-
-<span class="token comment"># 可以统计重复行出现的次数</span>
-<span class="token function">uniq</span> -c example.txt
-
-<span class="token comment"># 使用 -d 选项，只显示文件中有重复的行并只显示一次</span>
-<span class="token function">uniq</span> -d example.txt
-
-<span class="token comment"># 使用 -D 选项，显示文件中所有重复的行</span>
-<span class="token function">uniq</span> -D example.txt
-
-<span class="token comment"># 使用 -u 选项，只显示文件中不重复的行</span>
-<span class="token function">uniq</span> -u example.txt
-
-<span class="token comment"># 使用 -w 选项，限制 uniq 命令只比较每行的前 3 个字符是否重复</span>
-<span class="token function">uniq</span> -w <span class="token number">3</span> example.txt
-
-<span class="token comment"># 使用 -s 选项，避免 uniq 命令比较每行的前 3 个字符，只比较后面的字符是否重复</span>
-<span class="token function">uniq</span> -s <span class="token number">3</span> example.txt
-
-<span class="token comment"># 使用 -f 选项，避免 uniq 命令比较第一列的内容，只比较后面的字符是否重复</span>
-<span class="token function">uniq</span> -f <span class="token number">1</span> example.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="3-tr-替换或删除字符"><a href="#3-tr-替换或删除字符" class="headerlink" title="3.tr - 替换或删除字符"></a>3.tr - 替换或删除字符</h2><p><code>tr</code>命令主要用于删除文件中控制字符或进行字符转换。使用<code>tr</code>时要转换两个字符串：字符串 1 用于查询，字符串 2 用于处理各种转换。<code>tr</code>刚执行时，字符串 1 中的字符被映射到字符串 2 中的字符，然后转换操作开始。</p>
-<p><code>tr</code>命令的语法如下所示：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">tr</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. SET1 <span class="token punctuation">[</span>SET2<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>常用命令示例：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 若要将大括号转换为小括号</span>
-<span class="token function">tr</span> <span class="token string">'&#123;&#125;'</span> <span class="token string">'()'</span> <span class="token operator">&lt;</span> textfile <span class="token operator">></span> newfile
-
-<span class="token comment"># 若要将大括号转换成方括号</span>
-<span class="token function">tr</span> <span class="token string">'&#123;&#125;'</span> <span class="token string">'\[]'</span> <span class="token operator">&lt;</span> textfile <span class="token operator">></span> newfile
-
-<span class="token comment"># 若要将小写字符转换成大写，请输入：</span>
-<span class="token function">tr</span> <span class="token string">'a-z'</span> <span class="token string">'A-Z'</span> <span class="token operator">&lt;</span> textfile <span class="token operator">></span> newfile
-
-<span class="token comment"># 若要创建一个文件中的单词列表</span>
-<span class="token function">tr</span> -cs <span class="token string">'[:lower:][:upper:]'</span> <span class="token string">'[\n*]'</span> <span class="token operator">&lt;</span> textfile <span class="token operator">></span> newfile
-
-<span class="token comment"># 若要从某个文件中删除所有空字符</span>
-<span class="token function">tr</span> -d <span class="token string">'\0'</span> <span class="token operator">&lt;</span> textfile <span class="token operator">></span> newfile
-
-<span class="token comment"># 若要用单独的换行替换每一序列的一个或多个换行，请输入：</span>
-<span class="token function">tr</span> -s <span class="token string">'\n'</span> <span class="token operator">&lt;</span> textfile <span class="token operator">></span> newfile
-
-<span class="token comment"># 要以单个“#”字符替换 &lt;space> 字符类中的每个字符序列</span>
-<span class="token function">tr</span> -s <span class="token string">'[:space:]'</span> <span class="token string">'[#*]'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="4-grep-查找字符串"><a href="#4-grep-查找字符串" class="headerlink" title="4.grep - 查找字符串"></a>4.grep - 查找字符串</h2><p><code>grep</code>命令用于搜索文本或指定的文件中与指定的字符串或模式相匹配的行。默认情况下，<code>grep</code>命令只显示匹配的行。</p>
-<p><code>grep</code>命令的语法如下所示：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">grep</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. PATTERN <span class="token punctuation">[</span>FILE<span class="token punctuation">]</span><span class="token punctuation">..</span>.
-<span class="token function">grep</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>-e PATTERN <span class="token operator">|</span> -f FILE<span class="token punctuation">]</span> <span class="token punctuation">[</span>FILE<span class="token punctuation">]</span><span class="token punctuation">..</span>.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># `grep`命令查找文件/etc/passwd 中帐号 blinkfox 的信息</span>
-<span class="token function">grep</span> blinkfox /etc/passwd
-
-<span class="token comment"># 使用 -i 选项，强制 grep 命令忽略搜索关键字的大小写</span>
-<span class="token function">grep</span> -i blinkfox /etc/passwd
-
-<span class="token comment"># 使用 -r 选项，可以递归搜索指定目录下的所有文件</span>
-<span class="token function">grep</span> -r blinkfox /etc/
-
-<span class="token comment"># 使用 -w 选项，只匹配包含指定单词的行</span>
-<span class="token function">grep</span> -w blinkfox /etc/
-
-<span class="token comment"># 使用 -c 选项，报告文件或文本中模式被匹配的次数</span>
-<span class="token function">grep</span> -c blinkfox /etc/passwd
-
-<span class="token comment"># 使用 -n 选项，显示每一个匹配的行的行号</span>
-<span class="token function">grep</span> -n blinkfox /etc/passwd
-
-<span class="token comment"># 使用 -v 选项，可以输出除匹配指定模式的行以外的其他所有行</span>
-<span class="token function">grep</span> -v blinkfox /etc/passwd
-
-<span class="token comment"># 使用 --color 选项，在输出中将匹配的字符串以彩色的形式标出</span>
-<span class="token function">grep</span> --color blinkfox /etc/passwd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="5-diff-比较两个文件"><a href="#5-diff-比较两个文件" class="headerlink" title="5.diff - 比较两个文件"></a>5.diff - 比较两个文件</h2><p><code>diff</code>命令用于比较两个文件，并找出它们之间的不同。<code>diff</code>命令的语法如下所示：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">diff</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. from-file to-file<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>常用使用方式如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 比较两个文件</span>
-<span class="token function">diff</span> nsswitch.conf nsswitch.conf.org
-
-<span class="token comment"># 使用 -w 选项，比较时忽略空格</span>
-<span class="token function">diff</span> -w nsswitch.conf nsswitch.conf.org
-
-<span class="token comment"># 使用 -y 选项，以并排的格式输出两个文件的比较结果</span>
-<span class="token function">diff</span> -y nsswitch.conf nsswitch.conf.org
-
-使用 -c 选项，以上下对比的格式输出两个文件的比较结果
-<span class="token function">diff</span> -c nsswitch.conf nsswitch.conf.org<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>本文章由<a target="_blank" rel="noopener" href="https://github.com/blinkfox">blinkfox</a>原创，本站仅仅为学习转发</p>
-</blockquote>
+                <h2 id="文章列表"><a href="#文章列表" class="headerlink" title="文章列表"></a>文章列表</h2><ul>
+<li>Substantial and stable magnetoresistance and spin conductance in phosphorene-based spintronic devices with Co electrodes, Z Chen, G Li, <strong>H Wang</strong>, Q Tang, ZJ Li Physical Chemistry Chemical Physics 23 (17), 10573-10579</li>
+<li>Anharmonic Raman spectra simulation of crystals from deep neural networks, H Shang, <strong>H Wang</strong>, AIP Advances 11 (033515), 1-6</li>
+<li>First-principles study of two dimensional $C_3N$ and its derivatives, Z Chen, <strong>H Wang</strong>, ZJ Li RSC Advances 10 (55), 33469-33474</li>
+<li>Crystal structure prediction of binary alloys via Deep Potential, <strong>H Wang</strong>, Y Zhang, L Zhang, H Wang, Frontiers in chemistry, 8</li>
+<li>Penta-$Pt_2N_4$: an ideal two-dimensional material for nanoelectronics, Z Liu, <strong>H Wang</strong>, J Sun, R Sun, ZF Wang, J Yang, Nanoscale 10 (34), 16169-16177</li>
+<li>$BP_5$ monolayer with multiferroicity and negative Poisson’s ratio: a prediction by global optimization method, <strong>H Wang</strong>, X Li, J Sun, Z Liu, J Yang, 2D Materials 4 (4), 045020</li>
+<li>Electronic, Optical, and Mechanical Properties of Diamond Nanowires Encapsulated in Carbon Nanotubes: A First-Principles View, <strong>H Wang</strong>, B Li, J Yang* J. Phys. Chem. C 121 (6), 3661–3672</li>
+<li>ψ-Phosphorene: a new allotrope of phosphorene, <strong>H Wang</strong>, X Li, Z Liu, J Yang, Physical Chemistry Chemical Physics 19 (3), 2402-2408</li>
+<li>δ-Phosphorene: a two dimensional material with a highly negative Poisson’s ratio, <strong>H Wang</strong>, X Li, P Li, J Yang, Nanoscale 9 (2), 850-855</li>
+</ul>
 
                 
             </div>
@@ -572,7 +454,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://haidi-ustc.github.io/2019/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/">https://haidi-ustc.github.io/2019/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/</a>
+                    <a href="https://haidi-ustc.github.io/papers/index.html">https://haidi-ustc.github.io/papers/index.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -609,11 +491,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -782,7 +660,7 @@
         repo: 'haidi-ustc.github.io',
         owner: 'haidi-ustc',
         admin: ["haidi-ustc"],
-        id: '2019-06-29T11-11-00',
+        id: '2018-12-13T23-43-47',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -808,73 +686,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2021/06/29/quantum/deepmd-kit-manual/">
-                    <div class="card-image">
-                        
-                        <img src="http://www.deepmd.org/wp-content/uploads/2019/08/3banner1800x800.jpg" class="responsive-img" alt="DeepMD manual">
-                        
-                        <span class="card-title">DeepMD manual</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-29
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/quantum/" class="post-category">
-                                    quantum
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/deeplearning/">
-                        <span class="chip bg-color">deeplearning</span>
-                    </a>
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/ASE/">
-                        <span class="chip bg-color">ASE</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2018/09/12/hello-world/">
+                <a href="/papers/index.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="学术文章">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">学术文章</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -885,28 +708,55 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2018-09-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-13
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/computer/" class="post-category">
-                                    computer
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            haidi-ustc
                             
                         </span>
                     </div>
                 </div>
+
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/papers/index.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="学术文章">
+                        
+                        <span class="card-title">学术文章</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-12-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            haidi-ustc
+                            
+                        </span>
+                    </div>
                 </div>
+
                 
             </div>
         </div>
@@ -1034,6 +884,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
