@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2021-06-29T03:17:29.863Z</updated>
+  <updated>2021-06-29T07:52:00.348Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大学物理-功的一般性计算</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/physics/calculate-work/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/physics/calculate-work/</id>
+    <published>2021-06-29T07:16:00.000Z</published>
+    <updated>2021-06-29T07:52:00.348Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;加载环境 (所有命令可以在jupyter notebook中直接运行)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
+    
+    
+    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
+    
+    <category term="jupyter" scheme="https://haidi-ustc.github.io/tags/jupyter/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript之再学习</title>
@@ -403,9 +437,9 @@
     <category term="quantum" scheme="https://haidi-ustc.github.io/categories/quantum/"/>
     
     
-    <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
-    
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
     
     <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
     
@@ -433,9 +467,9 @@
     <category term="quantum" scheme="https://haidi-ustc.github.io/categories/quantum/"/>
     
     
-    <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
-    
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
     
     <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
     
