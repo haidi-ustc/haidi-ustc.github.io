@@ -97,9 +97,9 @@
     <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
     
     
-    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
-    
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
     
     <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
     
@@ -519,9 +519,9 @@
     <category term="quantum" scheme="https://haidi-ustc.github.io/categories/quantum/"/>
     
     
-    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
-    
     <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
     
     <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
     
@@ -549,9 +549,9 @@
     <category term="quantum" scheme="https://haidi-ustc.github.io/categories/quantum/"/>
     
     
-    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
-    
     <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
     
     <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
     
