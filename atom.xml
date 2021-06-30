@@ -130,6 +130,31 @@
   </entry>
   
   <entry>
+    <title>常用Bash命令整理之文本处理</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/</id>
+    <published>2021-06-29T03:11:00.000Z</published>
+    <updated>2021-06-30T04:40:03.952Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-sort-文本排序&quot;&gt;&lt;a href=&quot;#1-sort-文本排序&quot; class=&quot;headerlink&quot; title=&quot;1. sort - 文本排序&quot;&gt;&lt;/a&gt;1. sort -</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="Linux" scheme="https://haidi-ustc.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>常用Bash命令整理之操作文件和目录</title>
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cao-zuo-wen-jian-he-mu-lu/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cao-zuo-wen-jian-he-mu-lu/</id>
@@ -472,31 +497,6 @@
     <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
     
     <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用Bash命令整理之文本处理</title>
-    <link href="https://haidi-ustc.github.io/2019/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/"/>
-    <id>https://haidi-ustc.github.io/2019/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/</id>
-    <published>2019-06-29T03:11:00.000Z</published>
-    <updated>2021-06-29T03:11:16.480Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-sort-文本排序&quot;&gt;&lt;a href=&quot;#1-sort-文本排序&quot; class=&quot;headerlink&quot; title=&quot;1. sort - 文本排序&quot;&gt;&lt;/a&gt;1. sort -</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="Linux" scheme="https://haidi-ustc.github.io/tags/Linux/"/>
     
   </entry>
   
