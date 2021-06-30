@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2021-06-30T05:45:36.788Z</updated>
+  <updated>2021-06-30T05:59:21.825Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/30/computer/high-throughput/high-throughput-vasp/"/>
     <id>https://haidi-ustc.github.io/2021/06/30/computer/high-throughput/high-throughput-vasp/</id>
     <published>2021-06-30T05:40:00.000Z</published>
-    <updated>2021-06-30T05:45:36.788Z</updated>
+    <updated>2021-06-30T05:59:21.825Z</updated>
     
     
       
@@ -35,7 +35,7 @@
     
     
     
-    <category term="algorithm" scheme="https://haidi-ustc.github.io/categories/algorithm/"/>
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
     
     
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
