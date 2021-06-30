@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hands-on tutorial for Deepmd-kit, quantum chemitry, condensed materials, computer science, quantum computation">
+    <meta name="keywords" content="Cholesky矩阵分解, quantum chemitry, condensed materials, computer science, quantum computation">
     <meta name="description" content="做平凡的事儿，做快乐的自己">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hands-on tutorial for Deepmd-kit | null</title>
+    <title>Cholesky矩阵分解 | null</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -248,12 +248,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://note.youdao.com/yws/api/personal/file/8219499E304A43DE92E6F630FCD52433?method=download&shareKey=006cc93b8c8ab4d18b23d93a99973dd7')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://www.data-win.cn/static/shuyingyun/images/proservice/sqService.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hands-on tutorial for Deepmd-kit</h1>
+                    <h1 class="description center-align post-title">Cholesky矩阵分解</h1>
                 </div>
             </div>
         </div>
@@ -369,16 +369,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/matrix/">
+                                <span class="chip bg-color">matrix</span>
                             </a>
                         
-                            <a href="/tags/deeplearning/">
-                                <span class="chip bg-color">deeplearning</span>
-                            </a>
-                        
-                            <a href="/tags/ASE/">
-                                <span class="chip bg-color">ASE</span>
+                            <a href="/tags/fortran/">
+                                <span class="chip bg-color">fortran</span>
                             </a>
                         
                     </div>
@@ -389,8 +385,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/quantum/" class="post-category">
-                                quantum
+                            <a href="/categories/algorithm/" class="post-category">
+                                algorithm
                             </a>
                         
                     </div>
@@ -402,7 +398,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-29
+                    2021-06-30
                 </div>
                 
 
@@ -411,14 +407,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    595
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    3 分
                 </div>
                 
 
@@ -438,160 +434,109 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Hands-on-tutorial-for-DeePMD-kit"><a href="#Hands-on-tutorial-for-DeePMD-kit" class="headerlink" title="Hands-on tutorial for DeePMD-kit"></a>Hands-on tutorial for DeePMD-kit</h1><p>This tutorial will introduce you to the basic usage of DeePMD-kit, including data preparation, training, testing and running molecular dynamics simulations with lammps. </p>
-<p>Typically the DeePMD-kit workflow contains three parts: data preparation, training/freezing/testing and molecular dynamics.</p>
-<p>The folder structure of this tutorial is like this:</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span>
-00.data  01.train  02.lmp  readme.md<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>where the folder <code>00.data</code> contains the data, the folder <code>01.train</code> contains an example input script to train a model with DeePMD-kit and the folder <code>02.lmp</code> contains lammps example script for molecular dynamics simulation.</p>
-<p>Before starting with the tutorial, we want you to notice that the unit system in the DeePMD-kit is:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th align="center">Unit</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Time</td>
-<td align="center">ps</td>
-</tr>
-<tr>
-<td>Length</td>
-<td align="center">Å</td>
-</tr>
-<tr>
-<td>Energy</td>
-<td align="center">eV</td>
-</tr>
-<tr>
-<td>Force</td>
-<td align="center">eV/Å</td>
-</tr>
-<tr>
-<td>Pressure</td>
-<td align="center">Bar</td>
-</tr>
-</tbody></table>
-<h1 id="Data-preparation"><a href="#Data-preparation" class="headerlink" title="Data preparation"></a>Data preparation</h1><p>The training data of DeePMD-kit contains the atom type, the simulation box, the atom coordinate, the atom force, the system energy and the virial. A snapshot of a molecular system that has these information is called a <strong>frame</strong>. A <strong>system of data</strong> or in short a <strong>system</strong> includes a number of frames that share the same number of atoms and atom types. For example, a molecular dynamics trajectory can be converted in to a system of data, with each timestep corresponding to a frame in the system. </p>
-<p>The DeePMD-kit adopts a compressed data format. All training data should be firstly converted into this format and then can be used by DeePMD-kit. The data format is explained in detail in the DeePMD-kit manual that can be found in the DeePMD-kit official github site <a target="_blank" rel="noopener" href="http://www.github.com/deepmodeling/deepmd-kit">http://www.github.com/deepmodeling/deepmd-kit</a>. </p>
-<p>We provide a convenient tool named <code>dpdata</code> for converting the data produced by VASP, Gaussian, Quantum-Espresso and Lammps into the compressed format of DeePMD-kit. As an example, go to the data folder:</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token builtin class-name">cd</span> data
-$ <span class="token function">ls</span>
-OUTCAR<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>The OUTCAR that was produced by an ab-initio molecular dynamics (AIMD) simulation of a gas phase methane molecule using VASP. Now start an interactive python environment, for example</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ python<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>then execute the following commands:</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> dpdata
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-sys <span class="token operator">=</span> dpdata<span class="token punctuation">.</span>LabeledSystem<span class="token punctuation">(</span><span class="token string">'OUTCAR'</span><span class="token punctuation">,</span> fmt <span class="token operator">=</span> <span class="token string">'vasp/outcar'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'# the system contains %d frames'</span> <span class="token operator">%</span> sys<span class="token punctuation">.</span>get_nframes<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-sys<span class="token punctuation">.</span>to_deepmd_npy<span class="token punctuation">(</span><span class="token string">'system_0'</span><span class="token punctuation">,</span> set_size <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">,</span> prec <span class="token operator">=</span> np<span class="token punctuation">.</span>float32<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>The commands import a system of data from the OUTCAR (with format <code>vasp/outcar</code>), and then dump it in to the compressed format (numpy compressed arrays). The output folder <code>system_0</code>. </p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span> system_0
-set.000  set.001  set.002  set.003  set.004  set.005  set.006  set.007  set.008  set.009  type.raw<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>The data system that has 200 frames is split into 10 sets, each of which has 20 frames. The DeePMD-kit assumes that the last set, i.e.<code>set.009</code>, is the testing set, while the other sets are the training sets. The parameter <code>set_size</code> specifies the set size. The parameter <code>prec</code> specifies the precision of the floating point numbers.</p>
-<p>The file <code>type.raw</code> gives the type of atoms in the system. Since all frames in the system has the same atom types and atom numbers, we only need to specify the type information once for the whole system</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">cat</span> system_0/type.raw
-<span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>where the atom <code>H</code> is given type <code>0</code>, and atom <code>C</code> is given type <code>1</code>.</p>
-<h1 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h1><h2 id="Prepare-input-script"><a href="#Prepare-input-script" class="headerlink" title="Prepare input script"></a>Prepare input script</h2><p>Once the data preparation is done, we can go on with training. Now go to the training directory</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/01.train
-$ <span class="token function">ls</span>
-input.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>where input.json gives you an example training script. The options are explained in detail in the DeePMD-kit manual, so they are not comprehensively explained. We want to draw your attention to a few of important parameters that matters the training accuracy. In the following are the parameters that specify the neural network architecture.</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
-    <span class="token property">"use_smooth"</span><span class="token operator">:</span>	<span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"rcut_smth"</span><span class="token operator">:</span>        <span class="token number">5.80</span><span class="token punctuation">,</span>
-    <span class="token property">"rcut"</span><span class="token operator">:</span>             <span class="token number">6.00</span><span class="token punctuation">,</span>
-    <span class="token property">"sel_a"</span><span class="token operator">:</span>            <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"filter_neuron"</span><span class="token operator">:</span>    <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"axis_neuron"</span><span class="token operator">:</span>      <span class="token number">4</span><span class="token punctuation">,</span>
-    <span class="token property">"fitting_neuron"</span><span class="token operator">:</span>   <span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li><code>use_smooth</code> tells the DeePMD-kit that the smoothed deep potential, namely DeepPot-SE model, will be trained. </li>
-<li><code>rcut</code> gives the cut-off radius, while the key <code>rcut_smth</code> gives where the inverse distance start to be smoothed. That is to say the distance dependency 1/r decays to 0 smoothly from <code>rcut_smth</code> to <code>rcut</code>.</li>
-<li><code>sel_a</code> gives the (estimated) maximum number of atoms in the cut-off radius. This variable is a list, and <code>sel_a[i]</code> gives the maximum number of type i atoms in the cut-off radius. In the case of gas phase methane molecule <code>CH4</code>, a natural choice of <code>sel_a</code> is <code>[4,1]</code>, given <code>H</code> is of type 0 and <code>C</code> is of type 1.</li>
-<li><code>filter_neuron</code> gives the size of embedding neural network.</li>
-<li><code>fitting_neuron</code> gives the size of fitting neural network.</li>
-<li><code>axis_neuron</code> gives the number of axis neurons, i.e. the size of matrix G_1. This number should be smaller than or equal to <code>filter_neuron[-1]</code>.</li>
+                <h2 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a>TOC</h2><ul>
+<li>介绍(introductions)</li>
+<li>算法(algorithm)</li>
+<li>代码(code)</li>
 </ul>
-<p>The training parameters are given in the following</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>    
-    <span class="token property">"systems"</span><span class="token operator">:</span>          <span class="token punctuation">[</span><span class="token string">"../00.data/system_0/"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"set_prefix"</span><span class="token operator">:</span>       <span class="token string">"set"</span><span class="token punctuation">,</span>    
-    <span class="token property">"batch_size"</span><span class="token operator">:</span>       <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-    <span class="token property">"stop_batch"</span><span class="token operator">:</span>       <span class="token number">1000000</span><span class="token punctuation">,</span>
-    <span class="token property">"start_lr"</span><span class="token operator">:</span>         <span class="token number">0.001</span><span class="token punctuation">,</span>
-    <span class="token property">"decay_steps"</span><span class="token operator">:</span>      <span class="token number">5000</span><span class="token punctuation">,</span>
-    <span class="token property">"decay_rate"</span><span class="token operator">:</span>       <span class="token number">0.95</span><span class="token punctuation">,</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li><code>systems</code> is a list that provides location of the systems (in our case we have only one system). DeePMD-kit allows you to provide multiple systems. DeePMD-kit will train the model with the systems randomly picked from the list. </li>
-<li><code>batch_size</code> is a list that provides the batch size, i.e. number of frames used in one SGD step, of each system, respectively</li>
-<li><code>stop_batch</code> specifies the total number of SGD step (equal to the number of batches) used in the training.</li>
-<li><code>start_lr</code>, <code>decay_rate</code> and <code>decay_steps</code> specify how the learning rate changes. For example, the <code>t</code>th batch will be trained with learning rate:<pre class="line-numbers language-math" data-language="math"><code class="language-math">lr(t) &#x3D; start_lr * decay_rate ^ ( t &#x2F; decay_steps )<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p>Cholesky 分解是把一个对称正定的矩阵表示成一个下三角矩阵L和其转置的乘积的分解。它要求矩阵的所有特征值必须大于零，故分解的下三角的对角元也是大于零的。Cholesky分解法又称平方根法，是当A为实对称正定矩阵时，LU三角分解法的变形。其中<em>L</em>称之为矩阵<strong>A</strong>的Cholesky 因子。</p>
+<h3 id="2-算法"><a href="#2-算法" class="headerlink" title="2. 算法"></a>2. 算法</h3><p>以3x3的矩阵为例，算法如下<br><img src="https://note.youdao.com/yws/api/personal/file/F81901CEA7D94FEEB016CA9B068A5927?method=download&shareKey=f6b4cc2dc0fb65c9c074ccd2d149ae2c" alt="LL"></p>
+<h3 id="3-代码"><a href="#3-代码" class="headerlink" title="3. 代码"></a>3. 代码</h3><p>fortran 代码如下：</p>
+<pre class="line-numbers language-fortran" data-language="fortran"><code class="language-fortran"><span class="token comment">!  Cholesky_decomposition.f90</span>
+<span class="token comment">!</span>
+<span class="token comment">!****************************************************************************</span>
+<span class="token comment">!</span>
+<span class="token comment">!  PROGRAM: Cholesky_decomposition</span>
+<span class="token comment">!</span>
+<span class="token comment">!  PURPOSE:  Use the Cholesky method to decopose a positive definite matrix ,S=L*L'</span>
+<span class="token comment">!  here L' is transpose matrix of L. We then obtain the inverse matrix of S and L</span>
+<span class="token comment">!  matrix as an output.</span>
+<span class="token comment">!</span>
+<span class="token comment">!****************************************************************************</span>
 
-</li>
-</ul>
-<p>It is noted that the parameter <code>stop_batch</code> and <code>decay_steps</code> are usually increased in proportion, so that the learning rate at the end of the training does not change. A rule-of-thumb guide of the learning rate at the end of training is of order <code>10^&#123;-8&#125;</code> to <code>10^&#123;-7&#125;</code>.</p>
-<h2 id="Train-a-model"><a href="#Train-a-model" class="headerlink" title="Train a model"></a>Train a model</h2><p>After the training script is prepared, we can start the training with DeePMD-kit by simply running</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ dp_train input.json<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>On the screen you see the information of the data system(s)</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># DEEPMD: ---Summary of DataSystem-----------------------------------------</span>
-<span class="token comment"># DEEPMD: find 1 system(s):</span>
-<span class="token comment"># DEEPMD:                                     system  natoms  bch_sz  n_bch</span>
-<span class="token comment"># DEEPMD:                       ../00.data/system_0/       5       8     18</span>
-<span class="token comment"># DEEPMD: -----------------------------------------------------------------</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>and the starting and final learning rate of this training</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># DEEPMD: start training at lr 1.00e-03 (== 1.00e-03), final lr will be 3.51e-08</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+    <span class="token keyword">program</span> Cholesky_decomposition
 
-<p>If everything works fine, you will see, on the screen, information printed every 1000 SGD steps, like</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># DEEPMD: batch    1000 training time 5.92 s, testing time 0.01 s</span>
-<span class="token comment"># DEEPMD: batch    2000 training time 5.20 s, testing time 0.01 s</span>
-<span class="token comment"># DEEPMD: batch    3000 training time 5.50 s, testing time 0.01 s</span>
-<span class="token comment"># DEEPMD: batch    4000 training time 5.54 s, testing time 0.01 s</span>
-<span class="token comment"># DEEPMD: batch    5000 training time 5.58 s, testing time 0.01 s</span>
-<span class="token comment"># DEEPMD: batch    6000 training time 5.59 s, testing time 0.01 s</span>
-<span class="token comment"># DEEPMD: batch    7000 training time 5.64 s, testing time 0.01 s</span>
-<span class="token comment"># DEEPMD: batch    8000 training time 5.64 s, testing time 0.01 s</span>
-<span class="token comment"># DEEPMD: batch    9000 training time 5.73 s, testing time 0.01 s</span>
-<span class="token comment"># DEEPMD: batch   10000 training time 5.71 s, testing time 0.01 s</span>
-<span class="token comment"># DEEPMD: saved checkpoint model.ckpt</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>They present the training and testing time counts. At the end of the 10000th batch, the model is saved in Tensorflow’s checkpoint file <code>model.ckpt</code>.<br>At the same time, the training and testing errors are presented in file <code>lcurve.out</code>.</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">head</span> -n <span class="token number">2</span> lcurve.out 
-<span class="token comment"># batch      l2_tst    l2_trn    l2_e_tst  l2_e_trn    l2_f_tst  l2_f_trn         lr</span>
-      <span class="token number">0</span>    <span class="token number">4</span>.91e+01  <span class="token number">5</span>.55e+01    <span class="token number">4</span>.61e+00  <span class="token number">4</span>.59e+00    <span class="token number">1</span>.55e+00  <span class="token number">1</span>.75e+00    <span class="token number">1</span>.0e-03<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>and</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">tail</span> -n <span class="token number">2</span> lcurve.out 
- <span class="token number">137000</span>    <span class="token number">1</span>.87e+00  <span class="token number">1</span>.70e+00    <span class="token number">9</span>.64e-04  <span class="token number">1</span>.24e-03    <span class="token number">1</span>.18e-01  <span class="token number">1</span>.07e-01    <span class="token number">2</span>.5e-04
- <span class="token number">138000</span>    <span class="token number">1</span>.90e+00  <span class="token number">1</span>.72e+00    <span class="token number">3</span>.23e-03  <span class="token number">2</span>.86e-03    <span class="token number">1</span>.20e-01  <span class="token number">1</span>.09e-01    <span class="token number">2</span>.5e-04
- <span class="token number">139000</span>    <span class="token number">1</span>.93e+00  <span class="token number">1</span>.61e+00    <span class="token number">1</span>.58e-03  <span class="token number">1</span>.33e-03    <span class="token number">1</span>.21e-01  <span class="token number">1</span>.01e-01    <span class="token number">2</span>.5e-04
- <span class="token number">140000</span>    <span class="token number">1</span>.86e+00  <span class="token number">1</span>.68e+00    <span class="token number">1</span>.50e-03  <span class="token number">1</span>.66e-03    <span class="token number">1</span>.21e-01  <span class="token number">1</span>.09e-01    <span class="token number">2</span>.4e-04
- <span class="token number">141000</span>    <span class="token number">1</span>.83e+00  <span class="token number">1</span>.67e+00    <span class="token number">9</span>.39e-04  <span class="token number">6</span>.38e-04    <span class="token number">1</span>.19e-01  <span class="token number">1</span>.08e-01    <span class="token number">2</span>.4e-04<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Volumes 4, 5 and 6, 7 presents the energy and force training and testing errors, respectively. It is demonstrated that after 140,000 steps of training, the energy testing error is around 1 meV and the force testing error is around 120 meV/Å. It is also observed that the force testing error is systematically (but slightly) larger than the training error, which implies a slight over-fitting to the rather small dataset.</p>
-<h2 id="Freeze-a-model"><a href="#Freeze-a-model" class="headerlink" title="Freeze a model"></a>Freeze a model</h2><p>At the end of the training, the model parameters saved in tensorflow’s checkpoint file should be frozen as a model file that is usually ended with extension <code>.pb</code>. Simply execute</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ dp_frz 
-Converted <span class="token number">46</span> variables to const ops.
-<span class="token number">922</span> ops <span class="token keyword">in</span> the final graph.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>and it will output a model file named <code>frozen_model.pb</code> in the current directory.</p>
-<h1 id="Run-molecular-dynamics-simulation-with-Lammps"><a href="#Run-molecular-dynamics-simulation-with-Lammps" class="headerlink" title="Run molecular dynamics simulation with Lammps"></a>Run molecular dynamics simulation with Lammps</h1><p>Now let’s switch to the lammps directory to check the necessary input files for running DeePMD with lammps.</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/02.lmp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>Firstly, we soft-link the output model in the training directory to the current directory</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ln</span> -s <span class="token punctuation">..</span>/01.train/frozen_model.pb <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>Then we have three files </p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span>
-conf.lmp  frozen_model.pb  in.lammps  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>where <code>conf.lmp</code> gives the initial configuration of a gas phase methane MD simulation, and the file <code>in.lammps</code> is the lammps input script. One may check <code>in.lammps</code> and finds that it is a rather standard lammps input file for a MD simulation, with only two exception lines:</p>
-<pre class="line-numbers language-none"><code class="language-none">pair_style      deepmd frozen_model.pb
-pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>where the pair style <code>deepmd</code> is invokes and the model file <code>frozen_model.pb</code> is provided, which means the atomic interaction will be computed by the DeePMD model that is stored in the file <code>frozen_model.pb</code>.</p>
-<p>One may execute lammps in the standard way</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ lmp_mpi -i in.lammps<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>After waiting for a while, the MD simulation finishes, and the <code>log.lammps</code> and <code>ch4.dump</code> files are generated. They store the thermodynamic information and the trajectory of the molecule, respectively. One may want to visualize the trajectory by, e.g. ovito</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ ovito ch4.dump<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>to check the evolution of the molecular configuration.</p>
+    <span class="token keyword">implicit none</span>
+
+    <span class="token comment">! Variables</span>
+    <span class="token keyword">integer</span><span class="token operator">::</span>i<span class="token punctuation">,</span>j<span class="token punctuation">,</span>k
+    <span class="token keyword">real</span><span class="token punctuation">(</span><span class="token keyword">kind</span><span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token operator">::</span>summ
+    <span class="token keyword">real</span><span class="token punctuation">(</span><span class="token keyword">kind</span><span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token operator">::</span>S<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(/</span> <span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">5.0</span><span class="token punctuation">,</span><span class="token number">3.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">3.0</span><span class="token punctuation">,</span><span class="token number">11.0</span> <span class="token punctuation">/)</span>
+    <span class="token keyword">real</span><span class="token punctuation">(</span><span class="token keyword">kind</span><span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token operator">::</span>L<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>L_inv<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>L_inv_T<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>S_inv<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token keyword">real</span><span class="token punctuation">(</span><span class="token keyword">kind</span><span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token keyword">intrinsic</span><span class="token operator">::</span>sqrt<span class="token punctuation">,</span>transpose<span class="token punctuation">,</span>matmul
+    <span class="token comment">! Body of Cholesky_decomposition for the positive definite matrix S</span>
+    <span class="token keyword">write</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">"S matrix"</span>
+    <span class="token keyword">write</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span><span class="token string">"(3(f12.6,2x))"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>S
+ <span class="token comment">!   L(1,1)=sqrt(S(1,1))</span>
+    <span class="token keyword">do</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span>
+         <span class="token keyword">do</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span>
+                     
+                 <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">></span>j<span class="token punctuation">)</span><span class="token keyword">then</span>
+                     summ<span class="token operator">=</span><span class="token number">0.0</span>
+                     <span class="token keyword">do</span> k<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>j<span class="token operator">-</span><span class="token number">1</span>
+                         summ<span class="token operator">=</span>summ<span class="token operator">+</span>L<span class="token punctuation">(</span>i<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token operator">*</span>L<span class="token punctuation">(</span>j<span class="token punctuation">,</span>k<span class="token punctuation">)</span>
+                     <span class="token keyword">end do</span>
+                     L<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(</span>S<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token operator">-</span>summ<span class="token punctuation">)</span><span class="token operator">/</span>L<span class="token punctuation">(</span>j<span class="token punctuation">,</span>j<span class="token punctuation">)</span>
+                 <span class="token keyword">elseif</span><span class="token punctuation">(</span>i<span class="token operator">==</span>j<span class="token punctuation">)</span><span class="token keyword">then</span>
+                     summ<span class="token operator">=</span><span class="token number">0.0</span>
+                     <span class="token keyword">do</span> k<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>i<span class="token operator">-</span><span class="token number">1</span>
+                         summ<span class="token operator">=</span>summ<span class="token operator">+</span>L<span class="token punctuation">(</span>i<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span>
+                     <span class="token keyword">end do</span>
+                     L<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token operator">=</span>sqrt<span class="token punctuation">(</span>S<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token operator">-</span>summ<span class="token punctuation">)</span>
+                 <span class="token keyword">else</span>
+                     L<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0.0</span>
+                 <span class="token keyword">end if</span>
+                 
+           
+         <span class="token keyword">end do</span>
+    <span class="token keyword">end do</span>
+    <span class="token keyword">write</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token string">"L matrix"</span>
+    <span class="token keyword">write</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span><span class="token string">"(3(f12.6,2x))"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">(</span>L<span class="token punctuation">(</span>j<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token comment">!!calculate the inverse matrix of L matrix ,at the same time</span>
+    <span class="token comment">!!  S matrix by be sovled with sqare root method</span>
+    <span class="token keyword">do</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span>
+         <span class="token keyword">do</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">==</span>j<span class="token punctuation">)</span><span class="token keyword">then</span>
+                L_inv<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1</span><span class="token operator">/</span>L<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span>
+            <span class="token keyword">elseif</span><span class="token punctuation">(</span>i<span class="token operator">></span>j<span class="token punctuation">)</span><span class="token keyword">then</span>
+                summ<span class="token operator">=</span><span class="token number">0.0</span>
+                <span class="token keyword">do</span> k<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>i<span class="token operator">-</span><span class="token number">1</span>
+                    summ<span class="token operator">=</span>summ<span class="token operator">+</span>L<span class="token punctuation">(</span>i<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token operator">*</span>L_inv<span class="token punctuation">(</span>k<span class="token punctuation">,</span>j<span class="token punctuation">)</span>
+                <span class="token keyword">end do</span>
+                L_inv<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">*</span>summ<span class="token operator">/</span>L<span class="token punctuation">(</span>i<span class="token punctuation">,</span>i<span class="token punctuation">)</span>
+            <span class="token keyword">else</span>
+                L_inv<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">0.0</span>
+            <span class="token keyword">end if</span>
+         <span class="token keyword">end do</span>
+    <span class="token keyword">end do</span>
+    <span class="token keyword">write</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token string">"L_inv matrix"</span>
+    <span class="token keyword">write</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span><span class="token string">"(3(f12.6,2x))"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">(</span>L_inv<span class="token punctuation">(</span>j<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
+    L_inv_T<span class="token operator">=</span>transpose<span class="token punctuation">(</span>L_inv<span class="token punctuation">)</span>
+    S_inv<span class="token operator">=</span>matmul<span class="token punctuation">(</span>L_inv_T<span class="token punctuation">,</span>L_inv<span class="token punctuation">)</span>
+    <span class="token keyword">write</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token string">"S_inv matrix"</span>
+    <span class="token keyword">write</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">,</span><span class="token string">"(3(f12.6,2x))"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">(</span>S_inv<span class="token punctuation">(</span>j<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token keyword">end program</span> Cholesky_decomposition
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>通过<strong>ifort</strong>进行编译,执行</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ifort Cholesky_decomposition.f90 -o cd.x
+./cd.x<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>可以得到如下结果：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">S matrix
+   <span class="token number">1.000000</span>      <span class="token number">1.000000</span>      <span class="token number">1.000000</span>
+   <span class="token number">1.000000</span>      <span class="token number">5.000000</span>      <span class="token number">3.000000</span>
+   <span class="token number">1.000000</span>      <span class="token number">3.000000</span>     <span class="token number">11.000000</span>
+L matrix
+   <span class="token number">1.000000</span>      <span class="token number">0.000000</span>      <span class="token number">0.000000</span>
+   <span class="token number">1.000000</span>      <span class="token number">2.000000</span>      <span class="token number">0.000000</span>
+   <span class="token number">1.000000</span>      <span class="token number">1.000000</span>      <span class="token number">3.000000</span>
+L_inv matrix
+   <span class="token number">1.000000</span>      <span class="token number">0.000000</span>      <span class="token number">0.000000</span>
+  -0.500000      <span class="token number">0.500000</span>      <span class="token number">0.000000</span>
+  -0.166667     -0.166667      <span class="token number">0.333333</span>
+S_inv matrix
+   <span class="token number">1.277778</span>     -0.222222     -0.055556
+  -0.222222      <span class="token number">0.277778</span>     -0.055556
+  -0.055556     -0.055556      <span class="token number">0.111111</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -608,7 +553,7 @@ pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">haidi-ustc</a>
+                    <a href="/about" rel="external nofollow noreferrer">ustc-haidi</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -618,7 +563,7 @@ pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://haidi-ustc.github.io/2021/06/29/quantum/hands-on-tutorial-for-deepmd-kit/">https://haidi-ustc.github.io/2021/06/29/quantum/hands-on-tutorial-for-deepmd-kit/</a>
+                    <a href="https://haidi-ustc.github.io/2021/06/30/algorithm/cholesky-decomposition/">https://haidi-ustc.github.io/2021/06/30/algorithm/cholesky-decomposition/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -631,7 +576,7 @@ pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">haidi-ustc</a>
+                    <a href="/about" target="_blank">ustc-haidi</a>
                     !
                 </span>
             </div>
@@ -656,16 +601,12 @@ pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/matrix/">
+                                    <span class="chip bg-color">matrix</span>
                                 </a>
                             
-                                <a href="/tags/deeplearning/">
-                                    <span class="chip bg-color">deeplearning</span>
-                                </a>
-                            
-                                <a href="/tags/ASE/">
-                                    <span class="chip bg-color">ASE</span>
+                                <a href="/tags/fortran/">
+                                    <span class="chip bg-color">fortran</span>
                                 </a>
                             
                         </div>
@@ -835,16 +776,17 @@ pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/06/29/computer/database/oqmd-database/">
+                <a href="/2021/06/30/algorithm/cholesky-decomposition/">
                     <div class="card-image">
                         
-                        <img src="http://oqmd.org/static/img/new_logo_oqmd.png" class="responsive-img" alt="OQMD 材料数据库结构查询">
+                        <img src="http://www.data-win.cn/static/shuyingyun/images/proservice/sqService.jpg" class="responsive-img" alt="Cholesky矩阵分解">
                         
-                        <span class="card-title">OQMD 材料数据库结构查询</span>
+                        <span class="card-title">Cholesky矩阵分解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -854,34 +796,31 @@ pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/computer/" class="post-category">
-                                    computer
+                            <a href="/categories/algorithm/" class="post-category">
+                                    algorithm
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/matrix/">
+                        <span class="chip bg-color">matrix</span>
                     </a>
                     
-                    <a href="/tags/database/">
-                        <span class="chip bg-color">database</span>
-                    </a>
-                    
-                    <a href="/tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="/tags/fortran/">
+                        <span class="chip bg-color">fortran</span>
                     </a>
                     
                 </div>
@@ -895,12 +834,13 @@ pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/29/quantum/deepmd-kit-manual/">
+                <a href="/2021/06/29/physics/calculate-work/">
                     <div class="card-image">
                         
-                        <img src="https://note.youdao.com/yws/api/personal/file/8219499E304A43DE92E6F630FCD52433?method=download&shareKey=006cc93b8c8ab4d18b23d93a99973dd7" class="responsive-img" alt="DeepMD manual">
                         
-                        <span class="card-title">DeepMD manual</span>
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="大学物理-功的一般性计算">
+                        
+                        <span class="card-title">大学物理-功的一般性计算</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -917,8 +857,8 @@ pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/quantum/" class="post-category">
-                                    quantum
+                            <a href="/categories/physics/" class="post-category">
+                                    physics
                                 </a>
                             
                             
@@ -928,16 +868,20 @@ pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/work/">
+                        <span class="chip bg-color">work</span>
+                    </a>
+                    
                     <a href="/tags/python/">
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/deeplearning/">
-                        <span class="chip bg-color">deeplearning</span>
+                    <a href="/tags/matplotlib/">
+                        <span class="chip bg-color">matplotlib</span>
                     </a>
                     
-                    <a href="/tags/ASE/">
-                        <span class="chip bg-color">ASE</span>
+                    <a href="/tags/jupyter/">
+                        <span class="chip bg-color">jupyter</span>
                     </a>
                     
                 </div>
