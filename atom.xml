@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2021-06-30T05:31:54.069Z</updated>
+  <updated>2021-06-30T05:45:36.788Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VASP高通量计算</title>
+    <link href="https://haidi-ustc.github.io/2021/06/30/computer/high-throughput/high-throughput-vasp/"/>
+    <id>https://haidi-ustc.github.io/2021/06/30/computer/high-throughput/high-throughput-vasp/</id>
+    <published>2021-06-30T05:40:00.000Z</published>
+    <updated>2021-06-30T05:45:36.788Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;以vasp为例，假定你有很多结构，在init_clusters里面：&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="algorithm" scheme="https://haidi-ustc.github.io/categories/algorithm/"/>
+    
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="vasp" scheme="https://haidi-ustc.github.io/tags/vasp/"/>
+    
+    <category term="high throughput" scheme="https://haidi-ustc.github.io/tags/high-throughput/"/>
+    
+  </entry>
   
   <entry>
     <title>Cholesky矩阵分解</title>
@@ -524,31 +554,6 @@
     <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
     
     <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://haidi-ustc.github.io/2018/09/12/hello-world/"/>
-    <id>https://haidi-ustc.github.io/2018/09/12/hello-world/</id>
-    <published>2018-09-12T14:25:00.000Z</published>
-    <updated>2021-06-29T03:19:55.776Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="Hexo" scheme="https://haidi-ustc.github.io/tags/Hexo/"/>
     
   </entry>
   
