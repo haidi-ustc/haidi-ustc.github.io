@@ -475,9 +475,9 @@ SIGMA  &#x3D; 0.05
 #Write flags
 LWAVE  &#x3D;  F
 LCHARG &#x3D;  F<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>计算完成之后，在当前文件夹下执行如下的bash脚本(<code>sh mesh.sh</code>)，完成数据的提取和处理</p>
+<p>计算完成之后，在当前文件夹下执行如下的bash脚本(<code>sh mesh.sh 3.0</code>)，完成数据的提取和处理</p>
 <blockquote>
-<p>注：脚本默认c方向为真空层方向，建模时需要留意。</p>
+<p>注：脚本默认c方向为真空层方向，建模时需要留意；此外，3.0的数值表示材料的实际有效厚度，需要根据自己的材料测量设置。</p>
 </blockquote>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">c11</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">grep</span> -A <span class="token number">9</span> <span class="token string">"TOTAL ELASTIC"</span> OUTCAR <span class="token operator">|</span> <span class="token function">tail</span> -n <span class="token number">8</span> <span class="token operator">|</span> <span class="token function">grep</span> XX <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&#123;print $2&#125;'</span><span class="token variable">`</span></span>
 <span class="token assign-left variable">c22</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">grep</span> -A <span class="token number">9</span> <span class="token string">"TOTAL ELASTIC"</span> OUTCAR <span class="token operator">|</span> <span class="token function">tail</span> -n <span class="token number">8</span> <span class="token operator">|</span> <span class="token function">grep</span> YY <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'&#123;print $3&#125;'</span><span class="token variable">`</span></span>
