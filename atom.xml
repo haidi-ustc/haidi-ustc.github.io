@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2021-07-01T03:17:35.287Z</updated>
+  <updated>2021-07-01T04:46:57.708Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2D材料方向依赖的泊松比和杨氏模量图</title>
+    <link href="https://haidi-ustc.github.io/2021/07/01/materials/polar-ev/"/>
+    <id>https://haidi-ustc.github.io/2021/07/01/materials/polar-ev/</id>
+    <published>2021-07-01T03:26:00.000Z</published>
+    <updated>2021-07-01T04:46:57.708Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="materials" scheme="https://haidi-ustc.github.io/categories/materials/"/>
+    
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
+    
+    <category term="vasp" scheme="https://haidi-ustc.github.io/tags/vasp/"/>
+    
+    <category term="bash" scheme="https://haidi-ustc.github.io/tags/bash/"/>
+    
+    <category term="Young&#39;s modulus" scheme="https://haidi-ustc.github.io/tags/Young-s-modulus/"/>
+    
+    <category term="Poisson&#39;s ratio" scheme="https://haidi-ustc.github.io/tags/Poisson-s-ratio/"/>
+    
+  </entry>
   
   <entry>
     <title>Materials cell文件转换为siesta fdf格式</title>
@@ -524,35 +559,6 @@
     <category term="database" scheme="https://haidi-ustc.github.io/tags/database/"/>
     
     <category term="MySQL" scheme="https://haidi-ustc.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hands-on tutorial for Deepmd-kit</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/quantum/hands-on-tutorial-for-deepmd-kit/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/quantum/hands-on-tutorial-for-deepmd-kit/</id>
-    <published>2021-06-29T01:37:00.000Z</published>
-    <updated>2021-06-29T08:13:40.460Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Hands-on-tutorial-for-DeePMD-kit&quot;&gt;&lt;a href=&quot;#Hands-on-tutorial-for-DeePMD-kit&quot; class=&quot;headerlink&quot; title=&quot;Hands-on tutorial for</summary>
-        
-      
-    
-    
-    
-    <category term="quantum" scheme="https://haidi-ustc.github.io/categories/quantum/"/>
-    
-    
-    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
-    
-    <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
-    
-    <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
     
   </entry>
   
