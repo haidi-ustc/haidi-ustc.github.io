@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2021-06-30T05:59:21.825Z</updated>
+  <updated>2021-07-01T03:14:51.588Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Materials cell文件转换为siesta fdf格式</title>
+    <link href="https://haidi-ustc.github.io/2021/07/01/materials/cell2siesta/"/>
+    <id>https://haidi-ustc.github.io/2021/07/01/materials/cell2siesta/</id>
+    <published>2021-07-01T03:08:00.000Z</published>
+    <updated>2021-07-01T03:14:51.588Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;Materials Studio 软件支持的结构格式为.cell，如何将cell转换为</summary>
+        
+      
+    
+    
+    
+    <category term="materials" scheme="https://haidi-ustc.github.io/categories/materials/"/>
+    
+    
+    <category term="fortran" scheme="https://haidi-ustc.github.io/tags/fortran/"/>
+    
+    <category term="cell" scheme="https://haidi-ustc.github.io/tags/cell/"/>
+    
+    <category term="fdf" scheme="https://haidi-ustc.github.io/tags/fdf/"/>
+    
+  </entry>
   
   <entry>
     <title>VASP高通量计算</title>
@@ -97,9 +126,9 @@
     <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
     
     
-    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
-    
     <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
     
     <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
     
@@ -519,39 +548,9 @@
     <category term="quantum" scheme="https://haidi-ustc.github.io/categories/quantum/"/>
     
     
-    <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
-    
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
     
-    <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DeepMD manual</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/quantum/deepmd-kit-manual/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/quantum/deepmd-kit-manual/</id>
-    <published>2021-06-29T01:31:00.000Z</published>
-    <updated>2021-06-29T08:13:27.848Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Table-of-contents&quot;&gt;&lt;a href=&quot;#Table-of-contents&quot; class=&quot;headerlink&quot; title=&quot;Table of contents&quot;&gt;&lt;/a&gt;Table of contents&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="quantum" scheme="https://haidi-ustc.github.io/categories/quantum/"/>
-    
-    
     <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
-    
-    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
     
     <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
     
