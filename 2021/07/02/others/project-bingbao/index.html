@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="OQMD 材料数据库结构查询, quantum chemitry, condensed materials, computer science, quantum computation">
+    <meta name="keywords" content="大学物理作业-冰雹下降, quantum chemitry, condensed materials, computer science, quantum computation">
     <meta name="description" content="做平凡的事儿，做快乐的自己">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>OQMD 材料数据库结构查询 | null</title>
+    <title>大学物理作业-冰雹下降 | null</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -248,12 +248,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://oqmd.org/static/img/new_logo_oqmd.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">OQMD 材料数据库结构查询</h1>
+                    <h1 class="description center-align post-title">大学物理作业-冰雹下降</h1>
                 </div>
             </div>
         </div>
@@ -369,16 +369,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
-                            </a>
-                        
-                            <a href="/tags/database/">
-                                <span class="chip bg-color">database</span>
-                            </a>
-                        
-                            <a href="/tags/MySQL/">
-                                <span class="chip bg-color">MySQL</span>
+                            <a href="/tags/%E6%9D%82/">
+                                <span class="chip bg-color">杂</span>
                             </a>
                         
                     </div>
@@ -389,8 +381,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/computer/" class="post-category">
-                                computer
+                            <a href="/categories/physics/" class="post-category">
+                                physics
                             </a>
                         
                     </div>
@@ -402,7 +394,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-29
+                    2021-07-02
                 </div>
                 
 
@@ -411,14 +403,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    517
+                    890
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -438,103 +430,59 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a>TOC</h2><p>以下是OQMD数据库用法的简单说明，关于更详细的新特性了解，可参考<a target="_blank" rel="noopener" href="http://oqmd.org/">这里</a>。</p>
+                <h1 id="物理课程作业"><a href="#物理课程作业" class="headerlink" title="物理课程作业"></a>物理课程作业</h1><blockquote>
+<p>题目：<strong>根据物理课所学知识，对冰雹从下降到落地的过程进行分析模拟。</strong></p>
+<p>提示： </p>
+</blockquote>
 <ul>
-<li>介绍(introductions)</li>
-<li>使用(useage)</li>
-<li>其它(others)</li>
+<li>分析过程可能涉及力学/热力学/振动/波动</li>
+<li>可以从自己设计的阻力模型来分析下落过程，也可以尽可能的考虑真实情况(如温度，高度，气压等）</li>
+<li>也可以分析下降过程中收到风的影响等</li>
+<li>还可以分析落地之后单位面积受到压力大小</li>
+<li>还可以分析下降需要的时间</li>
+<li>不受任何限制，难易程度自己控制，字数不限</li>
+<li>等等</li>
 </ul>
-<h3 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h3><p>OQMD 数据库是由美国西北大学的Chris Wolverton组维护开发的材料数据库，总共有 <strong>815,654</strong> 条材料数据记录，包括了通过DFT计算的材料的热力学和结构信息. 该数据库为MySQL关系型数据库，可以自由下载和使用，通过qmpy可以很方便的进行数据查询。</p>
-<h3 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h3><p>在调用OQMD数据库时，可以通过qmpy对结构进行查找，再用pymatgen对查找到的结构进行分析后处理。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pymatgen<span class="token punctuation">.</span>core<span class="token punctuation">.</span>periodic_table <span class="token keyword">import</span> get_el_sp
-<span class="token keyword">from</span> pymatgen<span class="token punctuation">.</span>symmetry<span class="token punctuation">.</span>analyzer <span class="token keyword">import</span> SpacegroupAnalyzer
-<span class="token keyword">from</span> pymatgen <span class="token keyword">import</span> Structure
-<span class="token keyword">from</span> qmpy <span class="token keyword">import</span> Entry
-
-<span class="token keyword">def</span> <span class="token function">run_one</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    Take one OQMD 'Entry' object, search all the calculations associated and take the best calculation
-    in order to insert its data into the PyChemia Database
-
-    :param a: OQMD Entry object
-    :return:
-    """</span>
-    <span class="token comment">#print('Entry: %6d  Number of Calculations: %3d ' % (a.id, a.calculation_set.count()))</span>
-    <span class="token comment">#print('Entry: %6d  Number of Calculations: %3d  Energies: %s' % (a.id, a.calculation_set.count(),</span>
-    <span class="token comment">#                                                                 str([c.energy for c in a.calculation_set.all()])))</span>
-    energy <span class="token operator">=</span> <span class="token number">1E10</span>
-    <span class="token keyword">try</span><span class="token punctuation">:</span>
-      select<span class="token operator">=</span>a<span class="token punctuation">.</span>c<span class="token punctuation">[</span><span class="token string">'static'</span><span class="token punctuation">]</span>
-      <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>select<span class="token punctuation">.</span>errors<span class="token punctuation">)</span><span class="token operator">></span><span class="token number">0</span><span class="token punctuation">:</span> select<span class="token operator">=</span><span class="token boolean">None</span>
-    <span class="token keyword">except</span><span class="token punctuation">:</span>
-      select <span class="token operator">=</span> <span class="token boolean">None</span>
-      
-    <span class="token keyword">if</span> select <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token boolean">None</span>
-    
-    band_gap <span class="token operator">=</span> select<span class="token punctuation">.</span>band_gap
-    <span class="token keyword">if</span> band_gap <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-       <span class="token keyword">return</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token boolean">None</span>
-
-    cell <span class="token operator">=</span> select<span class="token punctuation">.</span>output<span class="token punctuation">.</span>cell
-    elements <span class="token operator">=</span> select<span class="token punctuation">.</span>output<span class="token punctuation">.</span>atomic_numbers
-    reduced <span class="token operator">=</span> select<span class="token punctuation">.</span>output<span class="token punctuation">.</span>coords
-
-    structure <span class="token operator">=</span> Structure<span class="token punctuation">(</span>cell<span class="token punctuation">,</span> elements<span class="token punctuation">,</span> reduced<span class="token punctuation">)</span>
-    structure_id <span class="token operator">=</span> select<span class="token punctuation">.</span>output_id
-    entry_id <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token builtin">id</span>
-    calculation_id <span class="token operator">=</span> select<span class="token punctuation">.</span><span class="token builtin">id</span>
-<span class="token comment">#    energy_pa = select.energy_pa</span>
-    energy <span class="token operator">=</span> select<span class="token punctuation">.</span>energy
-<span class="token comment">#    settings = select.settings</span>
-    <span class="token keyword">try</span><span class="token punctuation">:</span>
-        spacegroup_number <span class="token operator">=</span> select<span class="token punctuation">.</span>output<span class="token punctuation">.</span>spacegroup<span class="token punctuation">.</span>number
-    <span class="token keyword">except</span> ValueError<span class="token punctuation">:</span>
-        spacegroup_number <span class="token operator">=</span> <span class="token boolean">None</span>
-
-    symm <span class="token operator">=</span> SpacegroupAnalyzer<span class="token punctuation">(</span>structure<span class="token punctuation">)</span>
-    sym2 <span class="token operator">=</span> symm<span class="token punctuation">.</span>get_space_group_number<span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-    properties <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'oqmd'</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token string">'structure_id'</span><span class="token punctuation">:</span> structure_id<span class="token punctuation">,</span>
-                           <span class="token string">'entry_id'</span><span class="token punctuation">:</span> entry_id<span class="token punctuation">,</span>
-                           <span class="token string">'calculation_id'</span><span class="token punctuation">:</span> calculation_id<span class="token punctuation">,</span>
-                           <span class="token string">'energy'</span><span class="token punctuation">:</span> energy<span class="token punctuation">,</span>
-                           <span class="token string">'band_gap'</span><span class="token punctuation">:</span> band_gap<span class="token punctuation">,</span>
-<span class="token comment">#                           'settings': settings,</span>
-                           <span class="token string">'spacegroup_number'</span><span class="token punctuation">:</span> spacegroup_number<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-                  <span class="token string">'spacegroup_number'</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span><span class="token string">'value'</span><span class="token punctuation">:</span> sym2<span class="token punctuation">,</span> <span class="token string">'symprec'</span><span class="token punctuation">:</span> <span class="token number">1E</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
-
-    <span class="token keyword">return</span> structure<span class="token punctuation">,</span> properties
-
-<span class="token keyword">if</span> __name__<span class="token operator">==</span><span class="token string">"__main__"</span><span class="token punctuation">:</span>
-    <span class="token keyword">import</span> json
-    <span class="token keyword">import</span> time
-    icount<span class="token operator">=</span><span class="token number">32004</span>
-    queryset <span class="token operator">=</span> Entry<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    entry_ids <span class="token operator">=</span> <span class="token punctuation">[</span>entry<span class="token punctuation">.</span><span class="token builtin">id</span> <span class="token keyword">for</span> entry <span class="token keyword">in</span> queryset<span class="token punctuation">]</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Number of entries in OQMD: %d'</span> <span class="token operator">%</span> <span class="token builtin">len</span><span class="token punctuation">(</span>entry_ids<span class="token punctuation">)</span><span class="token punctuation">)</span>
-  <span class="token comment">#  print(entry_ids[1:1000])</span>
-  <span class="token comment">#  quit()</span>
-    <span class="token keyword">for</span> entry_id <span class="token keyword">in</span> entry_ids<span class="token punctuation">[</span><span class="token number">51331</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-  <span class="token comment">#      entry_id=entry_ids[0]</span>
-        <span class="token keyword">try</span><span class="token punctuation">:</span>
-           a <span class="token operator">=</span> Entry<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token builtin">id</span><span class="token operator">=</span>entry_id<span class="token punctuation">)</span>
-           st<span class="token punctuation">,</span>pr<span class="token operator">=</span>run_one<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
-           <span class="token keyword">if</span> st <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span> <span class="token keyword">and</span> pr <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-              icount<span class="token operator">+=</span><span class="token number">1</span>
-              fname<span class="token operator">=</span><span class="token string">"ustc-"</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>icount<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'.json'</span>
-              <span class="token comment">#print('-'*40)</span>
-              <span class="token comment">#print(st.formula)</span>
-              <span class="token comment">#print(pr['oqmd']['band_gap'])</span>
-              new_dict<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token string">'structure'</span><span class="token punctuation">:</span><span class="token punctuation">&#123;</span><span class="token string">'cell'</span><span class="token punctuation">:</span>st<span class="token punctuation">.</span>lattice<span class="token punctuation">.</span>matrix<span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'species'</span><span class="token punctuation">:</span><span class="token punctuation">[</span>x<span class="token punctuation">.</span>symbol <span class="token keyword">for</span> x <span class="token keyword">in</span> st<span class="token punctuation">.</span>species<span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">'coords'</span><span class="token punctuation">:</span>st<span class="token punctuation">.</span>frac_coords<span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span><span class="token string">'properties'</span><span class="token punctuation">:</span>pr<span class="token punctuation">&#125;</span>
-<span class="token comment">#              new_dict=&#123;'structure':st.as_dict(),'properties':pr&#125;</span>
-              <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'./data/'</span><span class="token operator">+</span>fname<span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
-                   json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>new_dict<span class="token punctuation">,</span>f<span class="token punctuation">)</span>
-           <span class="token keyword">if</span> icount<span class="token operator">%</span><span class="token number">1000</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">:</span>
-              <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"number %d"</span><span class="token operator">%</span><span class="token punctuation">(</span>icount<span class="token punctuation">)</span><span class="token punctuation">)</span>
-              time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
-        <span class="token keyword">except</span><span class="token punctuation">:</span>
-           <span class="token keyword">pass</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="1-格式要求："><a href="#1-格式要求：" class="headerlink" title="1.  格式要求："></a>1.  格式要求：</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>姓名-学号-班级 （注意短横线分割，班级名称标准全称）</p>
+<h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>用简单的一段话对你的研究报告进行简要说明</p>
+<h4 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h4><p>写出你研究的过程，如何研究，如何分析解决问题，得到了什么结论。包括公式，文字说明，数据图，相关分析。要求能够自圆其说。</p>
+<h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><p>列出你参考的一些书籍，文献 ，网站等。 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25243846">参考文献格式</a><br>参考 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25243846">https://zhuanlan.zhihu.com/p/25243846</a></p>
+<blockquote>
+<p>注： 除了标题改为自己的内容外，摘要，正文和参考文献这几个标题请勿修改。<br>   字体大小不限制</p>
+</blockquote>
+<h2 id="2-内容要求"><a href="#2-内容要求" class="headerlink" title="2. 内容要求:"></a>2. 内容要求:</h2><ul>
+<li>可以简单分析该过程，也可以通过文献调研尽可能的分析真实过程，总体要求分析有理有据，并能自圆其说。</li>
+<li>对于其中可能涉及到的一些复杂微分方程，如不能解决，可以遗留。</li>
+<li>尽量做到图文并茂，对图片，公式顺序编号。</li>
+</ul>
+<h2 id="3-提交要求："><a href="#3-提交要求：" class="headerlink" title="3. 提交要求："></a>3. 提交要求：</h2><p>  可以按照以下任意一种格式提交,鼓励后两种方式之一，文件名： <strong>姓名-学号-班级</strong>  (注意：班级用标准全称)</p>
+<ul>
+<li><p>word 文档,docx格式</p>
+</li>
+<li><p>jupyter-notebook文档，另存为html格式</p>
+</li>
+<li><p>latex格式，编译为 pdf格式</p>
+<blockquote>
+<p>注： 如有附件，压缩为： <strong>姓名-学号-班级.zip</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="4-提交时间："><a href="#4-提交时间：" class="headerlink" title="4. 提交时间："></a>4. 提交时间：</h2><p>  20xx.xx.xx 晚上12：00 之前copy给所在班班委(请勿独立发送邮件)，并由学习委员压缩之后发送到 here , 压缩文件名： 班级.rar 或者 班级.zip</p>
+<h2 id="5-评分标准："><a href="#5-评分标准：" class="headerlink" title="5. 评分标准："></a>5. 评分标准：</h2><ul>
+<li>是否按照要求格式撰写</li>
+<li>是否按时提交 </li>
+<li>是否对物理问题深入调研分析 </li>
+<li><strong>是否抄袭 (0分)</strong></li>
+<li>是否独辟蹊径</li>
+<li>是否理论上合理</li>
+</ul>
+<p><strong>个人思考</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">上课期间给学生布置了如上的作业。本来以为学生会根据学过的牛顿定律，动能定理等知识进行分析，但是结果令人失望，
+有95%的学生提交的报告都是从网上抄袭得到的，大部分文章都集中抄袭为数不多的几篇关于冰雹研究的文献。钱学森之问:
+为什么我们的学校总是培养不出杰出人才? 也许答案就在这里。当然，从学生角度出发，也能理解。毕竟，完成这样的小课
+题并不能保证期末获得很高的分数，而考试必然是要占据很大的比例。大学教育在培养学生的学习能力，解决问题的能力，
+适应社会的能力，考试必然不能成为教育的目标。所以，如何激发大学生对于科学问题探索的兴趣，同时也能保证他们获得
+理想的成绩是个亟待解决的问题。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -551,7 +499,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">ustc-haidi</a>
+                    <a href="/about" rel="external nofollow noreferrer">haidi-ustc</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -561,7 +509,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://haidi-ustc.github.io/2021/06/29/computer/database/oqmd-database/">https://haidi-ustc.github.io/2021/06/29/computer/database/oqmd-database/</a>
+                    <a href="https://haidi-ustc.github.io/2021/07/02/others/project-bingbao/">https://haidi-ustc.github.io/2021/07/02/others/project-bingbao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -574,7 +522,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">ustc-haidi</a>
+                    <a href="/about" target="_blank">haidi-ustc</a>
                     !
                 </span>
             </div>
@@ -599,16 +547,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
-                                </a>
-                            
-                                <a href="/tags/database/">
-                                    <span class="chip bg-color">database</span>
-                                </a>
-                            
-                                <a href="/tags/MySQL/">
-                                    <span class="chip bg-color">MySQL</span>
+                                <a href="/tags/%E6%9D%82/">
+                                    <span class="chip bg-color">杂</span>
                                 </a>
                             
                         </div>
@@ -778,16 +718,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/06/29/computer/markdown/markdown/">
+                <a href="/2021/07/02/others/project-bingbao/">
                     <div class="card-image">
                         
-                        <img src="https://pic2.zhimg.com/v2-4f7829d59cde12baaeb7388286b6be1c_1440w.jpg?source=172ae18b" class="responsive-img" alt="Markdown语法">
                         
-                        <span class="card-title">Markdown语法</span>
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="大学物理作业-冰雹下降">
+                        
+                        <span class="card-title">大学物理作业-冰雹下降</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -797,26 +739,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/computer/" class="post-category">
-                                    computer
+                            <a href="/categories/physics/" class="post-category">
+                                    physics
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Markdown/">
-                        <span class="chip bg-color">Markdown</span>
+                    <a href="/tags/%E6%9D%82/">
+                        <span class="chip bg-color">杂</span>
                     </a>
                     
                 </div>
@@ -830,12 +773,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/29/quantum/hands-on-tutorial-for-deepmd-kit/">
+                <a href="/2021/07/01/materials/polar-ev/">
                     <div class="card-image">
                         
-                        <img src="https://note.youdao.com/yws/api/personal/file/8219499E304A43DE92E6F630FCD52433?method=download&shareKey=006cc93b8c8ab4d18b23d93a99973dd7" class="responsive-img" alt="Hands-on tutorial for Deepmd-kit">
+                        <img src="https://pubs.rsc.org/en/Image/Get?imageInfo.ImageType=GA&imageInfo.ImageIdentifier.ManuscriptID=C6NR08550D&imageInfo.ImageIdentifier.Year=2017" class="responsive-img" alt="2D材料方向依赖的泊松比和杨氏模量图">
                         
-                        <span class="card-title">Hands-on tutorial for Deepmd-kit</span>
+                        <span class="card-title">2D材料方向依赖的泊松比和杨氏模量图</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -846,14 +789,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/quantum/" class="post-category">
-                                    quantum
+                            <a href="/categories/materials/" class="post-category">
+                                    materials
                                 </a>
                             
                             
@@ -867,12 +810,16 @@
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/deeplearning/">
-                        <span class="chip bg-color">deeplearning</span>
+                    <a href="/tags/matplotlib/">
+                        <span class="chip bg-color">matplotlib</span>
                     </a>
                     
-                    <a href="/tags/ASE/">
-                        <span class="chip bg-color">ASE</span>
+                    <a href="/tags/vasp/">
+                        <span class="chip bg-color">vasp</span>
+                    </a>
+                    
+                    <a href="/tags/bash/">
+                        <span class="chip bg-color">bash</span>
                     </a>
                     
                 </div>

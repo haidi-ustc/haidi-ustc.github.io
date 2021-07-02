@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2021-07-01T05:10:52.426Z</updated>
+  <updated>2021-07-02T09:12:22.698Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大学物理作业-冰雹下降</title>
+    <link href="https://haidi-ustc.github.io/2021/07/02/others/project-bingbao/"/>
+    <id>https://haidi-ustc.github.io/2021/07/02/others/project-bingbao/</id>
+    <published>2021-07-02T08:51:47.000Z</published>
+    <updated>2021-07-02T09:12:22.698Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;物理课程作业&quot;&gt;&lt;a href=&quot;#物理课程作业&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
+    
+    
+    <category term="杂" scheme="https://haidi-ustc.github.io/tags/%E6%9D%82/"/>
+    
+  </entry>
   
   <entry>
     <title>2D材料方向依赖的泊松比和杨氏模量图</title>
@@ -526,35 +551,6 @@
     
     
     <category term="Markdown" scheme="https://haidi-ustc.github.io/tags/Markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OQMD 材料数据库结构查询</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/computer/database/oqmd-database/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/computer/database/oqmd-database/</id>
-    <published>2021-06-29T01:50:00.000Z</published>
-    <updated>2021-06-29T02:04:37.390Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;TOC&quot;&gt;&lt;a href=&quot;#TOC&quot; class=&quot;headerlink&quot; title=&quot;TOC&quot;&gt;&lt;/a&gt;TOC&lt;/h2&gt;&lt;p&gt;以下是OQMD数据库用法的简单说明，关于更详细的新特性了解，可参考&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
-    
-    <category term="database" scheme="https://haidi-ustc.github.io/tags/database/"/>
-    
-    <category term="MySQL" scheme="https://haidi-ustc.github.io/tags/MySQL/"/>
     
   </entry>
   
