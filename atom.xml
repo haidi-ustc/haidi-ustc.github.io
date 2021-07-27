@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2021-07-02T09:12:22.698Z</updated>
+  <updated>2021-07-27T07:58:01.833Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VASP之POSCAR进行原子固定</title>
+    <link href="https://haidi-ustc.github.io/2021/07/27/materials/vasp-constrain/"/>
+    <id>https://haidi-ustc.github.io/2021/07/27/materials/vasp-constrain/</id>
+    <published>2021-07-27T07:49:00.000Z</published>
+    <updated>2021-07-27T07:58:01.833Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="materials" scheme="https://haidi-ustc.github.io/categories/materials/"/>
+    
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="vasp" scheme="https://haidi-ustc.github.io/tags/vasp/"/>
+    
+  </entry>
   
   <entry>
     <title>大学物理作业-冰雹下降</title>
@@ -525,32 +552,6 @@
     
     
     <category term="OOP" scheme="https://haidi-ustc.github.io/tags/OOP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Markdown语法</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/computer/markdown/markdown/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/computer/markdown/markdown/</id>
-    <published>2021-06-29T02:11:00.000Z</published>
-    <updated>2021-06-29T02:19:06.432Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;主要内容&quot;&gt;&lt;a href=&quot;#主要内容&quot; class=&quot;headerlink&quot; title=&quot;主要内容&quot;&gt;&lt;/a&gt;主要内容&lt;/h2&gt;&lt;blockquote&gt;
-&lt;h4 id=&quot;Markdown是什么？&quot;&gt;&lt;a href=&quot;#Markdown是什么？&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="Markdown" scheme="https://haidi-ustc.github.io/tags/Markdown/"/>
     
   </entry>
   
