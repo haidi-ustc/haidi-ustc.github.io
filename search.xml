@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>centos-7本地overleaf安装</title>
+      <link href="/2021/08/01/computer/latex/overleaf/"/>
+      <url>/2021/08/01/computer/latex/overleaf/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><img src="https://img-blog.csdnimg.cn/20190926010527532.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3poYW5nZmFuMTkxMzc3NTM2MQ==,size_16,color_FFFFFF,t_70" alt="overleaf"><br>Latex是科研工作中最常用的文档排版系统，其中最常用的就是在线latex编辑器<a href="https://www.overleaf.com/"><strong>overleaf</strong></a>。然而overleaf对于国内用户而言延迟非常高（虽然有cn服务器，但是仍然很慢）。对于科研团队来说，在自己的服务器上部署Overleaf，从而方便快速的编译使用latex，将为整个团队都省去安装Latex各种包的繁琐，是一件非常重要的事儿。本文在centos-7上部署overleaf。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>确保有centos系统的root权限</p><h3 id="1-安装Docker"><a href="#1-安装Docker" class="headerlink" title="1. 安装Docker"></a>1. 安装Docker</h3><ul><li><p>安装需要的软件包， yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</p><pre class="line-numbers language-none"><code class="language-none">yum install -y yum-utils device-mapper-persistent-data lvm2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>设置源</p><pre class="line-numbers language-none"><code class="language-none">yum-config-manager --add-repo https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;centos&#x2F;docker-ce.repo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>可以查看所有仓库中所有docker版本，并选择特定版本安装</p><pre class="line-numbers language-none"><code class="language-none">yum list docker-ce --showduplicates | sort -r<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>安装docker</p><pre class="line-numbers language-none"><code class="language-none">yum install docker-ce<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>设置开机启动</p><pre class="line-numbers language-none"><code class="language-none">systemctl start dockersystemctl enable docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>验证安装是否成功(有client和service两部分表示docker安装启动都成功了)</p><pre class="line-numbers language-none"><code class="language-none">docker version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果出现类似下面信息，表上安装成功</p><pre class="line-numbers language-none"><code class="language-none"> Client: Docker Engine - Community Version:           20.10.7 API version:       1.41 Go version:        go1.13.15 Git commit:        f0df350 Built:             Wed Jun  2 11:58:10 2021 OS&#x2F;Arch:           linux&#x2F;amd64 Context:           default Experimental:      trueServer: Docker Engine - Community Engine:  Version:          20.10.7  API version:      1.41 (minimum version 1.12)  Go version:       go1.13.15  Git commit:       b0f5bc3  Built:            Wed Jun  2 11:56:35 2021  OS&#x2F;Arch:          linux&#x2F;amd64  Experimental:     false containerd:  Version:          1.4.9  GitCommit:        e25210fe30a0a703442421b0f60afac609f950a3 runc:  Version:          1.0.1  GitCommit:        v1.0.1-0-g4144b63 docker-init:  Version:          0.19.0  GitCommit:        de40ad0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>docker-compose 安装</p><p>最简单的方式就是用pip安装，但是由于linux系统中仍然使用python2的pip，导致如下安装失败</p><pre class="line-numbers language-none"><code class="language-none">pip install docker-compose<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>可以尝试另外一种方法：从<a href="https://github.com/docker/compose/releases/"><strong>GitHub</strong></a>下载，然后加入权限直接使用</p><pre class="line-numbers language-none"><code class="language-none">curl -L https:&#x2F;&#x2F;github.com&#x2F;docker&#x2F;compose&#x2F;releases&#x2F;download&#x2F;1.29.2&#x2F;docker-compose-&#96;uname -s&#96;-&#96;uname -m&#96; -o &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-composechmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-compose<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>检查安装版本,正确输出则表示安装完成</p><pre class="line-numbers language-none"><code class="language-none">docker-compose --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul><h3 id="2-安装Overleaf"><a href="#2-安装Overleaf" class="headerlink" title="2. 安装Overleaf"></a>2. 安装Overleaf</h3><p>通过docker安装Overleaf的开源版本sharelatex</p><pre class="line-numbers language-none"><code class="language-none">docker pull sharelatex&#x2F;sharelatex<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="3-配置Overleaf"><a href="#3-配置Overleaf" class="headerlink" title="3. 配置Overleaf"></a>3. 配置Overleaf</h3><pre class="line-numbers language-none"><code class="language-none">wget https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;sharelatex&#x2F;sharelatex&#x2F;master&#x2F;docker-compose.yml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>对下载的docker-compose.yml文件进行编辑，修改端口号。需要修改的就是ports: - 80:80,一般80端口都被apache或nginx占用了，改用其他端口如：ports: - 5000:80。</p><pre class="line-numbers language-none"><code class="language-none">vim docker-compose.yml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="4-启动Overleaf"><a href="#4-启动Overleaf" class="headerlink" title="4. 启动Overleaf"></a>4. 启动Overleaf</h3><p>在docker-compose.yml所在路径下执行</p><pre class="line-numbers language-none"><code class="language-none">docker-compose up -d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="5-安装texlive"><a href="#5-安装texlive" class="headerlink" title="5. 安装texlive"></a>5. 安装texlive</h3><p>先进入docker容器，在docker中安装编译所需的完整的texlive</p><pre class="line-numbers language-none"><code class="language-none">docker exec -it sharelatex bashtlmgr option repository https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;CTAN&#x2F;systems&#x2F;texlive&#x2F;tlnettlmgr update --self --allnohup tlmgr install scheme-full &amp;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><p>将下面的邮件换成自己的邮箱</p><pre class="line-numbers language-none"><code class="language-none">docker exec sharelatex &#x2F;bin&#x2F;bash -c &quot;cd &#x2F;var&#x2F;www&#x2F;sharelatex; grunt user:create-admin --email&#x3D;joe@example.com&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>然后打开浏览器访问<code>http://localhost:8080/user/password/set?passwordResetToken=&lt;token&gt;</code>，修改密码即可使用</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://www.bilibili.com/read/cv6547551/">https://www.bilibili.com/read/cv6547551/</a></li><li><a href="https://github.com/overleaf/overleaf/wiki/Quick-Start-Guide">https://github.com/overleaf/overleaf/wiki/Quick-Start-Guide)</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> computer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> latex </tag>
+            
+            <tag> linux </tag>
+            
+            <tag> docker </tag>
+            
+            <tag> overleaf </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>VASP之POSCAR进行原子固定</title>
       <link href="/2021/07/27/materials/vasp-constrain/"/>
       <url>/2021/07/27/materials/vasp-constrain/</url>
@@ -74,11 +105,11 @@
             
             <tag> python </tag>
             
+            <tag> bash </tag>
+            
             <tag> matplotlib </tag>
             
             <tag> vasp </tag>
-            
-            <tag> bash </tag>
             
         </tags>
       
@@ -188,11 +219,11 @@
       
         <tags>
             
-            <tag> work </tag>
-            
             <tag> python </tag>
             
             <tag> matplotlib </tag>
+            
+            <tag> work </tag>
             
             <tag> jupyter </tag>
             

@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2021-07-27T07:58:01.833Z</updated>
+  <updated>2021-08-01T06:22:00.324Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos-7本地overleaf安装</title>
+    <link href="https://haidi-ustc.github.io/2021/08/01/computer/latex/overleaf/"/>
+    <id>https://haidi-ustc.github.io/2021/08/01/computer/latex/overleaf/</id>
+    <published>2021-08-01T05:40:00.000Z</published>
+    <updated>2021-08-01T06:22:00.324Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="latex" scheme="https://haidi-ustc.github.io/tags/latex/"/>
+    
+    <category term="linux" scheme="https://haidi-ustc.github.io/tags/linux/"/>
+    
+    <category term="docker" scheme="https://haidi-ustc.github.io/tags/docker/"/>
+    
+    <category term="overleaf" scheme="https://haidi-ustc.github.io/tags/overleaf/"/>
+    
+  </entry>
   
   <entry>
     <title>VASP之POSCAR进行原子固定</title>
@@ -91,11 +122,11 @@
     
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
     
+    <category term="bash" scheme="https://haidi-ustc.github.io/tags/bash/"/>
+    
     <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
     
     <category term="vasp" scheme="https://haidi-ustc.github.io/tags/vasp/"/>
-    
-    <category term="bash" scheme="https://haidi-ustc.github.io/tags/bash/"/>
     
   </entry>
   
@@ -209,11 +240,11 @@
     <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
     
     
-    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
-    
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
     
     <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
+    
+    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
     
     <category term="jupyter" scheme="https://haidi-ustc.github.io/tags/jupyter/"/>
     
@@ -527,31 +558,6 @@
     
     
     <category term="unittest" scheme="https://haidi-ustc.github.io/tags/unittest/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面向对象编程的理解</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/mian-xiang-dui-xiang-bian-cheng-de-li-jie/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/computer/common/mian-xiang-dui-xiang-bian-cheng-de-li-jie/</id>
-    <published>2021-06-29T02:24:00.000Z</published>
-    <updated>2021-06-29T02:25:50.272Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;面向过程和面向对象&quot;&gt;&lt;a href=&quot;#面向过程和面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向过程和面向对象&quot;&gt;&lt;/a&gt;面向过程和面向对象&lt;/h2&gt;&lt;h3 id=&quot;面向过程思想概述&quot;&gt;&lt;a href=&quot;#面向过程思想概述&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="OOP" scheme="https://haidi-ustc.github.io/tags/OOP/"/>
     
   </entry>
   
