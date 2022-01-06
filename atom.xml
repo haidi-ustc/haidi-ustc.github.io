@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2021-08-01T06:22:00.324Z</updated>
+  <updated>2022-01-06T05:35:00.534Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos 之 Matplotlib不显示Times New Roman</title>
+    <link href="https://haidi-ustc.github.io/2022/01/08/computer/python/matplotlib/"/>
+    <id>https://haidi-ustc.github.io/2022/01/08/computer/python/matplotlib/</id>
+    <published>2022-01-08T05:40:00.000Z</published>
+    <updated>2022-01-06T05:35:00.534Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在centos下用python做科学论文图的时候需要用到Times New Roman字体，可是……</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
+    
+    <category term="linux" scheme="https://haidi-ustc.github.io/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>centos-7本地overleaf安装</title>
@@ -532,32 +561,6 @@
     <category term="Hexo" scheme="https://haidi-ustc.github.io/tags/Hexo/"/>
     
     <category term="hexo-theme-matery" scheme="https://haidi-ustc.github.io/tags/hexo-theme-matery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>代码整洁之道内容概要</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/dai-ma-zheng-ji-zhi-dao-nei-rong-gai-yao/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/computer/common/dai-ma-zheng-ji-zhi-dao-nei-rong-gai-yao/</id>
-    <published>2021-06-29T02:27:00.000Z</published>
-    <updated>2021-06-29T02:28:33.677Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;读了代码整洁之道，觉得这本书写的很好，所以就将里面自己觉得很经典的内容记录下来，作为自己以后写代码的标准和准则。同时也为那些曾经困惑过的人一点参考吧！&lt;/p&gt;
-&lt;h2 id=&quot;一、在正式开始之前，我们先思考几个几个问题：&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="unittest" scheme="https://haidi-ustc.github.io/tags/unittest/"/>
     
   </entry>
   
