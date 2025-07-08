@@ -134,11 +134,11 @@
             
             <tag> python </tag>
             
-            <tag> matplotlib </tag>
-            
             <tag> vasp </tag>
             
             <tag> bash </tag>
+            
+            <tag> matplotlib </tag>
             
         </tags>
       
@@ -248,11 +248,11 @@
       
         <tags>
             
-            <tag> work </tag>
-            
             <tag> python </tag>
             
             <tag> matplotlib </tag>
+            
+            <tag> work </tag>
             
             <tag> jupyter </tag>
             

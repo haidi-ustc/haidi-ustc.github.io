@@ -151,11 +151,11 @@
     
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
     
-    <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
-    
     <category term="vasp" scheme="https://haidi-ustc.github.io/tags/vasp/"/>
     
     <category term="bash" scheme="https://haidi-ustc.github.io/tags/bash/"/>
+    
+    <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
     
   </entry>
   
@@ -269,11 +269,11 @@
     <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
     
     
-    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
-    
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
     
     <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
+    
+    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
     
     <category term="jupyter" scheme="https://haidi-ustc.github.io/tags/jupyter/"/>
     
