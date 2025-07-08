@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  
+  <subtitle>FightingPenguin</subtitle>
+  <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://haidi-ustc.github.io/"/>
+  <updated>2025-07-08T14:21:03.002Z</updated>
+  <id>https://haidi-ustc.github.io/</id>
+  
+  <author>
+    <name>haidi-ustc</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos 之 Matplotlib不显示Times New Roman</title>
+    <link href="https://haidi-ustc.github.io/2022/01/08/computer/python/matplotlib/"/>
+    <id>https://haidi-ustc.github.io/2022/01/08/computer/python/matplotlib/</id>
+    <published>2022-01-08T05:40:00.000Z</published>
+    <updated>2025-07-08T14:21:03.002Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在centos下用python做科学论文图的时候需要用到Times New Roman字体，可是……</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
+    
+    <category term="linux" scheme="https://haidi-ustc.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos-7本地overleaf安装</title>
+    <link href="https://haidi-ustc.github.io/2021/08/01/computer/latex/overleaf/"/>
+    <id>https://haidi-ustc.github.io/2021/08/01/computer/latex/overleaf/</id>
+    <published>2021-08-01T05:40:00.000Z</published>
+    <updated>2025-07-08T14:21:03.001Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="latex" scheme="https://haidi-ustc.github.io/tags/latex/"/>
+    
+    <category term="linux" scheme="https://haidi-ustc.github.io/tags/linux/"/>
+    
+    <category term="docker" scheme="https://haidi-ustc.github.io/tags/docker/"/>
+    
+    <category term="overleaf" scheme="https://haidi-ustc.github.io/tags/overleaf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VASP之POSCAR进行原子固定</title>
+    <link href="https://haidi-ustc.github.io/2021/07/27/materials/vasp-constrain/"/>
+    <id>https://haidi-ustc.github.io/2021/07/27/materials/vasp-constrain/</id>
+    <published>2021-07-27T07:49:00.000Z</published>
+    <updated>2025-07-08T14:21:03.003Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="materials" scheme="https://haidi-ustc.github.io/categories/materials/"/>
+    
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="vasp" scheme="https://haidi-ustc.github.io/tags/vasp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大学物理作业-冰雹下降</title>
+    <link href="https://haidi-ustc.github.io/2021/07/02/others/project-bingbao/"/>
+    <id>https://haidi-ustc.github.io/2021/07/02/others/project-bingbao/</id>
+    <published>2021-07-02T08:51:47.000Z</published>
+    <updated>2025-07-08T14:21:03.004Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;物理课程作业&quot;&gt;&lt;a href=&quot;#物理课程作业&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
+    
+    
+    <category term="杂" scheme="https://haidi-ustc.github.io/tags/%E6%9D%82/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2D材料方向依赖的泊松比和杨氏模量图</title>
+    <link href="https://haidi-ustc.github.io/2021/07/01/materials/polar-ev/"/>
+    <id>https://haidi-ustc.github.io/2021/07/01/materials/polar-ev/</id>
+    <published>2021-07-01T03:26:00.000Z</published>
+    <updated>2025-07-08T14:21:03.003Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="materials" scheme="https://haidi-ustc.github.io/categories/materials/"/>
+    
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
+    
+    <category term="vasp" scheme="https://haidi-ustc.github.io/tags/vasp/"/>
+    
+    <category term="bash" scheme="https://haidi-ustc.github.io/tags/bash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Materials cell文件转换为siesta fdf格式</title>
+    <link href="https://haidi-ustc.github.io/2021/07/01/materials/cell2siesta/"/>
+    <id>https://haidi-ustc.github.io/2021/07/01/materials/cell2siesta/</id>
+    <published>2021-07-01T03:08:00.000Z</published>
+    <updated>2025-07-08T14:21:03.003Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;Materials Studio 软件支持的结构格式为.cell，如何将cell转换为</summary>
+        
+      
+    
+    
+    
+    <category term="materials" scheme="https://haidi-ustc.github.io/categories/materials/"/>
+    
+    
+    <category term="fortran" scheme="https://haidi-ustc.github.io/tags/fortran/"/>
+    
+    <category term="cell" scheme="https://haidi-ustc.github.io/tags/cell/"/>
+    
+    <category term="fdf" scheme="https://haidi-ustc.github.io/tags/fdf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VASP高通量计算</title>
+    <link href="https://haidi-ustc.github.io/2021/06/30/computer/high-throughput/high-throughput-vasp/"/>
+    <id>https://haidi-ustc.github.io/2021/06/30/computer/high-throughput/high-throughput-vasp/</id>
+    <published>2021-06-30T05:40:00.000Z</published>
+    <updated>2025-07-08T14:21:03.001Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;以vasp为例，假定你有很多结构，在init_clusters里面：&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="vasp" scheme="https://haidi-ustc.github.io/tags/vasp/"/>
+    
+    <category term="high throughput" scheme="https://haidi-ustc.github.io/tags/high-throughput/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cholesky矩阵分解</title>
+    <link href="https://haidi-ustc.github.io/2021/06/30/algorithm/cholesky-decomposition/"/>
+    <id>https://haidi-ustc.github.io/2021/06/30/algorithm/cholesky-decomposition/</id>
+    <published>2021-06-30T04:50:00.000Z</published>
+    <updated>2025-07-08T14:21:02.997Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;TOC&quot;&gt;&lt;a href=&quot;#TOC&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="algorithm" scheme="https://haidi-ustc.github.io/categories/algorithm/"/>
+    
+    
+    <category term="fortran" scheme="https://haidi-ustc.github.io/tags/fortran/"/>
+    
+    <category term="matrix" scheme="https://haidi-ustc.github.io/tags/matrix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大学物理-功的一般性计算</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/physics/calculate-work/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/physics/calculate-work/</id>
+    <published>2021-06-29T07:16:00.000Z</published>
+    <updated>2025-07-08T14:21:03.004Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;加载环境 (所有命令可以在jupyter notebook中直接运行)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
+    
+    
+    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
+    
+    <category term="jupyter" scheme="https://haidi-ustc.github.io/tags/jupyter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript之再学习</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-zhi-zai-xue-xi/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-zhi-zai-xue-xi/</id>
+    <published>2021-06-29T03:17:00.000Z</published>
+    <updated>2025-07-08T14:21:02.998Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;p&gt;JavaScript 是一种面向对象的动态语言，它包含类型、运算符、标准内置（ built-in）对象和方法。它的语法来源于 Java 和</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="JavaScript" scheme="https://haidi-ustc.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitLab CI/CD 介绍和使用</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/devops/gitlab-ci-jie-shao-he-shi-yong/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/devops/gitlab-ci-jie-shao-he-shi-yong/</id>
+    <published>2021-06-29T03:14:00.000Z</published>
+    <updated>2025-07-08T14:21:03.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、持续集成介绍&quot;&gt;&lt;a href=&quot;#一、持续集成介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="GitLab CI" scheme="https://haidi-ustc.github.io/tags/GitLab-CI/"/>
+    
+    <category term="DevOps" scheme="https://haidi-ustc.github.io/tags/DevOps/"/>
+    
+    <category term="Jenkins" scheme="https://haidi-ustc.github.io/tags/Jenkins/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用Bash命令整理之查看文件和目录</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cha-kan-wen-jian-he-mu-lu/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cha-kan-wen-jian-he-mu-lu/</id>
+    <published>2021-06-29T03:12:00.000Z</published>
+    <updated>2025-07-08T14:21:03.002Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-ls-列出文件名和目录&quot;&gt;&lt;a href=&quot;#1-ls-列出文件名和目录&quot; class=&quot;headerlink&quot; title=&quot;1. ls - 列出文件名和目录&quot;&gt;&lt;/a&gt;1. ls -</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="Linux" scheme="https://haidi-ustc.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用Bash命令整理之文本处理</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/</id>
+    <published>2021-06-29T03:11:00.000Z</published>
+    <updated>2025-07-08T14:21:03.001Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-sort-文本排序&quot;&gt;&lt;a href=&quot;#1-sort-文本排序&quot; class=&quot;headerlink&quot; title=&quot;1. sort - 文本排序&quot;&gt;&lt;/a&gt;1. sort -</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="Linux" scheme="https://haidi-ustc.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用Bash命令整理之操作文件和目录</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cao-zuo-wen-jian-he-mu-lu/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cao-zuo-wen-jian-he-mu-lu/</id>
+    <published>2021-06-29T03:10:00.000Z</published>
+    <updated>2025-07-08T14:21:03.001Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-touch-创建文件&quot;&gt;&lt;a href=&quot;#1-touch-创建文件&quot; class=&quot;headerlink&quot; title=&quot;1. touch - 创建文件&quot;&gt;&lt;/a&gt;1. touch -</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="Linux" scheme="https://haidi-ustc.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用Bash命令整理之其他常用命令</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-qi-ta-chang-yong-ming-ling/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-qi-ta-chang-yong-ming-ling/</id>
+    <published>2021-06-29T03:09:00.000Z</published>
+    <updated>2025-07-08T14:21:03.001Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-hostname-查看主机名&quot;&gt;&lt;a href=&quot;#1-hostname-查看主机名&quot; class=&quot;headerlink&quot; title=&quot;1. hostname - 查看主机名&quot;&gt;&lt;/a&gt;1. hostname -</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="Linux" scheme="https://haidi-ustc.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git知识点整理</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/git/git-zhi-shi-dian-zheng-li/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/git/git-zhi-shi-dian-zheng-li/</id>
+    <published>2021-06-29T03:07:00.000Z</published>
+    <updated>2025-07-08T14:21:02.998Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Git基本概念。&quot;&gt;&lt;a href=&quot;#1-Git基本概念。&quot; class=&quot;headerlink&quot; title=&quot;1. Git基本概念。&quot;&gt;&lt;/a&gt;1.</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="Git" scheme="https://haidi-ustc.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UML各类关系介绍</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/uml-ge-lei-guan-xi-jie-shao/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/common/uml-ge-lei-guan-xi-jie-shao/</id>
+    <published>2021-06-29T03:04:00.000Z</published>
+    <updated>2025-07-08T14:21:02.999Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;继承关系（generalization）&quot;&gt;&lt;a href=&quot;#继承关系（generalization）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="OOP" scheme="https://haidi-ustc.github.io/tags/OOP/"/>
+    
+    <category term="UML" scheme="https://haidi-ustc.github.io/tags/UML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件程序设计原则</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/ruan-jian-cheng-xu-she-ji-yuan-ze/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/common/ruan-jian-cheng-xu-she-ji-yuan-ze/</id>
+    <published>2021-06-29T02:55:00.000Z</published>
+    <updated>2025-07-08T14:21:02.999Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="OOP" scheme="https://haidi-ustc.github.io/tags/OOP/"/>
+    
+    <category term="Java" scheme="https://haidi-ustc.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript基础教程</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-ji-chu-jiao-cheng/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-ji-chu-jiao-cheng/</id>
+    <published>2021-06-29T02:33:00.000Z</published>
+    <updated>2025-07-08T14:21:02.999Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、JavaScript介绍&quot;&gt;&lt;a href=&quot;#一、JavaScript介绍&quot; class=&quot;headerlink&quot; title=&quot;一、JavaScript介绍&quot;&gt;&lt;/a&gt;一、JavaScript介绍&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="JavaScript" scheme="https://haidi-ustc.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-theme-matery介绍</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/computer/others/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/computer/others/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</id>
+    <published>2021-06-29T02:30:00.000Z</published>
+    <updated>2025-07-08T14:21:03.002Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;README.md&quot;&gt;English Document&lt;/a&gt; | &lt;a href=&quot;https://blinkfox.github.io/&quot;&gt;演示示例&lt;/a&gt; |</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
+    
+    
+    <category term="Hexo" scheme="https://haidi-ustc.github.io/tags/Hexo/"/>
+    
+    <category term="hexo-theme-matery" scheme="https://haidi-ustc.github.io/tags/hexo-theme-matery/"/>
+    
+  </entry>
+  
+</feed>
