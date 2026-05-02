@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2026-05-02T12:47:50.128Z</updated>
+  <updated>2021-06-29T07:52:02.000Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,19 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>hello</title>
-    <link href="https://haidi-ustc.github.io/2026/05/02/hello/"/>
-    <id>https://haidi-ustc.github.io/2026/05/02/hello/</id>
-    <published>2026-05-02T12:47:50.000Z</published>
-    <updated>2026-05-02T12:47:50.128Z</updated>
-    
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>大学物理-功的一般性计算</title>
@@ -64,36 +51,11 @@
   </entry>
   
   <entry>
-    <title>JavaScript之再学习</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-zhi-zai-xue-xi/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-zhi-zai-xue-xi/</id>
-    <published>2021-06-29T03:17:00.000Z</published>
-    <updated>2021-06-29T03:17:30.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot; title=&quot;概览&quot;&gt;&lt;/a&gt;概览&lt;/h2&gt;&lt;p&gt;JavaScript 是一种面向对象的动态语言，它包含类型、运算符、标准内置（ built-in）对象和方法。它的语法来源于 Java 和</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="JavaScript" scheme="https://haidi-ustc.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
     <title>GitLab CI/CD 介绍和使用</title>
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/devops/gitlab-ci-jie-shao-he-shi-yong/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/devops/gitlab-ci-jie-shao-he-shi-yong/</id>
     <published>2021-06-29T03:14:00.000Z</published>
-    <updated>2021-06-29T03:14:34.000Z</updated>
+    <updated>2026-05-02T13:07:23.330Z</updated>
     
     
       
@@ -122,7 +84,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cha-kan-wen-jian-he-mu-lu/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cha-kan-wen-jian-he-mu-lu/</id>
     <published>2021-06-29T03:12:00.000Z</published>
-    <updated>2021-06-29T03:12:08.000Z</updated>
+    <updated>2026-05-02T13:07:50.641Z</updated>
     
     
       
@@ -197,7 +159,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/git/git-zhi-shi-dian-zheng-li/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/git/git-zhi-shi-dian-zheng-li/</id>
     <published>2021-06-29T03:07:00.000Z</published>
-    <updated>2021-06-29T03:08:00.000Z</updated>
+    <updated>2026-05-02T13:06:04.821Z</updated>
     
     
       
@@ -218,90 +180,11 @@
   </entry>
   
   <entry>
-    <title>UML各类关系介绍</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/uml-ge-lei-guan-xi-jie-shao/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/computer/common/uml-ge-lei-guan-xi-jie-shao/</id>
-    <published>2021-06-29T03:04:00.000Z</published>
-    <updated>2021-06-29T03:04:56.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;继承关系（generalization）&quot;&gt;&lt;a href=&quot;#继承关系（generalization）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="OOP" scheme="https://haidi-ustc.github.io/tags/OOP/"/>
-    
-    <category term="UML" scheme="https://haidi-ustc.github.io/tags/UML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>软件程序设计原则</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/ruan-jian-cheng-xu-she-ji-yuan-ze/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/computer/common/ruan-jian-cheng-xu-she-ji-yuan-ze/</id>
-    <published>2021-06-29T02:55:00.000Z</published>
-    <updated>2021-06-29T02:57:04.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="OOP" scheme="https://haidi-ustc.github.io/tags/OOP/"/>
-    
-    <category term="Java" scheme="https://haidi-ustc.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript基础教程</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-ji-chu-jiao-cheng/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-ji-chu-jiao-cheng/</id>
-    <published>2021-06-29T02:33:00.000Z</published>
-    <updated>2021-06-29T02:34:22.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一、JavaScript介绍&quot;&gt;&lt;a href=&quot;#一、JavaScript介绍&quot; class=&quot;headerlink&quot; title=&quot;一、JavaScript介绍&quot;&gt;&lt;/a&gt;一、JavaScript介绍&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="JavaScript" scheme="https://haidi-ustc.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo-theme-matery介绍</title>
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/others/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/others/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</id>
     <published>2021-06-29T02:30:00.000Z</published>
-    <updated>2021-06-29T02:37:52.000Z</updated>
+    <updated>2026-05-02T13:25:31.708Z</updated>
     
     
       
@@ -324,62 +207,11 @@
   </entry>
   
   <entry>
-    <title>代码整洁之道内容概要</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/dai-ma-zheng-ji-zhi-dao-nei-rong-gai-yao/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/computer/common/dai-ma-zheng-ji-zhi-dao-nei-rong-gai-yao/</id>
-    <published>2021-06-29T02:27:00.000Z</published>
-    <updated>2021-06-29T02:28:34.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;读了代码整洁之道，觉得这本书写的很好，所以就将里面自己觉得很经典的内容记录下来，作为自己以后写代码的标准和准则。同时也为那些曾经困惑过的人一点参考吧！&lt;/p&gt;
-&lt;h2 id=&quot;一、在正式开始之前，我们先思考几个几个问题：&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="unittest" scheme="https://haidi-ustc.github.io/tags/unittest/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面向对象编程的理解</title>
-    <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/mian-xiang-dui-xiang-bian-cheng-de-li-jie/"/>
-    <id>https://haidi-ustc.github.io/2021/06/29/computer/common/mian-xiang-dui-xiang-bian-cheng-de-li-jie/</id>
-    <published>2021-06-29T02:24:00.000Z</published>
-    <updated>2021-06-29T02:25:52.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;面向过程和面向对象&quot;&gt;&lt;a href=&quot;#面向过程和面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向过程和面向对象&quot;&gt;&lt;/a&gt;面向过程和面向对象&lt;/h2&gt;&lt;h3 id=&quot;面向过程思想概述&quot;&gt;&lt;a href=&quot;#面向过程思想概述&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="https://haidi-ustc.github.io/categories/computer/"/>
-    
-    
-    <category term="OOP" scheme="https://haidi-ustc.github.io/tags/OOP/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Markdown语法</title>
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/markdown/markdown/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/markdown/markdown/</id>
     <published>2021-06-29T02:11:00.000Z</published>
-    <updated>2021-06-29T02:19:08.000Z</updated>
+    <updated>2026-05-02T13:08:22.676Z</updated>
     
     
       
@@ -405,7 +237,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/database/oqmd-database/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/database/oqmd-database/</id>
     <published>2021-06-29T01:50:00.000Z</published>
-    <updated>2021-06-29T02:04:38.000Z</updated>
+    <updated>2026-05-02T13:08:45.953Z</updated>
     
     
       
@@ -434,7 +266,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/quantum/hands-on-tutorial-for-deepmd-kit/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/quantum/hands-on-tutorial-for-deepmd-kit/</id>
     <published>2021-06-29T01:37:00.000Z</published>
-    <updated>2021-06-29T01:39:48.000Z</updated>
+    <updated>2026-05-02T13:09:39.873Z</updated>
     
     
       
@@ -463,7 +295,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/quantum/deepmd-kit-manual/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/quantum/deepmd-kit-manual/</id>
     <published>2021-06-29T01:31:00.000Z</published>
-    <updated>2021-06-29T01:46:46.000Z</updated>
+    <updated>2026-05-02T13:09:35.158Z</updated>
     
     
       
@@ -493,7 +325,7 @@
     <link href="https://haidi-ustc.github.io/2019/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/"/>
     <id>https://haidi-ustc.github.io/2019/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/</id>
     <published>2019-06-29T03:11:00.000Z</published>
-    <updated>2021-06-29T03:11:18.000Z</updated>
+    <updated>2026-05-02T13:05:52.671Z</updated>
     
     
       
