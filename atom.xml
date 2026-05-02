@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2026-05-02T13:57:30.342Z</updated>
+  <updated>2026-05-02T14:03:24.037Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mech2d：二维弹性高通量计算框架</title>
+    <link href="https://haidi-ustc.github.io/2026/05/02/algorithm/mech2d/"/>
+    <id>https://haidi-ustc.github.io/2026/05/02/algorithm/mech2d/</id>
+    <published>2026-05-02T14:02:37.000Z</published>
+    <updated>2026-05-02T14:03:24.037Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;mech2d：快速上手指南&quot;&gt;&lt;a href=&quot;#mech2d：快速上手指南&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="algorithm" scheme="https://haidi-ustc.github.io/categories/algorithm/"/>
+    
+    
+    <category term="material" scheme="https://haidi-ustc.github.io/tags/material/"/>
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="dft" scheme="https://haidi-ustc.github.io/tags/dft/"/>
+    
+  </entry>
   
   <entry>
     <title>MatSimPy：面向高通量材料计算的 Python 框架</title>
@@ -38,9 +67,9 @@
     <category term="algorithm" scheme="https://haidi-ustc.github.io/categories/algorithm/"/>
     
     
-    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
-    
     <category term="material" scheme="https://haidi-ustc.github.io/tags/material/"/>
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
     
   </entry>
   
@@ -68,9 +97,9 @@
     <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
     
     
-    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
-    
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
     
     <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
     
@@ -323,7 +352,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/quantum/deepmd-kit-manual/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/quantum/deepmd-kit-manual/</id>
     <published>2021-06-29T01:31:00.000Z</published>
-    <updated>2026-05-02T13:09:35.158Z</updated>
+    <updated>2026-05-02T14:03:34.189Z</updated>
     
     
       

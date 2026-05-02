@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="常用Bash命令整理之其他常用命令, quantum chemitry, condensed materials, computer science, quantum computation">
+    <meta name="keywords" content="Mech2d：二维弹性高通量计算框架, quantum chemitry, condensed materials, computer science, quantum computation">
     <meta name="description" content="做平凡的事儿，做快乐的自己">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>常用Bash命令整理之其他常用命令 | null</title>
+    <title>Mech2d：二维弹性高通量计算框架 | null</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -248,12 +248,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">常用Bash命令整理之其他常用命令</h1>
+                    <h1 class="description center-align post-title">Mech2d：二维弹性高通量计算框架</h1>
                 </div>
             </div>
         </div>
@@ -369,8 +369,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Linux/">
-                                <span class="chip bg-color">Linux</span>
+                            <a href="/tags/material/">
+                                <span class="chip bg-color">material</span>
+                            </a>
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/tags/dft/">
+                                <span class="chip bg-color">dft</span>
                             </a>
                         
                     </div>
@@ -381,8 +389,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/computer/" class="post-category">
-                                computer
+                            <a href="/categories/algorithm/" class="post-category">
+                                algorithm
                             </a>
                         
                     </div>
@@ -394,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-29
+                    2026-05-02
                 </div>
                 
 
@@ -403,14 +411,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    681
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -430,145 +438,138 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-hostname-查看主机名"><a href="#1-hostname-查看主机名" class="headerlink" title="1. hostname - 查看主机名"></a>1. hostname - 查看主机名</h2><p><code>hostname</code>命令用于查看系统的主机名，或是修改系统的主机名。</p>
-<p><code>hostname</code>的常用命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 显示系统的当前主机名</span>
-<span class="token function">hostname</span>
-
-<span class="token comment"># 修改你系统的主机名</span>
-<span class="token function">hostname</span> blinkfox-system
-
-<span class="token comment"># 使用 -F 选项，从指定的文件中读取主机名</span>
-<span class="token function">hostname</span> -F /root/hostname.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2-uptime-查看系统运行时间"><a href="#2-uptime-查看系统运行时间" class="headerlink" title="2. uptime - 查看系统运行时间"></a>2. uptime - 查看系统运行时间</h2><p><code>uptime</code>命令用于打印系统的运行时间等信息。使用如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">uptime</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="3-w、who-列出登录的用户"><a href="#3-w、who-列出登录的用户" class="headerlink" title="3. w、who - 列出登录的用户"></a>3. w、who - 列出登录的用户</h2><p><code>w</code>命令用于显示登录用户及他们当前运行的进程。输入的内容格式如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">w
-
-<span class="token comment"># 打印如下</span>
-<span class="token number">22</span>:42  up <span class="token number">18</span> days, <span class="token number">1</span> hr, <span class="token number">2</span> users, load averages: <span class="token number">1.23</span> <span class="token number">1.79</span> <span class="token number">1.75</span>
-<span class="token environment constant">USER</span>     TTY      FROM              LOGIN@  IDLE WHAT
-blinkfox console  -                日19   6days -
-blinkfox s000     -                五23       - w<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><code>who</code>命令有与<code>w</code>命令类似的用途，但它的功能比<code>w</code>命令更强大一些。语法格式如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">who</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>FILE <span class="token operator">|</span> ARG1 ARG2<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><code>who</code>常用命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 显示当前登录的所有用户信息</span>
-<span class="token function">who</span>
-
-<span class="token comment"># 显示系统的启动时间</span>
-<span class="token function">who</span> -b
-
-<span class="token comment"># 显示系统登录进程</span>
-<span class="token function">who</span> -l
-
-<span class="token comment"># 显示与当前标准输入关联的用户信息</span>
-<span class="token function">who</span> -m
-
-<span class="token comment"># 显示系统的运行级别</span>
-<span class="token function">who</span> -r
-
-<span class="token comment"># 显示所有登录用户的用户名和登录用户数</span>
-<span class="token function">who</span> -q<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="4-uname-查看系统信息"><a href="#4-uname-查看系统信息" class="headerlink" title="4. uname - 查看系统信息"></a>4. uname - 查看系统信息</h2><p><code>uname</code>命令用于打印内核名称和版本、主机名等系统信息。命令的语法如下所示：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">uname</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>常用使用方式如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 只打印内核的名称</span>
-<span class="token function">uname</span>
-
-<span class="token comment"># 使用 -n 选项，只打印系统的主机名</span>
-<span class="token function">uname</span> -n
-
-<span class="token comment"># 使用 -r 选项，打印内核版本信息</span>
-<span class="token function">uname</span> -r
-
-<span class="token comment"># 使用 -m 选项，打印系统的硬件名称</span>
-<span class="token function">uname</span> -m
-
-<span class="token comment"># 使用 -p 选项，打印系统的处理器类型信息</span>
-<span class="token function">uname</span> -p
-
-<span class="token comment"># 使用 -i 选项，打印系统的硬件平台信息</span>
-<span class="token function">uname</span> -i
-
-<span class="token comment"># 使用 -a 选项，打印上述所有示例中的信息</span>
-<span class="token function">uname</span> -a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="5-date-显示和设置系统日期和时间"><a href="#5-date-显示和设置系统日期和时间" class="headerlink" title="5. date - 显示和设置系统日期和时间"></a>5. date - 显示和设置系统日期和时间</h2><p><code>date</code>命令用于以多种格式显示日期和时间，或设置系统的日期和时间。<code>date</code>命令的语法如下所示：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">date</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>+FORMAT<span class="token punctuation">]</span>
-<span class="token function">date</span> <span class="token punctuation">[</span>-u<span class="token operator">|</span>--utc<span class="token operator">|</span>--universal<span class="token punctuation">]</span> <span class="token punctuation">[</span>MMDDhhmm<span class="token punctuation">[</span><span class="token punctuation">[</span>CC<span class="token punctuation">]</span>YY<span class="token punctuation">]</span><span class="token punctuation">[</span>.ss<span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>常用使用命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 以默认格式显示系统的当前日期时间</span>
-<span class="token function">date</span>
-
-<span class="token comment"># 格式化当前日期</span>
-<span class="token function">date</span> +<span class="token string">"%Y-%m-%d"</span>
-
-<span class="token comment"># 格式化输出昨天的日期</span>
-<span class="token function">date</span> -d <span class="token string">"1 day ago"</span> +<span class="token string">"%Y-%m-%d"</span>
-
-<span class="token comment"># 2秒后格式化输出</span>
-<span class="token function">date</span> -d <span class="token string">"2 second"</span> +<span class="token string">"%Y-%m-%d %H:%M.%S"</span>
-
-<span class="token comment"># 普通格式化转出</span>
-<span class="token function">date</span> -d <span class="token string">"2009-12-12"</span> +<span class="token string">"%Y/%m/%d %H:%M.%S"</span>
-
-<span class="token comment"># apache格式转换</span>
-<span class="token function">date</span> -d <span class="token string">"Dec 5, 2009 12:00:37 AM"</span> +<span class="token string">"%Y-%m-%d %H:%M.%S"</span>
-
-<span class="token comment"># 日期加减操作</span>
-<span class="token function">date</span> +%Y%m%d <span class="token comment">#显示前天年月日</span>
-<span class="token function">date</span> -d <span class="token string">"+1 day"</span> +%Y%m%d <span class="token comment">#显示前一天的日期</span>
-<span class="token function">date</span> -d <span class="token string">"-1 day"</span> +%Y%m%d <span class="token comment">#显示后一天的日期</span>
-<span class="token function">date</span> -d <span class="token string">"-1 month"</span> +%Y%m%d <span class="token comment">#显示上一月的日期</span>
-<span class="token function">date</span> -d <span class="token string">"+1 month"</span> +%Y%m%d <span class="token comment">#显示下一月的日期</span>
-<span class="token function">date</span> -d <span class="token string">"-1 year"</span> +%Y%m%d <span class="token comment">#显示前一年的日期</span>
-<span class="token function">date</span> -d <span class="token string">"+1 year"</span> +%Y%m%d <span class="token comment">#显示下一年的日期</span>
-
-<span class="token comment"># 设定时间</span>
-<span class="token function">date</span> -s <span class="token comment"># 设置当前时间，只有root权限才能设置，其他只能查看</span>
-<span class="token function">date</span> -s <span class="token number">20160816</span> <span class="token comment"># 设置成20160816，这样会把具体时间设置成空00:00:00</span>
-<span class="token function">date</span> -s 01:01:01 <span class="token comment"># 设置具体时间，不会对日期做更改</span>
-<span class="token function">date</span> -s <span class="token string">"01:01:01 2012-05-23"</span> <span class="token comment"># 这样可以设置全部时间 </span>
-<span class="token function">date</span> -s <span class="token string">"01:01:01 20120523"</span> <span class="token comment"># 这样可以设置全部时间</span>
-<span class="token function">date</span> -s <span class="token string">"2012-05-23 01:01:01"</span> <span class="token comment"># 这样可以设置全部时间 </span>
-<span class="token function">date</span> -s <span class="token string">"20120523 01:01:01"</span> <span class="token comment"># 这样可以设置全部时间</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="6-id-显示用户属性"><a href="#6-id-显示用户属性" class="headerlink" title="6. id - 显示用户属性"></a>6. id - 显示用户属性</h2><p><code>id</code>命令用于打印输出用户<code>uid</code>、<code>gid</code>、用户名和组名等用户身份信息。<code>id</code>命令的语法如下所示：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">id</span> <span class="token punctuation">[</span>OPTION<span class="token punctuation">]</span><span class="token punctuation">..</span>. <span class="token punctuation">[</span>USERNAME<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>常见使用命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 输出当前用户的uid、用户名、gid、组名及用户属于的群组信息</span>
-<span class="token function">id</span>
-
-<span class="token comment"># 使用 -u 选项，输出用户的 uid</span>
-<span class="token function">id</span> -u
-
-<span class="token comment">#-u 选项和 -n 选项结合使用，输出账户的用户名</span>
-<span class="token function">id</span> -un
-
-<span class="token comment"># 使用 -g 选项，输出帐号当前起作用的gid</span>
-<span class="token function">id</span> -g
-
-<span class="token comment"># -g 与 -n 选项结合使用，输出帐号当前起作用的用户组名</span>
-<span class="token function">id</span> -gn
-
-<span class="token comment"># 使用 -G 选项，输出帐号所属的所有群组id</span>
-<span class="token function">id</span> -G root
-
-<span class="token comment"># -G 与 -n 选项结合使用，输出账号所属的所有群组的名称</span>
-<span class="token function">id</span> -Gn root<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>本文章由<a target="_blank" rel="noopener" href="https://github.com/blinkfox">blinkfox</a>原创，本站仅仅为学习转发</p>
+                <h1 id="mech2d：快速上手指南"><a href="#mech2d：快速上手指南" class="headerlink" title="mech2d：快速上手指南"></a>mech2d：快速上手指南</h1><blockquote>
+<p><strong>mech2d</strong> 是一个用于计算<strong>二维材料力学性质</strong>的 Python 工具，支持弹性常数张量、应力-应变曲线以及方向依赖性质的自动计算。<br>它将<strong>结构生成 → DFT任务 → 结果拟合</strong>整合为一个完整流程。</p>
 </blockquote>
+<hr>
+<h2 id="✨-核心特点（简要）"><a href="#✨-核心特点（简要）" class="headerlink" title="✨ 核心特点（简要）"></a>✨ 核心特点（简要）</h2><ul>
+<li><p>📐 自动生成<strong>形变结构</strong></p>
+</li>
+<li><p>⚙️ 自动准备并提交 <strong>DFT（VASP）任务</strong></p>
+</li>
+<li><p>📊 自动拟合：</p>
+<ul>
+<li>弹性常数（Elastic constants）</li>
+<li>应力-应变曲线（Stress-strain）</li>
+</ul>
+</li>
+<li><p>🔄 完整工作流：<strong>init → run → post</strong></p>
+</li>
+<li><p>🧩 支持 dpdispatcher / 手动模式</p>
+</li>
+<li><p>📉 可直接生成力学性质图（极坐标等）</p>
+</li>
+</ul>
+<hr>
+<h2 id="📦-安装"><a href="#📦-安装" class="headerlink" title="📦 安装"></a>📦 安装</h2><h3 id="1️⃣-创建环境（推荐）"><a href="#1️⃣-创建环境（推荐）" class="headerlink" title="1️⃣ 创建环境（推荐）"></a>1️⃣ 创建环境（推荐）</h3><pre class="line-numbers language-bash" data-language="bash"><div class="caption"><span>id</span></div><code class="language-bash">conda create -n mech2d <span class="token assign-left variable">python</span><span class="token operator">=</span><span class="token number">3.11</span>
+conda activate mech2d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="2️⃣-安装"><a href="#2️⃣-安装" class="headerlink" title="2️⃣ 安装"></a>2️⃣ 安装</h3><pre class="line-numbers language-bash" data-language="bash"><div class="caption"><span>id</span></div><code class="language-bash"><span class="token function">git</span> clone https://gitee.com/haidi-hfut/mech2d.git
+<span class="token builtin class-name">cd</span> mech2d
+pip <span class="token function">install</span> <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>开发测试：</p>
+<pre class="line-numbers language-bash" data-language="bash"><div class="caption"><span>id</span></div><code class="language-bash">pip <span class="token function">install</span> -e <span class="token string">".[test]"</span>
+pytest -q<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h2 id="🚀-基本使用流程"><a href="#🚀-基本使用流程" class="headerlink" title="🚀 基本使用流程"></a>🚀 基本使用流程</h2><p>mech2d 的核心流程分为三步：</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">init → run → post<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h2 id="🧱-Step-1：生成形变结构（init）"><a href="#🧱-Step-1：生成形变结构（init）" class="headerlink" title="🧱 Step 1：生成形变结构（init）"></a>🧱 Step 1：生成形变结构（init）</h2><pre class="line-numbers language-bash" data-language="bash"><div class="caption"><span>id</span></div><code class="language-bash">m2d init -c POSCAR -n <span class="token number">9</span> -m <span class="token number">0.02</span> -a stress<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="常用参数说明："><a href="#常用参数说明：" class="headerlink" title="常用参数说明："></a>常用参数说明：</h3><ul>
+<li><code>-c</code>：输入结构（POSCAR / CIF / XSF）</li>
+<li><code>-n</code>：形变结构数量（建议奇数 &gt; 4）</li>
+<li><code>-m</code>：最大应变（范围 [-m, +m]）</li>
+<li><code>-a</code>：拟合方式（stress / energy）</li>
+</ul>
+<hr>
+<h3 id="📁-输出结构示例"><a href="#📁-输出结构示例" class="headerlink" title="📁 输出结构示例"></a>📁 输出结构示例</h3><pre class="line-numbers language-id" data-language="id"><code class="language-id">elc_stress&#x2F;
+├── Def_1&#x2F;
+│   ├── Def_1_001
+│   ├── ...
+└── Def_2&#x2F;
+    ├── Def_2_001
+    ├── ...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>👉 每个子目录对应一个形变结构</p>
+<hr>
+<h3 id="📌-其他常见用法"><a href="#📌-其他常见用法" class="headerlink" title="📌 其他常见用法"></a>📌 其他常见用法</h3><h4 id="能量拟合："><a href="#能量拟合：" class="headerlink" title="能量拟合："></a>能量拟合：</h4><pre class="line-numbers language-bash" data-language="bash"><div class="caption"><span>id</span></div><code class="language-bash">m2d init -c POSCAR -n <span class="token number">9</span> -m <span class="token number">0.05</span> -a energy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="应力-应变曲线："><a href="#应力-应变曲线：" class="headerlink" title="应力-应变曲线："></a>应力-应变曲线：</h4><pre class="line-numbers language-bash" data-language="bash"><div class="caption"><span>id</span></div><code class="language-bash">m2d init -c POSCAR -n <span class="token number">21</span> -r <span class="token number">0.0</span> <span class="token number">0.2</span> -a stress -d xx yy -p ssc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h2 id="⚙️-Step-2：生成-amp-提交计算（run）"><a href="#⚙️-Step-2：生成-amp-提交计算（run）" class="headerlink" title="⚙️ Step 2：生成 &amp; 提交计算（run）"></a>⚙️ Step 2：生成 &amp; 提交计算（run）</h2><pre class="line-numbers language-bash" data-language="bash"><div class="caption"><span>id</span></div><code class="language-bash">m2d run -a stress input.yaml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="🧾-input-yaml-结构"><a href="#🧾-input-yaml-结构" class="headerlink" title="🧾 input.yaml 结构"></a>🧾 input.yaml 结构</h3><p>主要包含四部分：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><div class="caption"><span>id</span></div><code class="language-yaml"><span class="token key atrule">machine</span><span class="token punctuation">:</span>
+<span class="token key atrule">resources</span><span class="token punctuation">:</span>
+<span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+code<span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="核心内容："><a href="#核心内容：" class="headerlink" title="核心内容："></a>核心内容：</h4><ul>
+<li><strong>machine</strong>：运行环境（本地 / 集群）</li>
+<li><strong>resources</strong>：CPU / 队列 / 模块</li>
+<li><strong>tasks</strong>：执行命令（VASP）</li>
+<li><strong>code</strong>：DFT 输入设置</li>
+</ul>
+<hr>
+<h3 id="📌-示例（关键部分）"><a href="#📌-示例（关键部分）" class="headerlink" title="📌 示例（关键部分）"></a>📌 示例（关键部分）</h3><pre class="line-numbers language-yaml" data-language="yaml"><div class="caption"><span>id</span></div><code class="language-yaml"><span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+  <span class="token key atrule">command</span><span class="token punctuation">:</span> <span class="token string">"mpirun -np 48 vasp_std"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="🔧-只生成输入（不提交）"><a href="#🔧-只生成输入（不提交）" class="headerlink" title="🔧 只生成输入（不提交）"></a>🔧 只生成输入（不提交）</h3><pre class="line-numbers language-bash" data-language="bash"><div class="caption"><span>id</span></div><code class="language-bash">m2d run -a stress --manual input.yaml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>👉 适合手动提交任务</p>
+<hr>
+<h2 id="📊-Step-3：后处理（post）"><a href="#📊-Step-3：后处理（post）" class="headerlink" title="📊 Step 3：后处理（post）"></a>📊 Step 3：后处理（post）</h2><pre class="line-numbers language-bash" data-language="bash"><div class="caption"><span>id</span></div><code class="language-bash">m2d post -a stress --plot<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h3><ul>
+<li>解析 VASP 输出（OUTCAR 等）</li>
+<li>拟合弹性张量</li>
+<li>计算力学性质</li>
+<li>生成图像</li>
+</ul>
+<hr>
+<h3 id="输出示例："><a href="#输出示例：" class="headerlink" title="输出示例："></a>输出示例：</h3><ul>
+<li>弹性常数</li>
+<li>应力-应变曲线</li>
+<li>图像文件（png）</li>
+</ul>
+<hr>
+<h2 id="📈-力学性质（简单说明）"><a href="#📈-力学性质（简单说明）" class="headerlink" title="📈 力学性质（简单说明）"></a>📈 力学性质（简单说明）</h2><p>mech2d 支持计算：</p>
+<ul>
+<li>杨氏模量（Young’s modulus）</li>
+<li>泊松比（Poisson ratio）</li>
+<li>各向异性（极坐标）</li>
+</ul>
+<p>👉 支持角度依赖分析（0 ~ 2π）</p>
+<hr>
+<h2 id="🧠-使用总结"><a href="#🧠-使用总结" class="headerlink" title="🧠 使用总结"></a>🧠 使用总结</h2><p>mech2d 的设计理念可以总结为：</p>
+<pre class="line-numbers language-id" data-language="id"><code class="language-id">结构 → 形变 → DFT → 拟合 → 力学性质<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h2 id="🎯-适用场景"><a href="#🎯-适用场景" class="headerlink" title="🎯 适用场景"></a>🎯 适用场景</h2><ul>
+<li>二维材料（graphene / MoS₂ / MXene 等）</li>
+<li>弹性性质研究</li>
+<li>高通量力学筛选</li>
+<li>DFT 自动化流程</li>
+</ul>
+<hr>
+<h2 id="🔗-项目地址"><a href="#🔗-项目地址" class="headerlink" title="🔗 项目地址"></a>🔗 项目地址</h2><ul>
+<li>Gitee：<a target="_blank" rel="noopener" href="https://gitee.com/haidi-hfut/mech2d">https://gitee.com/haidi-hfut/mech2d</a></li>
+<li>GitHub：<a target="_blank" rel="noopener" href="https://github.com/haidi-ustc/mech2d">https://github.com/haidi-ustc/mech2d</a></li>
+</ul>
+<hr>
+<h2 id="📌-小结"><a href="#📌-小结" class="headerlink" title="📌 小结"></a>📌 小结</h2><p>mech2d 的优势：</p>
+<p>✔ 自动化程度高（几乎一键流程）<br>✔ 专注二维材料力学<br>✔ 与 VASP / HPC 无缝结合<br>✔ CLI 设计清晰</p>
+<hr>
+<p>🚀 如果你在做二维材料力学计算，这个工具可以显著减少重复工作。</p>
 
                 
             </div>
@@ -585,7 +586,7 @@ blinkfox s000     -                五23       - w<span aria-hidden="true" class
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">haidi-ustc</a>
+                    <a href="/about" rel="external nofollow noreferrer">ustc-haidi</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -595,7 +596,7 @@ blinkfox s000     -                五23       - w<span aria-hidden="true" class
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-qi-ta-chang-yong-ming-ling/">https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-qi-ta-chang-yong-ming-ling/</a>
+                    <a href="https://haidi-ustc.github.io/2026/05/02/algorithm/mech2d/">https://haidi-ustc.github.io/2026/05/02/algorithm/mech2d/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -608,7 +609,7 @@ blinkfox s000     -                五23       - w<span aria-hidden="true" class
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">haidi-ustc</a>
+                    <a href="/about" target="_blank">ustc-haidi</a>
                     !
                 </span>
             </div>
@@ -633,8 +634,16 @@ blinkfox s000     -                五23       - w<span aria-hidden="true" class
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Linux/">
-                                    <span class="chip bg-color">Linux</span>
+                                <a href="/tags/material/">
+                                    <span class="chip bg-color">material</span>
+                                </a>
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/tags/dft/">
+                                    <span class="chip bg-color">dft</span>
                                 </a>
                             
                         </div>
@@ -804,17 +813,18 @@ blinkfox s000     -                五23       - w<span aria-hidden="true" class
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cao-zuo-wen-jian-he-mu-lu/">
+                <a href="/2026/05/02/algorithm/mech2d/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="常用Bash命令整理之操作文件和目录">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Mech2d：二维弹性高通量计算框架">
                         
-                        <span class="card-title">常用Bash命令整理之操作文件和目录</span>
+                        <span class="card-title">Mech2d：二维弹性高通量计算框架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -824,26 +834,35 @@ blinkfox s000     -                五23       - w<span aria-hidden="true" class
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/computer/" class="post-category">
-                                    computer
+                            <a href="/categories/algorithm/" class="post-category">
+                                    algorithm
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/material/">
+                        <span class="chip bg-color">material</span>
+                    </a>
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/dft/">
+                        <span class="chip bg-color">dft</span>
                     </a>
                     
                 </div>
@@ -857,13 +876,13 @@ blinkfox s000     -                五23       - w<span aria-hidden="true" class
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/29/computer/git/git-zhi-shi-dian-zheng-li/">
+                <a href="/2026/05/02/algorithm/matsimpy/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Git知识点整理">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="MatSimPy：面向高通量材料计算的 Python 框架">
                         
-                        <span class="card-title">Git知识点整理</span>
+                        <span class="card-title">MatSimPy：面向高通量材料计算的 Python 框架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -874,14 +893,14 @@ blinkfox s000     -                五23       - w<span aria-hidden="true" class
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/computer/" class="post-category">
-                                    computer
+                            <a href="/categories/algorithm/" class="post-category">
+                                    algorithm
                                 </a>
                             
                             
@@ -891,8 +910,12 @@ blinkfox s000     -                五23       - w<span aria-hidden="true" class
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Git/">
-                        <span class="chip bg-color">Git</span>
+                    <a href="/tags/material/">
+                        <span class="chip bg-color">material</span>
+                    </a>
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
