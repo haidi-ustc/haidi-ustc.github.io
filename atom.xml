@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2021-06-29T03:17:29.863Z</updated>
+  <updated>2026-05-02T12:47:50.128Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -17,11 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hello</title>
+    <link href="https://haidi-ustc.github.io/2026/05/02/hello/"/>
+    <id>https://haidi-ustc.github.io/2026/05/02/hello/</id>
+    <published>2026-05-02T12:47:50.000Z</published>
+    <updated>2026-05-02T12:47:50.128Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大学物理-功的一般性计算</title>
+    <link href="https://haidi-ustc.github.io/2021/06/29/physics/calculate-work/"/>
+    <id>https://haidi-ustc.github.io/2021/06/29/physics/calculate-work/</id>
+    <published>2021-06-29T07:16:00.000Z</published>
+    <updated>2021-06-29T07:52:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;加载环境 (所有命令可以在jupyter notebook中直接运行)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
+    
+    
+    <category term="work" scheme="https://haidi-ustc.github.io/tags/work/"/>
+    
+    <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="matplotlib" scheme="https://haidi-ustc.github.io/tags/matplotlib/"/>
+    
+    <category term="jupyter" scheme="https://haidi-ustc.github.io/tags/jupyter/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript之再学习</title>
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-zhi-zai-xue-xi/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-zhi-zai-xue-xi/</id>
     <published>2021-06-29T03:17:00.000Z</published>
-    <updated>2021-06-29T03:17:29.863Z</updated>
+    <updated>2021-06-29T03:17:30.000Z</updated>
     
     
       
@@ -46,7 +93,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/devops/gitlab-ci-jie-shao-he-shi-yong/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/devops/gitlab-ci-jie-shao-he-shi-yong/</id>
     <published>2021-06-29T03:14:00.000Z</published>
-    <updated>2021-06-29T03:14:33.231Z</updated>
+    <updated>2021-06-29T03:14:34.000Z</updated>
     
     
       
@@ -75,7 +122,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cha-kan-wen-jian-he-mu-lu/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cha-kan-wen-jian-he-mu-lu/</id>
     <published>2021-06-29T03:12:00.000Z</published>
-    <updated>2021-06-29T03:12:06.585Z</updated>
+    <updated>2021-06-29T03:12:08.000Z</updated>
     
     
       
@@ -100,7 +147,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cao-zuo-wen-jian-he-mu-lu/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-cao-zuo-wen-jian-he-mu-lu/</id>
     <published>2021-06-29T03:10:00.000Z</published>
-    <updated>2021-06-29T03:17:57.642Z</updated>
+    <updated>2021-06-29T03:17:58.000Z</updated>
     
     
       
@@ -125,7 +172,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-qi-ta-chang-yong-ming-ling/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-qi-ta-chang-yong-ming-ling/</id>
     <published>2021-06-29T03:09:00.000Z</published>
-    <updated>2021-06-29T06:57:23.136Z</updated>
+    <updated>2021-06-29T06:57:24.000Z</updated>
     
     
       
@@ -150,7 +197,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/git/git-zhi-shi-dian-zheng-li/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/git/git-zhi-shi-dian-zheng-li/</id>
     <published>2021-06-29T03:07:00.000Z</published>
-    <updated>2021-06-29T03:07:59.632Z</updated>
+    <updated>2021-06-29T03:08:00.000Z</updated>
     
     
       
@@ -175,7 +222,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/uml-ge-lei-guan-xi-jie-shao/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/common/uml-ge-lei-guan-xi-jie-shao/</id>
     <published>2021-06-29T03:04:00.000Z</published>
-    <updated>2021-06-29T03:04:55.408Z</updated>
+    <updated>2021-06-29T03:04:56.000Z</updated>
     
     
       
@@ -202,7 +249,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/ruan-jian-cheng-xu-she-ji-yuan-ze/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/common/ruan-jian-cheng-xu-she-ji-yuan-ze/</id>
     <published>2021-06-29T02:55:00.000Z</published>
-    <updated>2021-06-29T02:57:03.961Z</updated>
+    <updated>2021-06-29T02:57:04.000Z</updated>
     
     
       
@@ -229,7 +276,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-ji-chu-jiao-cheng/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/javascript/javascript-ji-chu-jiao-cheng/</id>
     <published>2021-06-29T02:33:00.000Z</published>
-    <updated>2021-06-29T02:34:21.073Z</updated>
+    <updated>2021-06-29T02:34:22.000Z</updated>
     
     
       
@@ -254,7 +301,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/others/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/others/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</id>
     <published>2021-06-29T02:30:00.000Z</published>
-    <updated>2021-06-29T02:37:50.074Z</updated>
+    <updated>2021-06-29T02:37:52.000Z</updated>
     
     
       
@@ -281,7 +328,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/dai-ma-zheng-ji-zhi-dao-nei-rong-gai-yao/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/common/dai-ma-zheng-ji-zhi-dao-nei-rong-gai-yao/</id>
     <published>2021-06-29T02:27:00.000Z</published>
-    <updated>2021-06-29T02:28:33.677Z</updated>
+    <updated>2021-06-29T02:28:34.000Z</updated>
     
     
       
@@ -307,7 +354,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/common/mian-xiang-dui-xiang-bian-cheng-de-li-jie/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/common/mian-xiang-dui-xiang-bian-cheng-de-li-jie/</id>
     <published>2021-06-29T02:24:00.000Z</published>
-    <updated>2021-06-29T02:25:50.272Z</updated>
+    <updated>2021-06-29T02:25:52.000Z</updated>
     
     
       
@@ -332,7 +379,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/markdown/markdown/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/markdown/markdown/</id>
     <published>2021-06-29T02:11:00.000Z</published>
-    <updated>2021-06-29T02:19:06.432Z</updated>
+    <updated>2021-06-29T02:19:08.000Z</updated>
     
     
       
@@ -358,7 +405,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/computer/database/oqmd-database/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/computer/database/oqmd-database/</id>
     <published>2021-06-29T01:50:00.000Z</published>
-    <updated>2021-06-29T02:04:37.390Z</updated>
+    <updated>2021-06-29T02:04:38.000Z</updated>
     
     
       
@@ -387,7 +434,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/quantum/hands-on-tutorial-for-deepmd-kit/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/quantum/hands-on-tutorial-for-deepmd-kit/</id>
     <published>2021-06-29T01:37:00.000Z</published>
-    <updated>2021-06-29T01:39:47.162Z</updated>
+    <updated>2021-06-29T01:39:48.000Z</updated>
     
     
       
@@ -403,9 +450,9 @@
     <category term="quantum" scheme="https://haidi-ustc.github.io/categories/quantum/"/>
     
     
-    <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
-    
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
     
     <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
     
@@ -416,7 +463,7 @@
     <link href="https://haidi-ustc.github.io/2021/06/29/quantum/deepmd-kit-manual/"/>
     <id>https://haidi-ustc.github.io/2021/06/29/quantum/deepmd-kit-manual/</id>
     <published>2021-06-29T01:31:00.000Z</published>
-    <updated>2021-06-29T01:46:44.484Z</updated>
+    <updated>2021-06-29T01:46:46.000Z</updated>
     
     
       
@@ -433,9 +480,9 @@
     <category term="quantum" scheme="https://haidi-ustc.github.io/categories/quantum/"/>
     
     
-    <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
-    
     <category term="python" scheme="https://haidi-ustc.github.io/tags/python/"/>
+    
+    <category term="deeplearning" scheme="https://haidi-ustc.github.io/tags/deeplearning/"/>
     
     <category term="ASE" scheme="https://haidi-ustc.github.io/tags/ASE/"/>
     
@@ -446,7 +493,7 @@
     <link href="https://haidi-ustc.github.io/2019/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/"/>
     <id>https://haidi-ustc.github.io/2019/06/29/computer/linux/chang-yong-bash-ming-ling-zheng-li-zhi-wen-ben-chu-li/</id>
     <published>2019-06-29T03:11:00.000Z</published>
-    <updated>2021-06-29T03:11:16.480Z</updated>
+    <updated>2021-06-29T03:11:18.000Z</updated>
     
     
       
@@ -468,10 +515,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://haidi-ustc.github.io/2018/09/12/hello-world/"/>
-    <id>https://haidi-ustc.github.io/2018/09/12/hello-world/</id>
+    <link href="https://haidi-ustc.github.io/2018/09/12/materials/hello-world/"/>
+    <id>https://haidi-ustc.github.io/2018/09/12/materials/hello-world/</id>
     <published>2018-09-12T14:25:00.000Z</published>
-    <updated>2021-06-29T03:19:55.776Z</updated>
+    <updated>2021-06-29T03:19:56.000Z</updated>
     
     
       
