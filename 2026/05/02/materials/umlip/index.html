@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="大学物理-功的一般性计算, quantum chemitry, condensed materials, computer science, quantum computation">
+    <meta name="keywords" content="通用势能模型笔记, quantum chemitry, condensed materials, computer science, quantum computation">
     <meta name="description" content="做平凡的事儿，做快乐的自己">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>大学物理-功的一般性计算 | null</title>
+    <title>通用势能模型笔记 | null</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -248,12 +248,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">大学物理-功的一般性计算</h1>
+                    <h1 class="description center-align post-title">通用势能模型笔记</h1>
                 </div>
             </div>
         </div>
@@ -369,20 +369,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/dft/">
+                                <span class="chip bg-color">dft</span>
                             </a>
                         
-                            <a href="/tags/work/">
-                                <span class="chip bg-color">work</span>
+                            <a href="/tags/machine-learning/">
+                                <span class="chip bg-color">machine learning</span>
                             </a>
                         
-                            <a href="/tags/matplotlib/">
-                                <span class="chip bg-color">matplotlib</span>
-                            </a>
-                        
-                            <a href="/tags/jupyter/">
-                                <span class="chip bg-color">jupyter</span>
+                            <a href="/tags/atomistic-simulation/">
+                                <span class="chip bg-color">atomistic simulation</span>
                             </a>
                         
                     </div>
@@ -393,8 +389,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/physics/" class="post-category">
-                                physics
+                            <a href="/categories/materials/" class="post-category">
+                                materials
                             </a>
                         
                     </div>
@@ -406,7 +402,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-29
+                    2026-05-02
                 </div>
                 
 
@@ -415,14 +411,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    713
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    17 分
                 </div>
                 
 
@@ -442,102 +438,52 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
-<p>加载环境 (所有命令可以在jupyter notebook中直接运行)</p>
-</blockquote>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span>pylab inline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre><code>Populating the interactive namespace from numpy and matplotlib
-</code></pre>
-<ul>
-<li>问题描述： 假定质点的质量为1kg，在$\vec{F}(x,y)$的作用下沿着曲线S运行，其中<br>$$\vec{F}(x,y)=(x+y)\vec{i}+xy\vec{j}$$<br>曲线方程S为：<br>$$x=t, y=sin(t) $$<br>其中t$\in$[0,2$\pi$],计算该段时间内力所作的功</li>
+                <h1 id="通用势能模型笔记"><a href="#通用势能模型笔记" class="headerlink" title="通用势能模型笔记"></a>通用势能模型笔记</h1><p>这两年，通用机器学习原子间势（Universal Machine Learning Interatomic Potentials, uMLIPs）已经不只是“更快的势函数”了。更准确的说法是：它们正在向“原子尺度基础模型”靠拢。和早期为单一材料、单一相区、单一任务定制的 MLIP 不同，uMLIPs 追求的是<strong>跨元素、跨结构维度、跨温压条件、跨任务</strong>的零样本可用性：训练一次，尽可能在金属、半导体、离子化合物、小分子、表面、界面甚至复杂反应环境中都能直接上手。MACE 的 foundation model 工作把这种思路说得很清楚：目标不是再做一个“某体系专用势”，而是做一个可以直接作为下游起点、并在少量数据上快速适配的通用原子模型。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2401.00096" title="[2401.00096] A foundation model for atomistic materials chemistry">arXiv</a>)</p>
+<p>但真正值得注意的，不是“它们能不能替代 DFT”这种过于宽泛的问题，而是<strong>在什么物理问题上，它们已经足够好；在什么问题上，它们还会系统性失真</strong>。这一点，近年的 benchmark 已经给出比宣传材料更有价值的答案：在平衡结构优化、常规弛豫和大规模筛选上，主流 uMLIPs 已经相当成熟；但一旦进入声子、缺陷、高压、低维体系、迁移势垒、界面反应这些更“挑剔”的问题，模型间差异会迅速放大，而且很多误差并不是随机噪声，而是有明确来源的系统偏差。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
+<h2 id="1-技术路线"><a href="#1-技术路线" class="headerlink" title="1. 技术路线"></a>1. 技术路线</h2><p>从方法演进看，uMLIPs 大致经历了三步。第一步是手工描述符时代，例如 Behler–Parrinello 一类方法，用人工设计的局域环境函数把原子邻域映射成固定长度特征；第二步是图神经网络时代，把“原子—键—邻域”直接表示成图，通过消息传递自动学习特征；第三步则是今天的主流路线：<strong>把物理对称性直接写进网络结构里</strong>，尤其是旋转、平移和原子置换对称性。这样做的核心收益，不只是“更优雅”，而是能显著减少模型为了“学会正确坐标变换”而浪费的数据量。MACE 的核心思想就是高阶等变消息传递；SevenNet 则明确建立在 NequIP 这类等变框架之上；CHGNet、MatterSim、ORB、DPA-3 分别走了不同的图网络或大模型路线，但本质上都在回答同一问题：如何在保持物理一致性的同时，把化学空间做大。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.07697?utm_source=chatgpt.com" title="MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields">arXiv</a>)</p>
+<p>这里有一个很容易被忽略的判断标准：<strong>一个模型是否真的适合作为“通用势”</strong>，不在于它在某个静态 benchmark 上分数高，而在于它是否能把“局域化学环境的表示”做得足够稳健。MACE 之所以很强，不只是因为它准，而是因为它把 ACE 的多体展开思想和等变消息传递结合起来，用更少的 message passing 步数表达更高体阶的相互作用。原论文强调，四体消息可以把常见 MPNN 需要五六层才能达到的表达能力，压缩到两层左右，这既提升了并行效率，也改善了学习曲线。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.07697?utm_source=chatgpt.com" title="MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields">arXiv</a>)</p>
+<h2 id="2-为什么损失函数几乎总是同时拟合能量、力和应力"><a href="#2-为什么损失函数几乎总是同时拟合能量、力和应力" class="headerlink" title="2. 为什么损失函数几乎总是同时拟合能量、力和应力"></a>2. 为什么损失函数几乎总是同时拟合能量、力和应力</h2><p>uMLIPs 的训练目标通常写成下面这种形式：</p>
+<p>$$<br>\mathcal{L}<br>=<br>p_E \left| E_{\mathrm{DFT}}-E_{\mathrm{model}} \right|^2<br>+<br>p_F \sum_i \left| \mathbf{F}<em>{\mathrm{DFT},i}-\mathbf{F}</em>{\mathrm{model},i} \right|^2<br>+<br>p_V \left| \mathbf{V}<em>{\mathrm{DFT}}-\mathbf{V}</em>{\mathrm{model}} \right|^2<br>$$</p>
+<p>这个式子表面上只是一个加权最小二乘，真正重要的是它隐含了三个层次的物理约束：<strong>能量</strong>决定势能面的整体高度，<strong>力</strong>决定势能面的局部斜率，<strong>应力/维里张量</strong>决定晶格响应和弹性信息。也就是说，模型不是只学“哪种构型更稳定”，而是在学一个完整的势能面局部几何。声子、弹性常数、迁移势垒、热容这类二阶或更高阶响应性质，本质上都建立在“势能面曲率”是否准确这个问题上。近年的声子 benchmark 也正是抓住这一点：如果模型在平衡附近的二阶导数不对，那么即使结构优化看起来很像 DFT，振动和热力学性质依然会系统性偏掉。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
+<p>这也是为什么“只看力 MAE”会有误导性。一个模型可以在平均力误差上不错，却在高能构型、缺陷邻域、过渡态附近把势能面整体压软；反过来，一个模型如果能把保守力场结构维持好，即便参数量没那么夸张，也可能在真实模拟里更稳定。很多近年的工作已经把评价重点从单点误差转向<strong>结构弛豫、动力学稳定性、响应性质和势能面探索能力</strong>，这是很正确的方向。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
+<h2 id="3-主流模型怎么选"><a href="#3-主流模型怎么选" class="headerlink" title="3. 主流模型怎么选"></a>3. 主流模型怎么选</h2><h3 id="3-1-MACE"><a href="#3-1-MACE" class="headerlink" title="3.1 MACE"></a>3.1 MACE</h3><p>如果只允许我给一个“最稳妥的通用起点”，我会先想到 MACE。原因不是它在所有 benchmark 都第一，而是它在<strong>精度、稳定性、可迁移性、微调友好性</strong>之间做得最均衡。MACE 的 foundation model 论文直接把它定位成 general-purpose atomistic model：从固体、液体、气体到界面和小分子，都能开箱即用；更关键的是，它明确把“少量数据微调后达到 ab initio 精度”作为设计目标，而不是额外附带的功能。后续关于 frozen transfer learning 的工作也说明，MACE-MP 在低数据 regime 下微调效率非常高，往往比同数据量从头训练更划算。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2401.00096" title="[2401.00096] A foundation model for atomistic materials chemistry">arXiv</a>)</p>
+<p>从架构上看，MACE 的优势在于高体阶等变消息传递，这使它比很多传统等变 GNN 更善于在较少层数下表达复杂局域相互作用。它不是最快的，但通常是“又准又不太折腾”的那个。需要注意的是，MACE 也并不免疫于通用势的经典问题：在缺陷、表面、迁移势垒和声子等任务上，它同样会出现 PES softening，只是程度常常比更早期模型轻。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.07697?utm_source=chatgpt.com" title="MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields">arXiv</a>)</p>
+<h3 id="3-2-SevenNet"><a href="#3-2-SevenNet" class="headerlink" title="3.2 SevenNet"></a>3.2 SevenNet</h3><p>SevenNet 的核心模型建立在 NequIP 之上，同时非常强调并行 MD 和大规模可用性。它的官方实现直接把“预训练通用势”和“微调接口”作为主要功能，并且支持 LAMMPS 并行模拟。近年的声子 benchmark 中，SevenNet-0 的表现已经明显进入第一梯队；而一项针对近 11,000 个弹性稳定材料的弹性性质 benchmark 预印本进一步指出，<strong>SevenNet 在弹性性质预测上是四个主流模型里最准确的</strong>，MACE 和 MatterSim 则在精度与效率之间更均衡，CHGNet 相对落后。这里要强调一下，这个弹性 benchmark 目前还是预印本，所以更适合当作趋势判断，而不是最终定论。(<a target="_blank" rel="noopener" href="https://github.com/MDIL-SNU/SevenNet" title="GitHub - MDIL-SNU/SevenNet: SevenNet - a graph neural network interatomic potential package supporting efficient multi-GPU parallel molecular dynamics simulations. · GitHub">GitHub</a>)</p>
+<p>我对 SevenNet 的理解是：它代表了<strong>等变模型路线在工程可用性上的一次成熟落地</strong>。如果你的任务偏向弹性、结构响应、无机液体或电解质 MD，这类模型通常会比“只追求快”的路线更让人放心。与此同时，SevenNet 也不是“万能免疫体”。在一些出训练分布较远的液体、电解质或特殊化学环境中，它仍需要微调，相关工作已经展示了这一点。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2510.22999v1" title="Benchmarking Universal Machine Learning Interatomic Potentials for Elastic Property Prediction">arXiv</a>)</p>
+<h3 id="3-3-MatterSim"><a href="#3-3-MatterSim" class="headerlink" title="3.3 MatterSim"></a>3.3 MatterSim</h3><p>MatterSim 很有代表性，因为它提醒了一个事实：<strong>架构不一定越复杂越好，关键是数据覆盖和训练策略是否足够大、足够系统</strong>。MatterSim 基于 M3GNet 路线，但训练目标明确指向“跨元素、跨温度、跨压力”，论文摘要给出的覆盖范围是 0–5000 K 和最高 1000 GPa。更重要的是，在 2025 年的声子 benchmark 中，MatterSim-v1 在七个主流模型里是声子性质最准确的一个，误差分布接近以零为中心，甚至优于更复杂的等变模型。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2405.04967" title="[2405.04967] MatterSim: A Deep Learning Atomistic Model Across Elements, Temperatures and Pressures">arXiv</a>)</p>
+<p>不过，MatterSim 也有很明确的边界。官方仓库直说了：当前版本主要为<strong>体相材料的原子模拟</strong>设计，遇到表面、界面以及受长程相互作用显著影响的性质时，只能期待定性正确，不建议直接拿来做定量分析，最好先微调。也就是说，MatterSim 的强项非常突出：体相、热力学、声子、温压扩展；但一旦任务明显偏离 bulk inorganic 这条主航道，最好别把“通用”误读成“无需校正”。(<a target="_blank" rel="noopener" href="https://github.com/microsoft/mattersim" title="GitHub - microsoft/mattersim: MatterSim: A deep learning atomistic model across elements, temperatures and pressures. · GitHub">GitHub</a>)</p>
+<h3 id="3-4-ORB-v3"><a href="#3-4-ORB-v3" class="headerlink" title="3.4 ORB-v3"></a>3.4 ORB-v3</h3><p>ORB-v3 的吸引力很直接：它把“速度—内存—精度”的 Pareto 前沿往前推了一大截。官方论文摘要给出的结论是，相比此前路线，它能在接近 SOTA 表现的同时，把延迟降低到原来的十分之一以下、内存占用降到八分之一以下。ORB 系列同时提供 conservative 和 direct 等不同模式，这本身就暴露出它的设计哲学：<strong>不是为了把物理约束做得最死，而是为了让大规模模拟真正跑得动</strong>。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2504.06231" title="[2504.06231] Orb-v3: atomistic simulation at scale">arXiv</a>)</p>
+<p>但 ORB 也是一个非常适合“按任务使用”的模型。2025 年的声子 benchmark 给出的结论很值得记住：ORB 在平衡几何上极其准确，但在声子这样依赖高阶导数和严格保守性的任务上，质量明显下降；作者把问题直接归因于其非保守力预测路径——力不是通过能量对坐标求导得到，而是网络单独输出。换句话说，ORB 特别适合高通量结构筛选、快速弛豫、超大系统搜索；但对于严格依赖能量守恒和局部曲率精度的任务，尤其是冻结声子、精细振动谱和某些 NVE 动力学问题，需要非常谨慎。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
+<h3 id="3-5-CHGNet"><a href="#3-5-CHGNet" class="headerlink" title="3.5 CHGNet"></a>3.5 CHGNet</h3><p>CHGNet 的独特之处，不在于它是否“全能”，而在于它把<strong>电荷/磁矩信息显式带入图网络势</strong>。原始论文强调，CHGNet 预训练于 Materials Project Trajectory Dataset 上的能量、力、应力和磁矩，显式引入磁矩后，模型能够更好地刻画轨道占据与离子体系中的电子自由度。这也是它在锂电正极、扩散、相图等问题上经常被优先考虑的原因。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s42256-023-00716-3" title="CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling | Nature Machine Intelligence">Nature</a>)</p>
+<p>但如果问题集中在标准机械性质或“尽可能稳健的通用结构预测”上，CHGNet 往往不是第一选择。已有 benchmark 表明，它在声子和弹性任务上的整体表现不如 MatterSim、SevenNet 或 MACE。这个差异并不说明 CHGNet 不强，而是说明它更像一个<strong>带电子态偏好的专用型通用势</strong>：在合适场景里很有价值，在不对口的场景里不应强行拔高。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
+<h3 id="3-6-DPA-3"><a href="#3-6-DPA-3" class="headerlink" title="3.6 DPA-3"></a>3.6 DPA-3</h3><p>严格说，DPA-3 与其叫“单一通用势”，不如说更接近今天所谓 large atomistic model 的路线。其论文把它定位为为“大模型时代”设计的图网络架构，并报告了两个很关键信号：一是模型性能遵循 scaling law；二是作为在 OpenLAM-v1 上训练的 DPA-3.1-3M，它在 12 个下游任务上的整体零样本泛化误差最低之一。高压 benchmark 中，DPA3-v1-OpenLAM 也表现得很稳，结构体积误差随压力升高仍能维持较低水平。(<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2506.01686" title="A Graph Neural Network for the Era of Large Atomistic Models">arXiv</a>)</p>
+<p>所以我更愿意把 DPA-3 看作一个非常值得关注的方向：它不只是追求“某个模型更准”，而是在追求<strong>模型容量、数据规模、多任务训练与迁移能力之间的系统扩展规律</strong>。这条路线未来很可能会和今天的 uMLIP 概念逐渐合流。(<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2506.01686" title="A Graph Neural Network for the Era of Large Atomistic Models">arXiv</a>)</p>
+<h2 id="4-关键盲点"><a href="#4-关键盲点" class="headerlink" title="4. 关键盲点"></a>4. 关键盲点</h2><h3 id="4-1-PES-softening"><a href="#4-1-PES-softening" class="headerlink" title="4.1 PES softening"></a>4.1 PES softening</h3><p>近年最重要的一篇负面结果，几乎可以说直接改写了大家看待通用势的方法。那篇关于 PES softening 的工作指出，M3GNet、CHGNet 和 MACE-MP-0 都存在一致的势能面软化现象：能量和力在表面、缺陷、固溶体、离子迁移势垒、声子振动以及一般高能态上呈系统性低估。作者把根源归结为预训练数据对近平衡构型的偏采样：数据大量来自离子弛豫轨迹，因此模型在势阱附近学得很好，但对高能区域的曲率学习不足。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-024-01500-6" title="Systematic softening in universal machine learning interatomic potentials | npj Computational Materials">Nature</a>)</p>
+<p>这件事很重要，因为它解释了一个常见悖论：为什么有些模型结构优化看着很准，但一算缺陷形成能、声子频率、扩散势垒就开始“发软”。从数学上说，问题出在二阶导数；从物理上说，问题出在模型把势阱壁学得不够陡。也就是说，很多误差并不是偶然失败，而是<strong>由训练分布直接诱发的系统偏差</strong>。这类问题不是靠多跑几步 MD 能“平均掉”的。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-024-01500-6" title="Systematic softening in universal machine learning interatomic potentials | npj Computational Materials">Nature</a>)</p>
+<h3 id="4-2-高压测试"><a href="#4-2-高压测试" class="headerlink" title="4.2 高压测试"></a>4.2 高压测试</h3><p>“通用”如果不能过高压这一关，多少是有点名不副实的。2025 年的高压 benchmark 很有说服力：作者系统考察了 0–150 GPa 范围内多个主流 uMLIP，结论是原始模型普遍会随着压力上升而退化，只是退化幅度不同。M3GNet 在高压下体积误差显著放大；MatterSim、SevenNet、GRACE、ORB、DPA3 等模型更稳，但也不是完全不受影响。更关键的是，针对高压数据做微调后，模型性能能明显恢复，这说明问题主要还是训练覆盖不足，而不是这些架构天生不能做高压。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2508.17792v1" title="Universal Machine Learning Potentials under Pressure">arXiv</a>)</p>
+<p>我很赞同这篇工作的一个隐含判断：高压并不是特殊兴趣爱好，而是检验模型是否真正学到“可压缩的原子相互作用规律”的试金石。一个模型在常压附近表现优异，只能说明它在数据密集区工作良好；只有跨压力仍稳定，才更接近“物理基础模型”的标准。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2508.17792v1" title="Universal Machine Learning Potentials under Pressure">arXiv</a>)</p>
+<h3 id="4-3-低维体系"><a href="#4-3-低维体系" class="headerlink" title="4.3 低维体系"></a>4.3 低维体系</h3><p>另一个越来越清楚的现象是：很多现代 uMLIPs 在 3D 体相材料里已经非常强，但一旦降到 2D、1D、0D，精度会系统性下降。2025 年针对 0D–3D 全维度的 benchmark 明确指出，多数现代 uMLIPs 的预测准确率会随着维度降低而下降，尽管也有少数模型能维持相对稳定的表现。(<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2508.15614" title="Universal Machine Learning Potential for Systems with Reduced Dimensionality">arXiv</a>)</p>
+<p>这背后的原因并不神秘。低维体系的表面占比更大、局域配位更不饱和、长程相互作用和真空处理更敏感，而且训练集中常见的体相弛豫路径对它们并不构成良好代表。于是模型虽然“见过很多元素”，却未必“真正见过这种维度下的势能面形状”。所以如果研究对象是单层材料、纳米线、团簇、表面吸附或界面，最好默认：<strong>零样本结果可以拿来做初筛，但不能直接当最终定量答案</strong>。(<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2508.15614" title="Universal Machine Learning Potential for Systems with Reduced Dimensionality">arXiv</a>)</p>
+<h2 id="5-微调"><a href="#5-微调" class="headerlink" title="5. 微调"></a>5. 微调</h2><p>到这里，其实结论已经很明显了：uMLIPs 最有价值的地方，不是“完全不需要再训练”，而是它们把下游训练从“从零开始造势”变成了“在一个已经懂大量化学的模型上做校准”。这一点，近期关于 fine-tuning 的结果已经相当一致。一个跨五类主流框架的系统性研究显示，微调后力误差通常可以下降 <strong>5–15 倍</strong>，能量误差可改善 <strong>2–4 个数量级</strong>，而且这种提升几乎不依赖底层架构：MACE、SevenNet、MatterSim、ORB 这类路线最终都能被拉到接近 ab initio 的水平。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2511.05337v1" title="Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy">arXiv</a>)</p>
+<p>这说明一个很现实的问题：今天的 foundation uMLIP，真正角色更像<strong>高质量初始猜测器</strong>，而不是永远不必更新的终局模型。它把你所需的专用数据量从“几万到几十万构型”压缩到“少量、但高相关的数据”；真正决定能否做到近实验或近 DFT 精度的，不再只是模型大不大，而是你是否为目标体系补上了那一小块最关键的分布缺口。MACE 的 frozen transfer learning、SevenNet 在电解液上的微调、MatterSim 的官方 finetune 支持，都在同一个方向上收敛。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01727-x" title="Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning | npj Computational Materials">Nature</a>)</p>
+<p>所以在实际工作流里，我更推荐把“预训练 + 少量高质量微调”当成默认配置，而不是把“零样本通用”当成唯一目标。前者是真正能落地的 scientific workflow，后者更多是模型研发阶段的能力展示。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2511.05337v1" title="Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy">arXiv</a>)</p>
+<h2 id="6-建议"><a href="#6-建议" class="headerlink" title="6. 建议"></a>6. 建议</h2><p>如果任务是<strong>超大规模筛选、快速结构弛豫、优先看吞吐量</strong>，ORB-v3 这类模型很值得优先考虑；如果任务是<strong>常规材料模拟、想要尽量稳健的默认选项</strong>，MACE 往往最合适；如果任务更偏<strong>弹性、声子、结构响应</strong>，SevenNet 和 MatterSim 通常更值得优先测试；如果问题涉及<strong>磁矩、氧化还原、离子体系中的电子态耦合</strong>，CHGNet 仍然有明显优势；如果你关注的是<strong>大模型路线、跨数据集迁移和长期演化潜力</strong>，DPA-3 很值得跟进。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
+<p>但无论选哪一个，真正靠谱的策略其实都差不多：<strong>先用通用势做预筛和预探索，再用针对目标体系的小规模 DFT 数据做微调，最后再上长时间尺度或高阶性质计算</strong>。这一套流程既承认 foundation model 的价值，也尊重它的边界。对今天的 uMLIPs 来说，这不是保守，而是专业。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2511.05337v1" title="Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy">arXiv</a>)</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>Batatia, I. et al. <em>A foundation model for atomistic materials chemistry</em>. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2401.00096" title="[2401.00096] A foundation model for atomistic materials chemistry">arXiv</a>)</li>
+<li>Batatia, I. et al. <em>MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields</em>. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.07697?utm_source=chatgpt.com" title="MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields">arXiv</a>)</li>
+<li>Deng, B. et al. <em>CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling</em>. (<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s42256-023-00716-3" title="CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling | Nature Machine Intelligence">Nature</a>)</li>
+<li>Yang, H. et al. <em>MatterSim: A Deep Learning Atomistic Model Across Elements, Temperatures and Pressures</em>. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2405.04967" title="[2405.04967] MatterSim: A Deep Learning Atomistic Model Across Elements, Temperatures and Pressures">arXiv</a>)</li>
+<li>Rhodes, B. et al. <em>Orb-v3: atomistic simulation at scale</em>. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2504.06231" title="[2504.06231] Orb-v3: atomistic simulation at scale">arXiv</a>)</li>
+<li>Zhang, D. et al. <em>A Graph Neural Network for the Era of Large Atomistic Models (DPA-3)</em>. (<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2506.01686" title="A Graph Neural Network for the Era of Large Atomistic Models">arXiv</a>)</li>
+<li>Loew, A. et al. <em>Systematic softening in universal machine learning interatomic potentials</em>. (<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-024-01500-6" title="Systematic softening in universal machine learning interatomic potentials | npj Computational Materials">Nature</a>)</li>
+<li>Loew, A. et al. <em>Universal machine learning interatomic potentials are ready for phonons</em>. (<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</li>
+<li><em>Benchmarking Universal Machine Learning Interatomic Potentials for Elastic Property Prediction</em>（预印本）. (<a target="_blank" rel="noopener" href="https://arxiv.org/html/2510.22999v1" title="Benchmarking Universal Machine Learning Interatomic Potentials for Elastic Property Prediction">arXiv</a>)</li>
+<li>Loew, A. et al. <em>Universal Machine Learning Potentials under Pressure</em>（预印本）. (<a target="_blank" rel="noopener" href="https://arxiv.org/html/2508.17792v1" title="Universal Machine Learning Potentials under Pressure">arXiv</a>)</li>
+<li>Benedini, G. et al. <em>Universal Machine Learning Potential for Systems with Reduced Dimensionality</em>（预印本）. (<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2508.15614" title="Universal Machine Learning Potential for Systems with Reduced Dimensionality">arXiv</a>)</li>
+<li>Radova, M. et al. <em>Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning</em>. (<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01727-x" title="Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning | npj Computational Materials">Nature</a>)</li>
+<li>Hänseroth, J. et al. <em>Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy</em>（预印本）. (<a target="_blank" rel="noopener" href="https://arxiv.org/html/2511.05337v1" title="Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy">arXiv</a>)</li>
 </ul>
-<ul>
-<li>线积分问题：<br>若$\vec{F}(x,y)=P(x,y)\vec{i}+Q(x,y)\vec{j}$,且曲线参数方程为：</li>
-</ul>
-<p>$$<br>             x=x(t),<br>             y=y(t),<br>$$<br>其中t$\in[t_0,t_1]$,</p>
-<p>则$$<br>\int{\vec{F}d\vec{r}}=\int{(P(x,y)\vec{i}+Q(x,y)\vec{j})(dx\vec{i}+dy\vec{j})}<br>$$<br>$$<br>=\int{(P(x,y)dx+Q(x,y)dy)}<br>$$<br>$$<br>=\int{(P(x(t),y(t))x^{‘}(t)+Q(x(t),y(t))y^{‘}(t))dt}<br>$$<br>即<br>$$<br>work : W=\int_{t_0}^{t_1}{(P(x(t),y(t))x^{‘}(t)+Q(x(t),y(t))y^{‘}(t))dt}<br>$$</p>
-<ul>
-<li>可视化 F(x,y),其中箭头表示力的方向，长度表示力的大小</li>
-</ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 二维网格坐标</span>
-x<span class="token operator">=</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span>
-y<span class="token operator">=</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span>
-X<span class="token punctuation">,</span>Y<span class="token operator">=</span>meshgrid<span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span>
-
-<span class="token comment"># U,V 定义方向</span>
-U <span class="token operator">=</span> X <span class="token operator">+</span> Y
-V <span class="token operator">=</span> X <span class="token operator">*</span>Y
-
-<span class="token comment"># C 定义颜色</span>
-C <span class="token operator">=</span> sqrt<span class="token punctuation">(</span><span class="token punctuation">(</span>X <span class="token operator">+</span> Y<span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span><span class="token operator">+</span><span class="token punctuation">(</span>X<span class="token operator">*</span>Y<span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">)</span>
-
-quiver<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y<span class="token punctuation">,</span> U<span class="token punctuation">,</span> V<span class="token punctuation">,</span> C<span class="token punctuation">)</span>
-xlabel<span class="token punctuation">(</span><span class="token string">'F x component/N'</span><span class="token punctuation">)</span>
-ylabel<span class="token punctuation">(</span><span class="token string">'F y component/N'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><img src="https://note.youdao.com/yws/api/personal/file/692F1D72CA464A30945C474758765260?method=download&shareKey=d08541835d538d3c2333dab1640c5098"></p>
-<ul>
-<li>可视化 质点的轨迹方程，很显然，质点按照正弦函数的轨迹运行</li>
-</ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">t<span class="token operator">=</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token operator">*</span>pi<span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span>
-s<span class="token operator">=</span>sin<span class="token punctuation">(</span>t<span class="token punctuation">)</span>
-plot<span class="token punctuation">(</span>t<span class="token punctuation">,</span>s<span class="token punctuation">,</span><span class="token string">'-o'</span><span class="token punctuation">,</span>alpha<span class="token operator">=</span><span class="token number">0.5</span><span class="token punctuation">)</span>
-xlabel<span class="token punctuation">(</span><span class="token string">'time(s)'</span><span class="token punctuation">)</span>
-ylabel<span class="token punctuation">(</span><span class="token string">'distance(m)'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<p><img src="https://note.youdao.com/yws/api/personal/file/CC982A8C12A744B2AC0EEEB932DB04C0?method=download&shareKey=805f334d18af317e800962b79cb02c1c"></p>
-<ul>
-<li>问题即为在上述的力场下面，质点会沿着正弦曲线运动$2\pi$ 秒所作的功</li>
-</ul>
-<p>按照上面的理论分析,所做的功即为：<br>$$<br>\int_{0}^{2\pi}{\vec{F}d\vec{r}}=\int_{0}^{2\pi}{(t+sin(t)+tsin(t)cos(t))dt}<br>$$</p>
-<p>可以画出 被积分函数$f(t)=t+sin(t)+tsin(t)cos(t)$的图像,所作的功即为曲线下面所围成的面积</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">f<span class="token operator">=</span>t<span class="token operator">+</span>sin<span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token operator">+</span>t<span class="token operator">*</span>sin<span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token operator">*</span>cos<span class="token punctuation">(</span>t<span class="token punctuation">)</span>
-fill_between<span class="token punctuation">(</span>t<span class="token punctuation">,</span>f<span class="token punctuation">,</span>y2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
-plot<span class="token punctuation">(</span>t<span class="token punctuation">,</span>f<span class="token punctuation">,</span><span class="token string">'r-.o'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p><img src="https://note.youdao.com/yws/api/personal/file/7312B7944B8149E7B0292D1E6853E687?method=download&shareKey=d34b78314cf7d718efed63078ed2571d"></p>
-<ul>
-<li>可以使用python的 sympy 的符号计算，算出来原函数</li>
-</ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#%load_ext sympyprinting</span>
-<span class="token keyword">from</span> sympy<span class="token punctuation">.</span>interactive <span class="token keyword">import</span> printing
-printing<span class="token punctuation">.</span>init_printing<span class="token punctuation">(</span>use_latex <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> sympy 
-<span class="token keyword">from</span> sympy <span class="token keyword">import</span> I<span class="token punctuation">,</span> pi<span class="token punctuation">,</span> oo<span class="token punctuation">,</span>sin<span class="token punctuation">,</span>cos
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
- 
-<span class="token comment"># 初始化函数</span>
-t <span class="token operator">=</span> sympy<span class="token punctuation">.</span>Symbol<span class="token punctuation">(</span><span class="token string">'t'</span><span class="token punctuation">)</span>
-f <span class="token operator">=</span> t<span class="token operator">+</span>sin<span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token operator">+</span>t<span class="token operator">*</span>sin<span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token operator">*</span>cos<span class="token punctuation">(</span>t<span class="token punctuation">)</span>
-
-<span class="token comment"># 函数的积分</span>
-F <span class="token operator">=</span> sympy<span class="token punctuation">.</span>integrate<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'积分得到的函数F(t)为'</span><span class="token punctuation">)</span>
-F
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>积分得到的函数F(t)为</p>
-<p>$$\frac{t^{2}}{2} + \frac{t}{4} \sin^{2}{\left (t \right )} - \frac{t}{4} \cos^{2}{\left (t \right )} + \frac{1}{4} \sin{\left (t \right )} \cos{\left (t \right )} - \cos{\left (t \right )}$$</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">Fd<span class="token operator">=</span>sympy<span class="token punctuation">.</span>diff<span class="token punctuation">(</span>F<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'重新计算导数，看看是否和原来的被积分函数一致'</span><span class="token punctuation">)</span>
-Fd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre><code>重新计算导数，看看是否和原来的被积分函数一致
-</code></pre>
-<p>$$t \sin{\left (t \right )} \cos{\left (t \right )} + t + \sin{\left (t \right )}$$</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'所需要的功为F(2*pi)-F(0)=%.3fN'</span><span class="token operator">%</span><span class="token punctuation">(</span>F<span class="token punctuation">.</span>subs<span class="token punctuation">(</span>t<span class="token punctuation">,</span><span class="token number">2</span><span class="token operator">*</span>pi<span class="token punctuation">)</span><span class="token operator">-</span>F<span class="token punctuation">.</span>subs<span class="token punctuation">(</span>t<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre><code>所需要的功为F(2*pi)-F(0)=18.168N
-</code></pre>
-<blockquote>
-<p>思考，如何计算该系统的末态动能？假定初始状态为静止 ？</p>
-</blockquote>
 
                 
             </div>
@@ -554,7 +500,7 @@ Fd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">haidi-ustc</a>
+                    <a href="/about" rel="external nofollow noreferrer">ustc-haidi</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -564,7 +510,7 @@ Fd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://haidi-ustc.github.io/2021/06/29/physics/calculate-work/">https://haidi-ustc.github.io/2021/06/29/physics/calculate-work/</a>
+                    <a href="https://haidi-ustc.github.io/2026/05/02/materials/umlip/">https://haidi-ustc.github.io/2026/05/02/materials/umlip/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -577,7 +523,7 @@ Fd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">haidi-ustc</a>
+                    <a href="/about" target="_blank">ustc-haidi</a>
                     !
                 </span>
             </div>
@@ -602,20 +548,16 @@ Fd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/dft/">
+                                    <span class="chip bg-color">dft</span>
                                 </a>
                             
-                                <a href="/tags/work/">
-                                    <span class="chip bg-color">work</span>
+                                <a href="/tags/machine-learning/">
+                                    <span class="chip bg-color">machine learning</span>
                                 </a>
                             
-                                <a href="/tags/matplotlib/">
-                                    <span class="chip bg-color">matplotlib</span>
-                                </a>
-                            
-                                <a href="/tags/jupyter/">
-                                    <span class="chip bg-color">jupyter</span>
+                                <a href="/tags/atomistic-simulation/">
+                                    <span class="chip bg-color">atomistic simulation</span>
                                 </a>
                             
                         </div>
@@ -785,17 +727,18 @@ Fd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2026/05/02/algorithm/matsimpy/">
+                <a href="/2026/05/02/materials/umlip/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="MatSimPy：面向高通量材料计算的 Python 框架">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="通用势能模型笔记">
                         
-                        <span class="card-title">MatSimPy：面向高通量材料计算的 Python 框架</span>
+                        <span class="card-title">通用势能模型笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -805,9 +748,67 @@ Fd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-02
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/materials/" class="post-category">
+                                    materials
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/dft/">
+                        <span class="chip bg-color">dft</span>
+                    </a>
+                    
+                    <a href="/tags/machine-learning/">
+                        <span class="chip bg-color">machine learning</span>
+                    </a>
+                    
+                    <a href="/tags/atomistic-simulation/">
+                        <span class="chip bg-color">atomistic simulation</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2026/05/02/algorithm/mech2d/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Mech2d：二维弹性高通量计算框架">
+                        
+                        <span class="card-title">Mech2d：二维弹性高通量计算框架</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -831,61 +832,8 @@ Fd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/06/29/computer/devops/gitlab-ci-jie-shao-he-shi-yong/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="GitLab CI/CD 介绍和使用">
-                        
-                        <span class="card-title">GitLab CI/CD 介绍和使用</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-29
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/computer/" class="post-category">
-                                    computer
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/GitLab-CI/">
-                        <span class="chip bg-color">GitLab CI</span>
-                    </a>
-                    
-                    <a href="/tags/DevOps/">
-                        <span class="chip bg-color">DevOps</span>
-                    </a>
-                    
-                    <a href="/tags/Jenkins/">
-                        <span class="chip bg-color">Jenkins</span>
+                    <a href="/tags/dft/">
+                        <span class="chip bg-color">dft</span>
                     </a>
                     
                 </div>
@@ -1016,13 +964,6 @@ Fd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
