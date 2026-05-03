@@ -407,7 +407,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    790
+                    803
                 </div>
                 
 
@@ -472,9 +472,9 @@
 <hr>
 <h3 id="🏗️-构建器（Builders）"><a href="#🏗️-构建器（Builders）" class="headerlink" title="🏗️ 构建器（Builders）"></a>🏗️ 构建器（Builders）</h3><p>支持快速生成复杂结构：</p>
 <ul>
-<li>晶体：FCC / BCC / Diamond</li>
+<li>晶体：FCC &#x2F; BCC &#x2F; Diamond</li>
 <li>表面：slab</li>
-<li>缺陷：vacancy / interstitial</li>
+<li>缺陷：vacancy &#x2F; interstitial</li>
 <li>分子：四面体结构</li>
 <li>纳米结构：碳纳米管</li>
 </ul>
@@ -485,8 +485,8 @@ fcc_cu <span class="token operator">=</span> from_prototype<span class="token pu
 <hr>
 <h3 id="🔄-结构变换（Transformations）"><a href="#🔄-结构变换（Transformations）" class="headerlink" title="🔄 结构变换（Transformations）"></a>🔄 结构变换（Transformations）</h3><p>支持多种变换：</p>
 <ul>
-<li>几何：平移 / 旋转</li>
-<li>晶格：应变 / 缩放</li>
+<li>几何：平移 &#x2F; 旋转</li>
+<li>晶格：应变 &#x2F; 缩放</li>
 <li>化学：替换元素</li>
 <li>结构：超胞生成</li>
 </ul>
@@ -510,7 +510,7 @@ pipeline<span class="token punctuation">.</span>add_step<span class="token punct
 <li>对称性分析（spglib）</li>
 <li>分子图（Graph）</li>
 <li>NetworkX 转换</li>
-<li>配位数 / 邻接矩阵</li>
+<li>配位数 &#x2F; 邻接矩阵</li>
 </ul>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">graph <span class="token operator">=</span> MoleculeGraph<span class="token punctuation">(</span>molecule<span class="token punctuation">,</span> cutoff<span class="token operator">=</span><span class="token number">2.0</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>graph<span class="token punctuation">.</span>is_connected<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -518,7 +518,7 @@ pipeline<span class="token punctuation">.</span>add_step<span class="token punct
 <hr>
 <h3 id="📦-文件-IO"><a href="#📦-文件-IO" class="headerlink" title="📦 文件 IO"></a>📦 文件 IO</h3><p>支持多种格式：</p>
 <ul>
-<li>VASP / CIF / XYZ / PDB / JSON</li>
+<li>VASP &#x2F; CIF &#x2F; XYZ &#x2F; PDB &#x2F; JSON</li>
 <li>自动识别格式</li>
 </ul>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> matsimpy<span class="token punctuation">.</span>io <span class="token keyword">import</span> read<span class="token punctuation">,</span> write
@@ -540,7 +540,7 @@ crystal <span class="token operator">=</span> read<span class="token punctuation
 <p>支持：</p>
 <ul>
 <li>JSON 持久化</li>
-<li>查询 / 重建对象</li>
+<li>查询 &#x2F; 重建对象</li>
 </ul>
 <hr>
 <h3 id="🖥️-CLI-工具"><a href="#🖥️-CLI-工具" class="headerlink" title="🖥️ CLI 工具"></a>🖥️ CLI 工具</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">matsimpy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -558,10 +558,10 @@ crystal <span class="token operator">=</span> read<span class="token punctuation
 <hr>
 <h3 id="开发模式"><a href="#开发模式" class="headerlink" title="开发模式"></a>开发模式</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://gitee.com/haidi-hfut/MatSimPy.git
 <span class="token builtin class-name">cd</span> MatSimPy
-pip <span class="token function">install</span> -e <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+pip <span class="token function">install</span> <span class="token parameter variable">-e</span> <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <hr>
-<h3 id="可选功能"><a href="#可选功能" class="headerlink" title="可选功能"></a>可选功能</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> -e .<span class="token punctuation">[</span>all<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="可选功能"><a href="#可选功能" class="headerlink" title="可选功能"></a>可选功能</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> <span class="token parameter variable">-e</span> .<span class="token punctuation">[</span>all<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>模块包括：</p>
 <ul>
@@ -596,7 +596,7 @@ crystal <span class="token operator">=</span> Crystal<span class="token punctuat
 <p>👉 模块划分清晰，易扩展</p>
 <hr>
 <h2 id="🧪-测试"><a href="#🧪-测试" class="headerlink" title="🧪 测试"></a>🧪 测试</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pytest
-pytest --cov<span class="token operator">=</span>matsimpy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+pytest <span class="token parameter variable">--cov</span><span class="token operator">=</span>matsimpy<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>支持：</p>
 <ul>
@@ -605,8 +605,8 @@ pytest --cov<span class="token operator">=</span>matsimpy<span aria-hidden="true
 </ul>
 <hr>
 <h2 id="📚-文档"><a href="#📚-文档" class="headerlink" title="📚 文档"></a>📚 文档</h2><ul>
-<li>Sphinx 文档（docs/）</li>
-<li>示例（examples/）</li>
+<li>Sphinx 文档（docs&#x2F;）</li>
+<li>示例（examples&#x2F;）</li>
 <li>API Docstring</li>
 </ul>
 <hr>
@@ -615,7 +615,7 @@ pytest --cov<span class="token operator">=</span>matsimpy<span aria-hidden="true
 <hr>
 <h2 id="🔗-项目地址"><a href="#🔗-项目地址" class="headerlink" title="🔗 项目地址"></a>🔗 项目地址</h2><p>👉 <a target="_blank" rel="noopener" href="https://gitee.com/haidi-hfut/MatSimPy">https://gitee.com/haidi-hfut/MatSimPy</a></p>
 <hr>
-<h2 id="👨‍💻-作者"><a href="#👨‍💻-作者" class="headerlink" title="👨‍💻 作者"></a>👨‍💻 作者</h2><p><strong>Haidi Wang</strong><br>📧 <a href="mailto:haidi@hfut.edu.cn">haidi@hfut.edu.cn</a></p>
+<h2 id="👨‍💻-作者"><a href="#👨‍💻-作者" class="headerlink" title="👨‍💻 作者"></a>👨‍💻 作者</h2><p><strong>Haidi Wang</strong><br>📧 <a href="mailto:&#104;&#x61;&#x69;&#x64;&#105;&#x40;&#104;&#102;&#117;&#x74;&#46;&#x65;&#x64;&#117;&#46;&#99;&#110;">haidi@hfut.edu.cn</a></p>
 <hr>
 <h2 id="📌-未来方向"><a href="#📌-未来方向" class="headerlink" title="📌 未来方向"></a>📌 未来方向</h2><ul>
 <li>可视化模块</li>

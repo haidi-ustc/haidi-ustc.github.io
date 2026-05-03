@@ -415,7 +415,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    713
+                    725
                 </div>
                 
 
@@ -450,13 +450,13 @@
 <pre><code>Populating the interactive namespace from numpy and matplotlib
 </code></pre>
 <ul>
-<li>问题描述： 假定质点的质量为1kg，在$\vec{F}(x,y)$的作用下沿着曲线S运行，其中<br>$$\vec{F}(x,y)=(x+y)\vec{i}+xy\vec{j}$$<br>曲线方程S为：<br>$$x=t, y=sin(t) $$<br>其中t$\in$[0,2$\pi$],计算该段时间内力所作的功</li>
+<li><p>问题描述： 假定质点的质量为1kg，在$\vec{F}(x,y)$的作用下沿着曲线S运行，其中<br>$$\vec{F}(x,y)&#x3D;(x+y)\vec{i}+xy\vec{j}$$<br>曲线方程S为：<br>$$x&#x3D;t, y&#x3D;sin(t) $$<br>其中t$\in$[0,2$\pi$],计算该段时间内力所作的功</p>
+</li>
+<li><p>线积分问题：<br>若$\vec{F}(x,y)&#x3D;P(x,y)\vec{i}+Q(x,y)\vec{j}$,且曲线参数方程为：</p>
+</li>
 </ul>
-<ul>
-<li>线积分问题：<br>若$\vec{F}(x,y)=P(x,y)\vec{i}+Q(x,y)\vec{j}$,且曲线参数方程为：</li>
-</ul>
-<p>$$<br>             x=x(t),<br>             y=y(t),<br>$$<br>其中t$\in[t_0,t_1]$,</p>
-<p>则$$<br>\int{\vec{F}d\vec{r}}=\int{(P(x,y)\vec{i}+Q(x,y)\vec{j})(dx\vec{i}+dy\vec{j})}<br>$$<br>$$<br>=\int{(P(x,y)dx+Q(x,y)dy)}<br>$$<br>$$<br>=\int{(P(x(t),y(t))x^{‘}(t)+Q(x(t),y(t))y^{‘}(t))dt}<br>$$<br>即<br>$$<br>work : W=\int_{t_0}^{t_1}{(P(x(t),y(t))x^{‘}(t)+Q(x(t),y(t))y^{‘}(t))dt}<br>$$</p>
+<p>$$<br>             x&#x3D;x(t),<br>             y&#x3D;y(t),<br>$$<br>其中t$\in[t_0,t_1]$,</p>
+<p>则$$<br>\int{\vec{F}d\vec{r}}&#x3D;\int{(P(x,y)\vec{i}+Q(x,y)\vec{j})(dx\vec{i}+dy\vec{j})}<br>$$<br>$$<br>&#x3D;\int{(P(x,y)dx+Q(x,y)dy)}<br>$$<br>$$<br>&#x3D;\int{(P(x(t),y(t))x^{‘}(t)+Q(x(t),y(t))y^{‘}(t))dt}<br>$$<br>即<br>$$<br>work : W&#x3D;\int_{t_0}^{t_1}{(P(x(t),y(t))x^{‘}(t)+Q(x(t),y(t))y^{‘}(t))dt}<br>$$</p>
 <ul>
 <li>可视化 F(x,y),其中箭头表示力的方向，长度表示力的大小</li>
 </ul>
@@ -491,8 +491,8 @@ ylabel<span class="token punctuation">(</span><span class="token string">'distan
 <ul>
 <li>问题即为在上述的力场下面，质点会沿着正弦曲线运动$2\pi$ 秒所作的功</li>
 </ul>
-<p>按照上面的理论分析,所做的功即为：<br>$$<br>\int_{0}^{2\pi}{\vec{F}d\vec{r}}=\int_{0}^{2\pi}{(t+sin(t)+tsin(t)cos(t))dt}<br>$$</p>
-<p>可以画出 被积分函数$f(t)=t+sin(t)+tsin(t)cos(t)$的图像,所作的功即为曲线下面所围成的面积</p>
+<p>按照上面的理论分析,所做的功即为：<br>$$<br>\int_{0}^{2\pi}{\vec{F}d\vec{r}}&#x3D;\int_{0}^{2\pi}{(t+sin(t)+tsin(t)cos(t))dt}<br>$$</p>
+<p>可以画出 被积分函数$f(t)&#x3D;t+sin(t)+tsin(t)cos(t)$的图像,所作的功即为曲线下面所围成的面积</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">f<span class="token operator">=</span>t<span class="token operator">+</span>sin<span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token operator">+</span>t<span class="token operator">*</span>sin<span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token operator">*</span>cos<span class="token punctuation">(</span>t<span class="token punctuation">)</span>
 fill_between<span class="token punctuation">(</span>t<span class="token punctuation">,</span>f<span class="token punctuation">,</span>y2<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
 plot<span class="token punctuation">(</span>t<span class="token punctuation">,</span>f<span class="token punctuation">,</span><span class="token string">'r-.o'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>

@@ -534,7 +534,7 @@
 <span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p>由于 Hexo 自带的代码高亮主题显示不好看，所以主题中使用到了 <a target="_blank" rel="noopener" href="https://github.com/ele828/hexo-prism-plugin">hexo-prism-plugin</a> 的 Hexo 插件来做代码高亮，安装命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> i -S hexo-prism-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> i <span class="token parameter variable">-S</span> hexo-prism-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>然后，修改 Hexo 根目录下 <code>_config.yml</code> 文件中 <code>highlight.enable</code> 的值为 <code>false</code>，并新增 <code>prism</code> 插件相关的配置，主要配置如下：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">highlight</span><span class="token punctuation">:</span>
@@ -547,7 +547,7 @@
   custom_css<span class="token punctuation">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search">hexo-generator-search</a> 的 Hexo 插件来做内容搜索，安装命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">search</span><span class="token punctuation">:</span>
@@ -556,7 +556,7 @@
 
 <h3 id="中文链接转拼音（可选的）"><a href="#中文链接转拼音（可选的）" class="headerlink" title="中文链接转拼音（可选的）"></a>中文链接转拼音（可选的）</h3><p>如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 <code>SEO</code>，且 <code>gitment</code> 评论对中文链接也不支持。我们可以用 <a target="_blank" rel="noopener" href="https://github.com/viko16/hexo-permalink-pinyin">hexo-permalink-pinyin</a> Hexo 插件使在生成文章时生成中文拼音的永久链接。</p>
 <p>安装命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> i hexo-permalink-pinyin --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> i hexo-permalink-pinyin <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">permalink_pinyin</span><span class="token punctuation">:</span>
@@ -568,7 +568,7 @@
 </blockquote>
 <h3 id="文章字数统计插件（可选的）"><a href="#文章字数统计插件（可选的）" class="headerlink" title="文章字数统计插件（可选的）"></a>文章字数统计插件（可选的）</h3><p>如果你想要在文章中显示文章字数、阅读时长信息，可以安装 <a target="_blank" rel="noopener" href="https://github.com/willin/hexo-wordcount">hexo-wordcount</a>插件。</p>
 <p>安装命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> i --save hexo-wordcount<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> i <span class="token parameter variable">--save</span> hexo-wordcount<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>然后只需在本主题下的 <code>_config.yml</code> 文件中，激活以下配置项即可：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">wordCount</span><span class="token punctuation">:</span>
@@ -578,7 +578,7 @@
   <span class="token key atrule">totalCount</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="添加-RSS-订阅支持（可选的）"><a href="#添加-RSS-订阅支持（可选的）" class="headerlink" title="添加 RSS 订阅支持（可选的）"></a>添加 RSS 订阅支持（可选的）</h3><p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 的 Hexo 插件来做 <code>RSS</code>，安装命令如下：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">feed</span><span class="token punctuation">:</span>

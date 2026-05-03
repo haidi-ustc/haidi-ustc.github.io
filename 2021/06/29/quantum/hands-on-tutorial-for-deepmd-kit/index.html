@@ -439,40 +439,13 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Hands-on-tutorial-for-DeePMD-kit"><a href="#Hands-on-tutorial-for-DeePMD-kit" class="headerlink" title="Hands-on tutorial for DeePMD-kit"></a>Hands-on tutorial for DeePMD-kit</h1><p>This tutorial will introduce you to the basic usage of DeePMD-kit, including data preparation, training, testing and running molecular dynamics simulations with lammps. </p>
-<p>Typically the DeePMD-kit workflow contains three parts: data preparation, training/freezing/testing and molecular dynamics.</p>
+<p>Typically the DeePMD-kit workflow contains three parts: data preparation, training&#x2F;freezing&#x2F;testing and molecular dynamics.</p>
 <p>The folder structure of this tutorial is like this:</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span>
 00.data  01.train  02.lmp  readme.md<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>where the folder <code>00.data</code> contains the data, the folder <code>01.train</code> contains an example input script to train a model with DeePMD-kit and the folder <code>02.lmp</code> contains lammps example script for molecular dynamics simulation.</p>
 <p>Before starting with the tutorial, we want you to notice that the unit system in the DeePMD-kit is:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th align="center">Unit</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Time</td>
-<td align="center">ps</td>
-</tr>
-<tr>
-<td>Length</td>
-<td align="center">Å</td>
-</tr>
-<tr>
-<td>Energy</td>
-<td align="center">eV</td>
-</tr>
-<tr>
-<td>Force</td>
-<td align="center">eV/Å</td>
-</tr>
-<tr>
-<td>Pressure</td>
-<td align="center">Bar</td>
-</tr>
-</tbody></table>
+<p>Property| Unit<br>—	| :—:<br>Time	| ps<br>Length	| Å<br>Energy	| eV<br>Force	| eV&#x2F;Å<br>Pressure| Bar</p>
 <h1 id="Data-preparation"><a href="#Data-preparation" class="headerlink" title="Data preparation"></a>Data preparation</h1><p>The training data of DeePMD-kit contains the atom type, the simulation box, the atom coordinate, the atom force, the system energy and the virial. A snapshot of a molecular system that has these information is called a <strong>frame</strong>. A <strong>system of data</strong> or in short a <strong>system</strong> includes a number of frames that share the same number of atoms and atom types. For example, a molecular dynamics trajectory can be converted in to a system of data, with each timestep corresponding to a frame in the system. </p>
 <p>The DeePMD-kit adopts a compressed data format. All training data should be firstly converted into this format and then can be used by DeePMD-kit. The data format is explained in detail in the DeePMD-kit manual that can be found in the DeePMD-kit official github site <a target="_blank" rel="noopener" href="http://www.github.com/deepmodeling/deepmd-kit">http://www.github.com/deepmodeling/deepmd-kit</a>. </p>
 <p>We provide a convenient tool named <code>dpdata</code> for converting the data produced by VASP, Gaussian, Quantum-Espresso and Lammps into the compressed format of DeePMD-kit. As an example, go to the data folder:</p>
@@ -511,7 +484,7 @@ input.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><code>use_smooth</code> tells the DeePMD-kit that the smoothed deep potential, namely DeepPot-SE model, will be trained. </li>
-<li><code>rcut</code> gives the cut-off radius, while the key <code>rcut_smth</code> gives where the inverse distance start to be smoothed. That is to say the distance dependency 1/r decays to 0 smoothly from <code>rcut_smth</code> to <code>rcut</code>.</li>
+<li><code>rcut</code> gives the cut-off radius, while the key <code>rcut_smth</code> gives where the inverse distance start to be smoothed. That is to say the distance dependency 1&#x2F;r decays to 0 smoothly from <code>rcut_smth</code> to <code>rcut</code>.</li>
 <li><code>sel_a</code> gives the (estimated) maximum number of atoms in the cut-off radius. This variable is a list, and <code>sel_a[i]</code> gives the maximum number of type i atoms in the cut-off radius. In the case of gas phase methane molecule <code>CH4</code>, a natural choice of <code>sel_a</code> is <code>[4,1]</code>, given <code>H</code> is of type 0 and <code>C</code> is of type 1.</li>
 <li><code>filter_neuron</code> gives the size of embedding neural network.</li>
 <li><code>fitting_neuron</code> gives the size of fitting neural network.</li>
@@ -531,10 +504,10 @@ input.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <li><code>systems</code> is a list that provides location of the systems (in our case we have only one system). DeePMD-kit allows you to provide multiple systems. DeePMD-kit will train the model with the systems randomly picked from the list. </li>
 <li><code>batch_size</code> is a list that provides the batch size, i.e. number of frames used in one SGD step, of each system, respectively</li>
 <li><code>stop_batch</code> specifies the total number of SGD step (equal to the number of batches) used in the training.</li>
-<li><code>start_lr</code>, <code>decay_rate</code> and <code>decay_steps</code> specify how the learning rate changes. For example, the <code>t</code>th batch will be trained with learning rate:<pre class="line-numbers language-math" data-language="math"><code class="language-math">lr(t) &#x3D; start_lr * decay_rate ^ ( t &#x2F; decay_steps )<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-</li>
+<li><code>start_lr</code>, <code>decay_rate</code> and <code>decay_steps</code> specify how the learning rate changes. For example, the <code>t</code>th batch will be trained with learning rate:</li>
 </ul>
+<pre class="line-numbers language-math" data-language="math"><code class="language-math">lr(t) &#x3D; start_lr * decay_rate ^ ( t &#x2F; decay_steps )<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>It is noted that the parameter <code>stop_batch</code> and <code>decay_steps</code> are usually increased in proportion, so that the learning rate at the end of the training does not change. A rule-of-thumb guide of the learning rate at the end of training is of order <code>10^&#123;-8&#125;</code> to <code>10^&#123;-7&#125;</code>.</p>
 <h2 id="Train-a-model"><a href="#Train-a-model" class="headerlink" title="Train a model"></a>Train a model</h2><p>After the training script is prepared, we can start the training with DeePMD-kit by simply running</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ dp_train input.json<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -560,17 +533,17 @@ input.json<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <span class="token comment"># DEEPMD: batch   10000 training time 5.71 s, testing time 0.01 s</span>
 <span class="token comment"># DEEPMD: saved checkpoint model.ckpt</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>They present the training and testing time counts. At the end of the 10000th batch, the model is saved in Tensorflow’s checkpoint file <code>model.ckpt</code>.<br>At the same time, the training and testing errors are presented in file <code>lcurve.out</code>.</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">head</span> -n <span class="token number">2</span> lcurve.out 
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">head</span> <span class="token parameter variable">-n</span> <span class="token number">2</span> lcurve.out 
 <span class="token comment"># batch      l2_tst    l2_trn    l2_e_tst  l2_e_trn    l2_f_tst  l2_f_trn         lr</span>
       <span class="token number">0</span>    <span class="token number">4</span>.91e+01  <span class="token number">5</span>.55e+01    <span class="token number">4</span>.61e+00  <span class="token number">4</span>.59e+00    <span class="token number">1</span>.55e+00  <span class="token number">1</span>.75e+00    <span class="token number">1</span>.0e-03<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>and</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">tail</span> -n <span class="token number">2</span> lcurve.out 
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">tail</span> <span class="token parameter variable">-n</span> <span class="token number">2</span> lcurve.out 
  <span class="token number">137000</span>    <span class="token number">1</span>.87e+00  <span class="token number">1</span>.70e+00    <span class="token number">9</span>.64e-04  <span class="token number">1</span>.24e-03    <span class="token number">1</span>.18e-01  <span class="token number">1</span>.07e-01    <span class="token number">2</span>.5e-04
  <span class="token number">138000</span>    <span class="token number">1</span>.90e+00  <span class="token number">1</span>.72e+00    <span class="token number">3</span>.23e-03  <span class="token number">2</span>.86e-03    <span class="token number">1</span>.20e-01  <span class="token number">1</span>.09e-01    <span class="token number">2</span>.5e-04
  <span class="token number">139000</span>    <span class="token number">1</span>.93e+00  <span class="token number">1</span>.61e+00    <span class="token number">1</span>.58e-03  <span class="token number">1</span>.33e-03    <span class="token number">1</span>.21e-01  <span class="token number">1</span>.01e-01    <span class="token number">2</span>.5e-04
  <span class="token number">140000</span>    <span class="token number">1</span>.86e+00  <span class="token number">1</span>.68e+00    <span class="token number">1</span>.50e-03  <span class="token number">1</span>.66e-03    <span class="token number">1</span>.21e-01  <span class="token number">1</span>.09e-01    <span class="token number">2</span>.4e-04
  <span class="token number">141000</span>    <span class="token number">1</span>.83e+00  <span class="token number">1</span>.67e+00    <span class="token number">9</span>.39e-04  <span class="token number">6</span>.38e-04    <span class="token number">1</span>.19e-01  <span class="token number">1</span>.08e-01    <span class="token number">2</span>.4e-04<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>Volumes 4, 5 and 6, 7 presents the energy and force training and testing errors, respectively. It is demonstrated that after 140,000 steps of training, the energy testing error is around 1 meV and the force testing error is around 120 meV/Å. It is also observed that the force testing error is systematically (but slightly) larger than the training error, which implies a slight over-fitting to the rather small dataset.</p>
+<p>Volumes 4, 5 and 6, 7 presents the energy and force training and testing errors, respectively. It is demonstrated that after 140,000 steps of training, the energy testing error is around 1 meV and the force testing error is around 120 meV&#x2F;Å. It is also observed that the force testing error is systematically (but slightly) larger than the training error, which implies a slight over-fitting to the rather small dataset.</p>
 <h2 id="Freeze-a-model"><a href="#Freeze-a-model" class="headerlink" title="Freeze a model"></a>Freeze a model</h2><p>At the end of the training, the model parameters saved in tensorflow’s checkpoint file should be frozen as a model file that is usually ended with extension <code>.pb</code>. Simply execute</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ dp_frz 
 Converted <span class="token number">46</span> variables to const ops.
@@ -579,7 +552,7 @@ Converted <span class="token number">46</span> variables to const ops.
 <h1 id="Run-molecular-dynamics-simulation-with-Lammps"><a href="#Run-molecular-dynamics-simulation-with-Lammps" class="headerlink" title="Run molecular dynamics simulation with Lammps"></a>Run molecular dynamics simulation with Lammps</h1><p>Now let’s switch to the lammps directory to check the necessary input files for running DeePMD with lammps.</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/02.lmp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>Firstly, we soft-link the output model in the training directory to the current directory</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ln</span> -s <span class="token punctuation">..</span>/01.train/frozen_model.pb <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ln</span> <span class="token parameter variable">-s</span> <span class="token punctuation">..</span>/01.train/frozen_model.pb <span class="token builtin class-name">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>Then we have three files </p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">ls</span>
 conf.lmp  frozen_model.pb  in.lammps  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -588,7 +561,7 @@ conf.lmp  frozen_model.pb  in.lammps  <span aria-hidden="true" class="line-numbe
 pair_coeff<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>where the pair style <code>deepmd</code> is invokes and the model file <code>frozen_model.pb</code> is provided, which means the atomic interaction will be computed by the DeePMD model that is stored in the file <code>frozen_model.pb</code>.</p>
 <p>One may execute lammps in the standard way</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ lmp_mpi -i in.lammps<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ lmp_mpi <span class="token parameter variable">-i</span> in.lammps<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>After waiting for a while, the MD simulation finishes, and the <code>log.lammps</code> and <code>ch4.dump</code> files are generated. They store the thermodynamic information and the trajectory of the molecule, respectively. One may want to visualize the trajectory by, e.g. ovito</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ ovito ch4.dump<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>to check the evolution of the molecular configuration.</p>
