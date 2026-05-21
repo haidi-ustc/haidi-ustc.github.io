@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2026-05-03T14:27:11.673Z</updated>
+  <updated>2026-05-21T10:00:12.502Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>赫姆霍兹线圈与三线圈均匀磁场原理</title>
+    <link href="https://haidi-ustc.github.io/2026/05/20/physics/hemlholtz-coil/"/>
+    <id>https://haidi-ustc.github.io/2026/05/20/physics/hemlholtz-coil/</id>
+    <published>2026-05-20T13:00:00.000Z</published>
+    <updated>2026-05-21T10:00:12.502Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;赫姆霍兹线圈与三线圈均匀磁场原理&quot;&gt;&lt;a href=&quot;#赫姆霍兹线圈与三线圈均匀磁场原理&quot; class=&quot;headerlink&quot; title=&quot;赫姆霍兹线圈与三线圈均匀磁场原理&quot;&gt;&lt;/a&gt;赫姆霍兹线圈与三线圈均匀磁场原理&lt;/h1&gt;&lt;p&gt;赫姆霍兹线圈是一种用于产生近似均匀磁场的经典结构。它由两个完全相同的同轴圆形线圈组成，两个线圈通以相同方向、相同大小的电流。当两个线圈中心间距等于线圈半径时，中心区域的磁场会变得非常平坦。&lt;/p&gt;
+&lt;p&gt;如果进一步加入第三个线圈，合理选择线圈位置和安匝比，可以比普通赫姆霍兹线圈获得更大的均匀磁场区域。本文从单个圆线圈的轴向磁场出发，推导赫姆霍兹双线圈的均匀性条件，并说明三线圈结构的改进原理。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
+    
+    
+    <category term="Helmholtz Coil" scheme="https://haidi-ustc.github.io/tags/Helmholtz-Coil/"/>
+    
+    <category term="Biot-Savart Law" scheme="https://haidi-ustc.github.io/tags/Biot-Savart-Law/"/>
+    
+    <category term="Magnetic Field" scheme="https://haidi-ustc.github.io/tags/Magnetic-Field/"/>
+    
+    <category term="Three-Coil System" scheme="https://haidi-ustc.github.io/tags/Three-Coil-System/"/>
+    
+    <category term="Uniform Magnetic Field" scheme="https://haidi-ustc.github.io/tags/Uniform-Magnetic-Field/"/>
+    
+  </entry>
   
   <entry>
     <title>通用势能模型笔记</title>

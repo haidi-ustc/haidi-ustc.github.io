@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="通用势能模型笔记, quantum chemitry, condensed materials, computer science, quantum computation">
+    <meta name="keywords" content="赫姆霍兹线圈与三线圈均匀磁场原理, quantum chemitry, condensed materials, computer science, quantum computation">
     <meta name="description" content="做平凡的事儿，做快乐的自己">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>通用势能模型笔记 | null</title>
+    <title>赫姆霍兹线圈与三线圈均匀磁场原理 | null</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -248,12 +248,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">通用势能模型笔记</h1>
+                    <h1 class="description center-align post-title">赫姆霍兹线圈与三线圈均匀磁场原理</h1>
                 </div>
             </div>
         </div>
@@ -369,16 +369,24 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/dft/">
-                                <span class="chip bg-color">dft</span>
+                            <a href="/tags/Helmholtz-Coil/">
+                                <span class="chip bg-color">Helmholtz Coil</span>
                             </a>
                         
-                            <a href="/tags/machine-learning/">
-                                <span class="chip bg-color">machine learning</span>
+                            <a href="/tags/Biot-Savart-Law/">
+                                <span class="chip bg-color">Biot-Savart Law</span>
                             </a>
                         
-                            <a href="/tags/atomistic-simulation/">
-                                <span class="chip bg-color">atomistic simulation</span>
+                            <a href="/tags/Magnetic-Field/">
+                                <span class="chip bg-color">Magnetic Field</span>
+                            </a>
+                        
+                            <a href="/tags/Three-Coil-System/">
+                                <span class="chip bg-color">Three-Coil System</span>
+                            </a>
+                        
+                            <a href="/tags/Uniform-Magnetic-Field/">
+                                <span class="chip bg-color">Uniform Magnetic Field</span>
                             </a>
                         
                     </div>
@@ -389,8 +397,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/materials/" class="post-category">
-                                materials
+                            <a href="/categories/physics/" class="post-category">
+                                physics
                             </a>
                         
                     </div>
@@ -402,7 +410,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-05-02
+                    2026-05-20
                 </div>
                 
 
@@ -411,14 +419,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.7k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    13 分
                 </div>
                 
 
@@ -438,52 +446,298 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="通用势能模型笔记"><a href="#通用势能模型笔记" class="headerlink" title="通用势能模型笔记"></a>通用势能模型笔记</h1><p>这两年，通用机器学习原子间势（Universal Machine Learning Interatomic Potentials, uMLIPs）已经不只是“更快的势函数”了。更准确的说法是：它们正在向“原子尺度基础模型”靠拢。和早期为单一材料、单一相区、单一任务定制的 MLIP 不同，uMLIPs 追求的是<strong>跨元素、跨结构维度、跨温压条件、跨任务</strong>的零样本可用性：训练一次，尽可能在金属、半导体、离子化合物、小分子、表面、界面甚至复杂反应环境中都能直接上手。MACE 的 foundation model 工作把这种思路说得很清楚：目标不是再做一个“某体系专用势”，而是做一个可以直接作为下游起点、并在少量数据上快速适配的通用原子模型。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2401.00096" title="[2401.00096] A foundation model for atomistic materials chemistry">arXiv</a>)</p>
-<p>但真正值得注意的，不是“它们能不能替代 DFT”这种过于宽泛的问题，而是<strong>在什么物理问题上，它们已经足够好；在什么问题上，它们还会系统性失真</strong>。这一点，近年的 benchmark 已经给出比宣传材料更有价值的答案：在平衡结构优化、常规弛豫和大规模筛选上，主流 uMLIPs 已经相当成熟；但一旦进入声子、缺陷、高压、低维体系、迁移势垒、界面反应这些更“挑剔”的问题，模型间差异会迅速放大，而且很多误差并不是随机噪声，而是有明确来源的系统偏差。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
-<h2 id="1-技术路线"><a href="#1-技术路线" class="headerlink" title="1. 技术路线"></a>1. 技术路线</h2><p>从方法演进看，uMLIPs 大致经历了三步。第一步是手工描述符时代，例如 Behler–Parrinello 一类方法，用人工设计的局域环境函数把原子邻域映射成固定长度特征；第二步是图神经网络时代，把“原子—键—邻域”直接表示成图，通过消息传递自动学习特征；第三步则是今天的主流路线：<strong>把物理对称性直接写进网络结构里</strong>，尤其是旋转、平移和原子置换对称性。这样做的核心收益，不只是“更优雅”，而是能显著减少模型为了“学会正确坐标变换”而浪费的数据量。MACE 的核心思想就是高阶等变消息传递；SevenNet 则明确建立在 NequIP 这类等变框架之上；CHGNet、MatterSim、ORB、DPA-3 分别走了不同的图网络或大模型路线，但本质上都在回答同一问题：如何在保持物理一致性的同时，把化学空间做大。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.07697?utm_source=chatgpt.com" title="MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields">arXiv</a>)</p>
-<p>这里有一个很容易被忽略的判断标准：<strong>一个模型是否真的适合作为“通用势”</strong>，不在于它在某个静态 benchmark 上分数高，而在于它是否能把“局域化学环境的表示”做得足够稳健。MACE 之所以很强，不只是因为它准，而是因为它把 ACE 的多体展开思想和等变消息传递结合起来，用更少的 message passing 步数表达更高体阶的相互作用。原论文强调，四体消息可以把常见 MPNN 需要五六层才能达到的表达能力，压缩到两层左右，这既提升了并行效率，也改善了学习曲线。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.07697?utm_source=chatgpt.com" title="MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields">arXiv</a>)</p>
-<h2 id="2-损失函数"><a href="#2-损失函数" class="headerlink" title="2. 损失函数"></a>2. 损失函数</h2><p>uMLIPs 的训练目标通常写成下面这种形式：</p>
-<p>$$ L &#x3D; p_E (E_{DFT} - E_{model})^2 + p_F \sum_i (F_{DFT,i} - F_{model,i})^2 + p_V (V_{DFT} - V_{model})^2 $$</p>
-<p>这个式子表面上只是一个加权最小二乘，真正重要的是它隐含了三个层次的物理约束：<strong>能量</strong>决定势能面的整体高度，<strong>力</strong>决定势能面的局部斜率，<strong>应力&#x2F;维里张量</strong>决定晶格响应和弹性信息。也就是说，模型不是只学“哪种构型更稳定”，而是在学一个完整的势能面局部几何。声子、弹性常数、迁移势垒、热容这类二阶或更高阶响应性质，本质上都建立在“势能面曲率”是否准确这个问题上。近年的声子 benchmark 也正是抓住这一点：如果模型在平衡附近的二阶导数不对，那么即使结构优化看起来很像 DFT，振动和热力学性质依然会系统性偏掉。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
-<p>这也是为什么“只看力 MAE”会有误导性。一个模型可以在平均力误差上不错，却在高能构型、缺陷邻域、过渡态附近把势能面整体压软；反过来，一个模型如果能把保守力场结构维持好，即便参数量没那么夸张，也可能在真实模拟里更稳定。很多近年的工作已经把评价重点从单点误差转向<strong>结构弛豫、动力学稳定性、响应性质和势能面探索能力</strong>，这是很正确的方向。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
-<h2 id="3-主流模型"><a href="#3-主流模型" class="headerlink" title="3. 主流模型"></a>3. 主流模型</h2><h3 id="3-1-MACE"><a href="#3-1-MACE" class="headerlink" title="3.1 MACE"></a>3.1 MACE</h3><p>如果只允许我给一个“最稳妥的通用起点”，我会先想到 MACE。原因不是它在所有 benchmark 都第一，而是它在<strong>精度、稳定性、可迁移性、微调友好性</strong>之间做得最均衡。MACE 的 foundation model 论文直接把它定位成 general-purpose atomistic model：从固体、液体、气体到界面和小分子，都能开箱即用；更关键的是，它明确把“少量数据微调后达到 ab initio 精度”作为设计目标，而不是额外附带的功能。后续关于 frozen transfer learning 的工作也说明，MACE-MP 在低数据 regime 下微调效率非常高，往往比同数据量从头训练更划算。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2401.00096" title="[2401.00096] A foundation model for atomistic materials chemistry">arXiv</a>)</p>
-<p>从架构上看，MACE 的优势在于高体阶等变消息传递，这使它比很多传统等变 GNN 更善于在较少层数下表达复杂局域相互作用。它不是最快的，但通常是“又准又不太折腾”的那个。需要注意的是，MACE 也并不免疫于通用势的经典问题：在缺陷、表面、迁移势垒和声子等任务上，它同样会出现 PES softening，只是程度常常比更早期模型轻。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.07697?utm_source=chatgpt.com" title="MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields">arXiv</a>)</p>
-<h3 id="3-2-SevenNet"><a href="#3-2-SevenNet" class="headerlink" title="3.2 SevenNet"></a>3.2 SevenNet</h3><p>SevenNet 的核心模型建立在 NequIP 之上，同时非常强调并行 MD 和大规模可用性。它的官方实现直接把“预训练通用势”和“微调接口”作为主要功能，并且支持 LAMMPS 并行模拟。近年的声子 benchmark 中，SevenNet-0 的表现已经明显进入第一梯队；而一项针对近 11,000 个弹性稳定材料的弹性性质 benchmark 预印本进一步指出，<strong>SevenNet 在弹性性质预测上是四个主流模型里最准确的</strong>，MACE 和 MatterSim 则在精度与效率之间更均衡，CHGNet 相对落后。这里要强调一下，这个弹性 benchmark 目前还是预印本，所以更适合当作趋势判断，而不是最终定论。(<a target="_blank" rel="noopener" href="https://github.com/MDIL-SNU/SevenNet" title="GitHub - MDIL-SNU&#x2F;SevenNet: SevenNet - a graph neural network interatomic potential package supporting efficient multi-GPU parallel molecular dynamics simulations. · GitHub">GitHub</a>)</p>
-<p>我对 SevenNet 的理解是：它代表了<strong>等变模型路线在工程可用性上的一次成熟落地</strong>。如果你的任务偏向弹性、结构响应、无机液体或电解质 MD，这类模型通常会比“只追求快”的路线更让人放心。与此同时，SevenNet 也不是“万能免疫体”。在一些出训练分布较远的液体、电解质或特殊化学环境中，它仍需要微调，相关工作已经展示了这一点。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2510.22999v1" title="Benchmarking Universal Machine Learning Interatomic Potentials for Elastic Property Prediction">arXiv</a>)</p>
-<h3 id="3-3-MatterSim"><a href="#3-3-MatterSim" class="headerlink" title="3.3 MatterSim"></a>3.3 MatterSim</h3><p>MatterSim 很有代表性，因为它提醒了一个事实：<strong>架构不一定越复杂越好，关键是数据覆盖和训练策略是否足够大、足够系统</strong>。MatterSim 基于 M3GNet 路线，但训练目标明确指向“跨元素、跨温度、跨压力”，论文摘要给出的覆盖范围是 0–5000 K 和最高 1000 GPa。更重要的是，在 2025 年的声子 benchmark 中，MatterSim-v1 在七个主流模型里是声子性质最准确的一个，误差分布接近以零为中心，甚至优于更复杂的等变模型。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2405.04967" title="[2405.04967] MatterSim: A Deep Learning Atomistic Model Across Elements, Temperatures and Pressures">arXiv</a>)</p>
-<p>不过，MatterSim 也有很明确的边界。官方仓库直说了：当前版本主要为<strong>体相材料的原子模拟</strong>设计，遇到表面、界面以及受长程相互作用显著影响的性质时，只能期待定性正确，不建议直接拿来做定量分析，最好先微调。也就是说，MatterSim 的强项非常突出：体相、热力学、声子、温压扩展；但一旦任务明显偏离 bulk inorganic 这条主航道，最好别把“通用”误读成“无需校正”。(<a target="_blank" rel="noopener" href="https://github.com/microsoft/mattersim" title="GitHub - microsoft&#x2F;mattersim: MatterSim: A deep learning atomistic model across elements, temperatures and pressures. · GitHub">GitHub</a>)</p>
-<h3 id="3-4-ORB-v3"><a href="#3-4-ORB-v3" class="headerlink" title="3.4 ORB-v3"></a>3.4 ORB-v3</h3><p>ORB-v3 的吸引力很直接：它把“速度—内存—精度”的 Pareto 前沿往前推了一大截。官方论文摘要给出的结论是，相比此前路线，它能在接近 SOTA 表现的同时，把延迟降低到原来的十分之一以下、内存占用降到八分之一以下。ORB 系列同时提供 conservative 和 direct 等不同模式，这本身就暴露出它的设计哲学：<strong>不是为了把物理约束做得最死，而是为了让大规模模拟真正跑得动</strong>。(<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2504.06231" title="[2504.06231] Orb-v3: atomistic simulation at scale">arXiv</a>)</p>
-<p>但 ORB 也是一个非常适合“按任务使用”的模型。2025 年的声子 benchmark 给出的结论很值得记住：ORB 在平衡几何上极其准确，但在声子这样依赖高阶导数和严格保守性的任务上，质量明显下降；作者把问题直接归因于其非保守力预测路径——力不是通过能量对坐标求导得到，而是网络单独输出。换句话说，ORB 特别适合高通量结构筛选、快速弛豫、超大系统搜索；但对于严格依赖能量守恒和局部曲率精度的任务，尤其是冻结声子、精细振动谱和某些 NVE 动力学问题，需要非常谨慎。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
-<h3 id="3-5-CHGNet"><a href="#3-5-CHGNet" class="headerlink" title="3.5 CHGNet"></a>3.5 CHGNet</h3><p>CHGNet 的独特之处，不在于它是否“全能”，而在于它把<strong>电荷&#x2F;磁矩信息显式带入图网络势</strong>。原始论文强调，CHGNet 预训练于 Materials Project Trajectory Dataset 上的能量、力、应力和磁矩，显式引入磁矩后，模型能够更好地刻画轨道占据与离子体系中的电子自由度。这也是它在锂电正极、扩散、相图等问题上经常被优先考虑的原因。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s42256-023-00716-3" title="CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling | Nature Machine Intelligence">Nature</a>)</p>
-<p>但如果问题集中在标准机械性质或“尽可能稳健的通用结构预测”上，CHGNet 往往不是第一选择。已有 benchmark 表明，它在声子和弹性任务上的整体表现不如 MatterSim、SevenNet 或 MACE。这个差异并不说明 CHGNet 不强，而是说明它更像一个<strong>带电子态偏好的专用型通用势</strong>：在合适场景里很有价值，在不对口的场景里不应强行拔高。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
-<h3 id="3-6-DPA-3"><a href="#3-6-DPA-3" class="headerlink" title="3.6 DPA-3"></a>3.6 DPA-3</h3><p>严格说，DPA-3 与其叫“单一通用势”，不如说更接近今天所谓 large atomistic model 的路线。其论文把它定位为为“大模型时代”设计的图网络架构，并报告了两个很关键信号：一是模型性能遵循 scaling law；二是作为在 OpenLAM-v1 上训练的 DPA-3.1-3M，它在 12 个下游任务上的整体零样本泛化误差最低之一。高压 benchmark 中，DPA3-v1-OpenLAM 也表现得很稳，结构体积误差随压力升高仍能维持较低水平。(<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2506.01686" title="A Graph Neural Network for the Era of Large Atomistic Models">arXiv</a>)</p>
-<p>所以我更愿意把 DPA-3 看作一个非常值得关注的方向：它不只是追求“某个模型更准”，而是在追求<strong>模型容量、数据规模、多任务训练与迁移能力之间的系统扩展规律</strong>。这条路线未来很可能会和今天的 uMLIP 概念逐渐合流。(<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2506.01686" title="A Graph Neural Network for the Era of Large Atomistic Models">arXiv</a>)</p>
-<h2 id="4-关键盲点"><a href="#4-关键盲点" class="headerlink" title="4. 关键盲点"></a>4. 关键盲点</h2><h3 id="4-1-PES-softening"><a href="#4-1-PES-softening" class="headerlink" title="4.1 PES softening"></a>4.1 PES softening</h3><p>近年最重要的一篇负面结果，几乎可以说直接改写了大家看待通用势的方法。那篇关于 PES softening 的工作指出，M3GNet、CHGNet 和 MACE-MP-0 都存在一致的势能面软化现象：能量和力在表面、缺陷、固溶体、离子迁移势垒、声子振动以及一般高能态上呈系统性低估。作者把根源归结为预训练数据对近平衡构型的偏采样：数据大量来自离子弛豫轨迹，因此模型在势阱附近学得很好，但对高能区域的曲率学习不足。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-024-01500-6" title="Systematic softening in universal machine learning interatomic potentials | npj Computational Materials">Nature</a>)</p>
-<p>这件事很重要，因为它解释了一个常见悖论：为什么有些模型结构优化看着很准，但一算缺陷形成能、声子频率、扩散势垒就开始“发软”。从数学上说，问题出在二阶导数；从物理上说，问题出在模型把势阱壁学得不够陡。也就是说，很多误差并不是偶然失败，而是<strong>由训练分布直接诱发的系统偏差</strong>。这类问题不是靠多跑几步 MD 能“平均掉”的。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-024-01500-6" title="Systematic softening in universal machine learning interatomic potentials | npj Computational Materials">Nature</a>)</p>
-<h3 id="4-2-高压测试"><a href="#4-2-高压测试" class="headerlink" title="4.2 高压测试"></a>4.2 高压测试</h3><p>“通用”如果不能过高压这一关，多少是有点名不副实的。2025 年的高压 benchmark 很有说服力：作者系统考察了 0–150 GPa 范围内多个主流 uMLIP，结论是原始模型普遍会随着压力上升而退化，只是退化幅度不同。M3GNet 在高压下体积误差显著放大；MatterSim、SevenNet、GRACE、ORB、DPA3 等模型更稳，但也不是完全不受影响。更关键的是，针对高压数据做微调后，模型性能能明显恢复，这说明问题主要还是训练覆盖不足，而不是这些架构天生不能做高压。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2508.17792v1" title="Universal Machine Learning Potentials under Pressure">arXiv</a>)</p>
-<p>我很赞同这篇工作的一个隐含判断：高压并不是特殊兴趣爱好，而是检验模型是否真正学到“可压缩的原子相互作用规律”的试金石。一个模型在常压附近表现优异，只能说明它在数据密集区工作良好；只有跨压力仍稳定，才更接近“物理基础模型”的标准。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2508.17792v1" title="Universal Machine Learning Potentials under Pressure">arXiv</a>)</p>
-<h3 id="4-3-低维体系"><a href="#4-3-低维体系" class="headerlink" title="4.3 低维体系"></a>4.3 低维体系</h3><p>另一个越来越清楚的现象是：很多现代 uMLIPs 在 3D 体相材料里已经非常强，但一旦降到 2D、1D、0D，精度会系统性下降。2025 年针对 0D–3D 全维度的 benchmark 明确指出，多数现代 uMLIPs 的预测准确率会随着维度降低而下降，尽管也有少数模型能维持相对稳定的表现。(<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2508.15614" title="Universal Machine Learning Potential for Systems with Reduced Dimensionality">arXiv</a>)</p>
-<p>这背后的原因并不神秘。低维体系的表面占比更大、局域配位更不饱和、长程相互作用和真空处理更敏感，而且训练集中常见的体相弛豫路径对它们并不构成良好代表。于是模型虽然“见过很多元素”，却未必“真正见过这种维度下的势能面形状”。所以如果研究对象是单层材料、纳米线、团簇、表面吸附或界面，最好默认：<strong>零样本结果可以拿来做初筛，但不能直接当最终定量答案</strong>。(<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2508.15614" title="Universal Machine Learning Potential for Systems with Reduced Dimensionality">arXiv</a>)</p>
-<h2 id="5-微调"><a href="#5-微调" class="headerlink" title="5. 微调"></a>5. 微调</h2><p>到这里，其实结论已经很明显了：uMLIPs 最有价值的地方，不是“完全不需要再训练”，而是它们把下游训练从“从零开始造势”变成了“在一个已经懂大量化学的模型上做校准”。这一点，近期关于 fine-tuning 的结果已经相当一致。一个跨五类主流框架的系统性研究显示，微调后力误差通常可以下降 <strong>5–15 倍</strong>，能量误差可改善 <strong>2–4 个数量级</strong>，而且这种提升几乎不依赖底层架构：MACE、SevenNet、MatterSim、ORB 这类路线最终都能被拉到接近 ab initio 的水平。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2511.05337v1" title="Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy">arXiv</a>)</p>
-<p>这说明一个很现实的问题：今天的 foundation uMLIP，真正角色更像<strong>高质量初始猜测器</strong>，而不是永远不必更新的终局模型。它把你所需的专用数据量从“几万到几十万构型”压缩到“少量、但高相关的数据”；真正决定能否做到近实验或近 DFT 精度的，不再只是模型大不大，而是你是否为目标体系补上了那一小块最关键的分布缺口。MACE 的 frozen transfer learning、SevenNet 在电解液上的微调、MatterSim 的官方 finetune 支持，都在同一个方向上收敛。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01727-x" title="Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning | npj Computational Materials">Nature</a>)</p>
-<p>所以在实际工作流里，我更推荐把“预训练 + 少量高质量微调”当成默认配置，而不是把“零样本通用”当成唯一目标。前者是真正能落地的 scientific workflow，后者更多是模型研发阶段的能力展示。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2511.05337v1" title="Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy">arXiv</a>)</p>
-<h2 id="6-建议"><a href="#6-建议" class="headerlink" title="6. 建议"></a>6. 建议</h2><p>如果任务是<strong>超大规模筛选、快速结构弛豫、优先看吞吐量</strong>，ORB-v3 这类模型很值得优先考虑；如果任务是<strong>常规材料模拟、想要尽量稳健的默认选项</strong>，MACE 往往最合适；如果任务更偏<strong>弹性、声子、结构响应</strong>，SevenNet 和 MatterSim 通常更值得优先测试；如果问题涉及<strong>磁矩、氧化还原、离子体系中的电子态耦合</strong>，CHGNet 仍然有明显优势；如果你关注的是<strong>大模型路线、跨数据集迁移和长期演化潜力</strong>，DPA-3 很值得跟进。(<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</p>
-<p>但无论选哪一个，真正靠谱的策略其实都差不多：<strong>先用通用势做预筛和预探索，再用针对目标体系的小规模 DFT 数据做微调，最后再上长时间尺度或高阶性质计算</strong>。这一套流程既承认 foundation model 的价值，也尊重它的边界。对今天的 uMLIPs 来说，这不是保守，而是专业。(<a target="_blank" rel="noopener" href="https://arxiv.org/html/2511.05337v1" title="Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy">arXiv</a>)</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
-<li>Batatia, I. et al. <em>A foundation model for atomistic materials chemistry</em>. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2401.00096" title="[2401.00096] A foundation model for atomistic materials chemistry">arXiv</a>)</li>
-<li>Batatia, I. et al. <em>MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields</em>. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2206.07697?utm_source=chatgpt.com" title="MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields">arXiv</a>)</li>
-<li>Deng, B. et al. <em>CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling</em>. (<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s42256-023-00716-3" title="CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling | Nature Machine Intelligence">Nature</a>)</li>
-<li>Yang, H. et al. <em>MatterSim: A Deep Learning Atomistic Model Across Elements, Temperatures and Pressures</em>. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2405.04967" title="[2405.04967] MatterSim: A Deep Learning Atomistic Model Across Elements, Temperatures and Pressures">arXiv</a>)</li>
-<li>Rhodes, B. et al. <em>Orb-v3: atomistic simulation at scale</em>. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2504.06231" title="[2504.06231] Orb-v3: atomistic simulation at scale">arXiv</a>)</li>
-<li>Zhang, D. et al. <em>A Graph Neural Network for the Era of Large Atomistic Models (DPA-3)</em>. (<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2506.01686" title="A Graph Neural Network for the Era of Large Atomistic Models">arXiv</a>)</li>
-<li>Loew, A. et al. <em>Systematic softening in universal machine learning interatomic potentials</em>. (<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-024-01500-6" title="Systematic softening in universal machine learning interatomic potentials | npj Computational Materials">Nature</a>)</li>
-<li>Loew, A. et al. <em>Universal machine learning interatomic potentials are ready for phonons</em>. (<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01650-1" title="Universal machine learning interatomic potentials are ready for phonons | npj Computational Materials">Nature</a>)</li>
-<li><em>Benchmarking Universal Machine Learning Interatomic Potentials for Elastic Property Prediction</em>（预印本）. (<a target="_blank" rel="noopener" href="https://arxiv.org/html/2510.22999v1" title="Benchmarking Universal Machine Learning Interatomic Potentials for Elastic Property Prediction">arXiv</a>)</li>
-<li>Loew, A. et al. <em>Universal Machine Learning Potentials under Pressure</em>（预印本）. (<a target="_blank" rel="noopener" href="https://arxiv.org/html/2508.17792v1" title="Universal Machine Learning Potentials under Pressure">arXiv</a>)</li>
-<li>Benedini, G. et al. <em>Universal Machine Learning Potential for Systems with Reduced Dimensionality</em>（预印本）. (<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2508.15614" title="Universal Machine Learning Potential for Systems with Reduced Dimensionality">arXiv</a>)</li>
-<li>Radova, M. et al. <em>Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning</em>. (<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41524-025-01727-x" title="Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning | npj Computational Materials">Nature</a>)</li>
-<li>Hänseroth, J. et al. <em>Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy</em>（预印本）. (<a target="_blank" rel="noopener" href="https://arxiv.org/html/2511.05337v1" title="Fine-Tuning Unifies Foundational Machine-learned Interatomic Potential Architectures at ab initio Accuracy">arXiv</a>)</li>
+                <h1 id="赫姆霍兹线圈与三线圈均匀磁场原理"><a href="#赫姆霍兹线圈与三线圈均匀磁场原理" class="headerlink" title="赫姆霍兹线圈与三线圈均匀磁场原理"></a>赫姆霍兹线圈与三线圈均匀磁场原理</h1><p>赫姆霍兹线圈是一种用于产生近似均匀磁场的经典结构。它由两个完全相同的同轴圆形线圈组成，两个线圈通以相同方向、相同大小的电流。当两个线圈中心间距等于线圈半径时，中心区域的磁场会变得非常平坦。</p>
+<p>如果进一步加入第三个线圈，合理选择线圈位置和安匝比，可以比普通赫姆霍兹线圈获得更大的均匀磁场区域。本文从单个圆线圈的轴向磁场出发，推导赫姆霍兹双线圈的均匀性条件，并说明三线圈结构的改进原理。</p>
+<span id="more"></span>
+
+<hr>
+<h2 id="1-单个圆形载流线圈的轴向磁场"><a href="#1-单个圆形载流线圈的轴向磁场" class="headerlink" title="1. 单个圆形载流线圈的轴向磁场"></a>1. 单个圆形载流线圈的轴向磁场</h2><p>设一个圆形线圈半径为 $R$，匝数为 $N$，电流为 $I$。线圈位于 $xy$ 平面，圆心在原点，轴线为 $z$ 轴。</p>
+<p>由毕奥-萨伐尔定律：</p>
+<h1 id="d-mathbf-B"><a href="#d-mathbf-B" class="headerlink" title="$$d\mathbf{B}"></a>$$<br>d\mathbf{B}</h1><p>\frac{\mu_0 I}{4\pi}<br>\frac{d\boldsymbol{\ell}\times \mathbf{r}}{r^3}<br>$$</p>
+<p>对于圆形线圈，在轴线上距离圆心为 $z$ 的点，磁场方向沿 $z$ 轴。积分后得到单个圆线圈的轴向磁场：</p>
+<h1 id="B-z"><a href="#B-z" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>\frac{\mu_0 N I R^2}{2(R^2+z^2)^{3&#x2F;2}}<br>$$</p>
+<p>其中：</p>
+<ul>
+<li>$\mu_0$ 是真空磁导率；</li>
+<li>$N$ 是线圈匝数；</li>
+<li>$I$ 是电流；</li>
+<li>$R$ 是线圈半径；</li>
+<li>$z$ 是观察点到线圈中心的轴向距离。</li>
 </ul>
+<p>在线圈中心 $z&#x3D;0$ 处：</p>
+<h1 id="B-0"><a href="#B-0" class="headerlink" title="$$B(0)"></a>$$<br>B(0)</h1><p>\frac{\mu_0 N I}{2R}<br>$$</p>
+<p>这个公式是分析赫姆霍兹线圈和多线圈系统的基础。</p>
+<hr>
+<h2 id="2-两个线圈的叠加：赫姆霍兹线圈"><a href="#2-两个线圈的叠加：赫姆霍兹线圈" class="headerlink" title="2. 两个线圈的叠加：赫姆霍兹线圈"></a>2. 两个线圈的叠加：赫姆霍兹线圈</h2><p>设两个相同线圈同轴放置，线圈半径均为 $R$，匝数均为 $N$，电流均为 $I$。两个线圈中心分别位于：</p>
+<p>$$<br>z &#x3D; -\frac{s}{2},<br>\qquad<br>z &#x3D; +\frac{s}{2}<br>$$</p>
+<p>其中 $s$ 是两个线圈中心之间的距离。</p>
+<p>根据磁场叠加原理，轴线上任意点 $z$ 处的总磁场为：</p>
+<h1 id="B-z-1"><a href="#B-z-1" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>\frac{\mu_0 N I R^2}{2}<br>\left[<br>\frac{1}{\left(R^2+(z-s&#x2F;2)^2\right)^{3&#x2F;2}}<br>+<br>\frac{1}{\left(R^2+(z+s&#x2F;2)^2\right)^{3&#x2F;2}}<br>\right]<br>$$</p>
+<p>由于系统关于 $z&#x3D;0$ 对称，中心附近的磁场展开只包含偶次项：</p>
+<h1 id="B-z-2"><a href="#B-z-2" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>B_0<br>+<br>A_2z^2<br>+<br>A_4z^4<br>+<br>A_6z^6<br>+<br>\cdots<br>$$</p>
+<p>如果希望中心区域磁场尽量均匀，就要尽量消除低阶变化项。由于一阶项因对称性自动为零，下一步就是令二阶项为零：</p>
+<p>$$<br>A_2 &#x3D; 0<br>$$</p>
+<p>解这个条件可以得到：</p>
+<p>$$<br>s &#x3D; R<br>$$</p>
+<p>这就是赫姆霍兹线圈的经典条件：<strong>两个线圈的中心间距等于线圈半径</strong>。</p>
+<hr>
+<h2 id="3-赫姆霍兹条件下的中心磁场"><a href="#3-赫姆霍兹条件下的中心磁场" class="headerlink" title="3. 赫姆霍兹条件下的中心磁场"></a>3. 赫姆霍兹条件下的中心磁场</h2><p>当：</p>
+<p>$$<br>s&#x3D;R<br>$$</p>
+<p>两个线圈分别位于：</p>
+<p>$$<br>z&#x3D;-\frac{R}{2},<br>\qquad<br>z&#x3D;+\frac{R}{2}<br>$$</p>
+<p>中心点 $z&#x3D;0$ 处的磁场为：</p>
+<h1 id="B-0-1"><a href="#B-0-1" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>2\cdot<br>\frac{\mu_0 N I R^2}{2\left(R^2+(R&#x2F;2)^2\right)^{3&#x2F;2}}<br>$$</p>
+<p>化简：</p>
+<h1 id="B-0-2"><a href="#B-0-2" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>\frac{\mu_0 N I R^2}<br>{\left(R^2+\frac{R^2}{4}\right)^{3&#x2F;2}}<br>$$</p>
+<h1 id="B-0-3"><a href="#B-0-3" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>\frac{\mu_0 N I R^2}<br>{\left(\frac{5}{4}R^2\right)^{3&#x2F;2}}<br>$$</p>
+<h1 id="B-0-4"><a href="#B-0-4" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>\left(\frac{4}{5}\right)^{3&#x2F;2}<br>\frac{\mu_0 N I}{R}<br>$$</p>
+<p>数值上：</p>
+<p>$$<br>\left(\frac{4}{5}\right)^{3&#x2F;2}<br>\approx 0.7155<br>$$</p>
+<p>所以：</p>
+<p>$$<br>B_0<br>\approx<br>0.7155<br>\frac{\mu_0 N I}{R}<br>$$</p>
+<hr>
+<h2 id="4-为什么赫姆霍兹线圈更均匀？"><a href="#4-为什么赫姆霍兹线圈更均匀？" class="headerlink" title="4. 为什么赫姆霍兹线圈更均匀？"></a>4. 为什么赫姆霍兹线圈更均匀？</h2><p>对于一般双线圈系统，中心附近磁场可以展开为：</p>
+<h1 id="B-z-3"><a href="#B-z-3" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>B_0<br>+<br>A_2z^2<br>+<br>A_4z^4<br>+<br>\cdots<br>$$</p>
+<p>当两个线圈的间距满足：</p>
+<p>$$<br>s&#x3D;R<br>$$</p>
+<p>时，有：</p>
+<p>$$<br>A_2&#x3D;0<br>$$</p>
+<p>于是中心附近变为：</p>
+<h1 id="B-z-4"><a href="#B-z-4" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>B_0<br>+<br>A_4z^4<br>+<br>A_6z^6<br>+<br>\cdots<br>$$</p>
+<p>也就是说，磁场偏离中心值的主导项从二阶变成四阶。因为 $z^4$ 在中心附近比 $z^2$ 小得多，所以磁场曲线会在中心附近形成一个更宽的“平台”。</p>
+<p>这就是赫姆霍兹线圈能够产生近似均匀磁场的根本原因。</p>
+<hr>
+<h2 id="5-用无量纲形式表示赫姆霍兹线圈"><a href="#5-用无量纲形式表示赫姆霍兹线圈" class="headerlink" title="5. 用无量纲形式表示赫姆霍兹线圈"></a>5. 用无量纲形式表示赫姆霍兹线圈</h2><p>令：</p>
+<p>$$<br>u&#x3D;\frac{z}{R}<br>$$</p>
+<p>对标准赫姆霍兹线圈，两个线圈位于：</p>
+<p>$$<br>u&#x3D;\pm \frac{1}{2}<br>$$</p>
+<p>轴向磁场可以写成：</p>
+<h1 id="B-u"><a href="#B-u" class="headerlink" title="$$B(u)"></a>$$<br>B(u)</h1><p>\frac{\mu_0 N I}{2R}<br>\left[<br>\frac{1}{\left(1+(u-1&#x2F;2)^2\right)^{3&#x2F;2}}<br>+<br>\frac{1}{\left(1+(u+1&#x2F;2)^2\right)^{3&#x2F;2}}<br>\right]<br>$$</p>
+<p>中心场为：</p>
+<h1 id="B-0-5"><a href="#B-0-5" class="headerlink" title="$$B(0)"></a>$$<br>B(0)</h1><p>\left(\frac{4}{5}\right)^{3&#x2F;2}<br>\frac{\mu_0 N I}{R}<br>$$</p>
+<p>归一化磁场为：</p>
+<p>$$<br>\frac{B(u)}{B(0)}<br>$$</p>
+<p>在中心附近，如果系统设计良好，这个值应尽量接近 1。</p>
+<hr>
+<h2 id="6-从两个线圈推广到多个线圈"><a href="#6-从两个线圈推广到多个线圈" class="headerlink" title="6. 从两个线圈推广到多个线圈"></a>6. 从两个线圈推广到多个线圈</h2><p>对于任意多个同轴圆线圈，只要线圈半径相同，都可以用叠加原理计算轴向磁场。</p>
+<p>设第 $i$ 个线圈位于 $z&#x3D;z_i$，半径为 $R$，匝数为 $N_i$，电流为 $I_i$，则轴线上总磁场为：</p>
+<h1 id="B-z-z"><a href="#B-z-z" class="headerlink" title="$$B_z(z)"></a>$$<br>B_z(z)</h1><p>\sum_i<br>\frac{\mu_0 N_i I_i R^2}<br>{2\left[R^2+(z-z_i)^2\right]^{3&#x2F;2}}<br>$$</p>
+<p>如果不同线圈半径不同，则推广为：</p>
+<h1 id="B-z-z-1"><a href="#B-z-z-1" class="headerlink" title="$$B_z(z)"></a>$$<br>B_z(z)</h1><p>\sum_i<br>\frac{\mu_0 N_i I_i R_i^2}<br>{2\left[R_i^2+(z-z_i)^2\right]^{3&#x2F;2}}<br>$$</p>
+<p>这就是多线圈系统轴向磁场分析的基本公式。</p>
+<hr>
+<h2 id="7-三线圈结构的基本思想"><a href="#7-三线圈结构的基本思想" class="headerlink" title="7. 三线圈结构的基本思想"></a>7. 三线圈结构的基本思想</h2><p>如果在赫姆霍兹双线圈中间再加入一个线圈，就得到一种三线圈系统。</p>
+<p>最常见的同半径三线圈模型为：</p>
+<p>$$<br>z&#x3D;-hR,\qquad z&#x3D;0,\qquad z&#x3D;+hR<br>$$</p>
+<p>其中：</p>
+<ul>
+<li>两个外侧线圈位于 $z&#x3D;\pm hR$；</li>
+<li>中心线圈位于 $z&#x3D;0$；</li>
+<li>三个线圈半径均为 $R$；</li>
+<li>外侧线圈安匝数为 $NI$；</li>
+<li>中心线圈安匝数为 $mNI$。</li>
+</ul>
+<p>这里 $m$ 是中心线圈相对于外侧线圈的安匝比。</p>
+<p>轴向磁场为：</p>
+<h1 id="B-z-5"><a href="#B-z-5" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>\frac{\mu_0 N I R^2}{2}<br>\left[<br>\frac{1}{\left(R^2+(z-hR)^2\right)^{3&#x2F;2}}<br>+<br>\frac{1}{\left(R^2+(z+hR)^2\right)^{3&#x2F;2}}<br>+<br>m<br>\frac{1}{\left(R^2+z^2\right)^{3&#x2F;2}}<br>\right]<br>$$</p>
+<p>写成无量纲形式，令：</p>
+<p>$$<br>u&#x3D;\frac{z}{R}<br>$$</p>
+<p>得到：</p>
+<h1 id="B-u-1"><a href="#B-u-1" class="headerlink" title="$$B(u)"></a>$$<br>B(u)</h1><p>\frac{\mu_0 N I}{2R}<br>\left[<br>\frac{1}{\left(1+(u-h)^2\right)^{3&#x2F;2}}<br>+<br>\frac{1}{\left(1+(u+h)^2\right)^{3&#x2F;2}}<br>+<br>m<br>\frac{1}{\left(1+u^2\right)^{3&#x2F;2}}<br>\right]<br>$$</p>
+<hr>
+<h2 id="8-三线圈为什么可以更均匀？"><a href="#8-三线圈为什么可以更均匀？" class="headerlink" title="8. 三线圈为什么可以更均匀？"></a>8. 三线圈为什么可以更均匀？</h2><p>三线圈系统仍然关于中心对称，因此中心附近展开为：</p>
+<h1 id="B-u-2"><a href="#B-u-2" class="headerlink" title="$$B(u)"></a>$$<br>B(u)</h1><p>B_0<br>+<br>C_2u^2<br>+<br>C_4u^4<br>+<br>C_6u^6<br>+<br>\cdots<br>$$</p>
+<p>赫姆霍兹双线圈只有一个主要几何参数，即线圈间距，所以通常只能令：</p>
+<p>$$<br>C_2&#x3D;0<br>$$</p>
+<p>而三线圈系统多了两个可调参数：</p>
+<p>$$<br>h,\qquad m<br>$$</p>
+<p>因此可以进一步令：</p>
+<p>$$<br>C_2&#x3D;0<br>$$</p>
+<p>并且：</p>
+<p>$$<br>C_4&#x3D;0<br>$$</p>
+<p>这样磁场展开变成：</p>
+<h1 id="B-u-3"><a href="#B-u-3" class="headerlink" title="$$B(u)"></a>$$<br>B(u)</h1><p>B_0<br>+<br>C_6u^6<br>+<br>C_8u^8<br>+<br>\cdots<br>$$</p>
+<p>这意味着中心附近磁场误差的主导项从四阶进一步提高到六阶。中心平台会更宽，均匀区更大。</p>
+<hr>
+<h2 id="9-一种常见的优化三线圈参数"><a href="#9-一种常见的优化三线圈参数" class="headerlink" title="9. 一种常见的优化三线圈参数"></a>9. 一种常见的优化三线圈参数</h2><p>对于三个同半径线圈，一种常见的优化结果是：</p>
+<p>$$<br>h\approx 0.76005<br>$$</p>
+<p>$$<br>m\approx 0.5315<br>$$</p>
+<p>也就是：</p>
+<p>$$<br>z&#x3D;\pm 0.76005R,\qquad z&#x3D;0<br>$$</p>
+<p>中心线圈安匝数约为外侧线圈的：</p>
+<p>$$<br>0.5315<br>$$</p>
+<p>如果三个线圈串联、流过相同电流，则可以通过匝数比实现：</p>
+<p>$$<br>\frac{N_{\text{center}}}{N_{\text{outer}}}<br>\approx<br>0.5315<br>$$</p>
+<p>一个整数近似是：</p>
+<h1 id="N-text-center-N-text-outer"><a href="#N-text-center-N-text-outer" class="headerlink" title="$$N_{\text{center}}:N_{\text{outer}}"></a>$$<br>N_{\text{center}}:N_{\text{outer}}</h1><p>59:111<br>$$</p>
+<p>此时三线圈轴向磁场为：</p>
+<h1 id="B-u-4"><a href="#B-u-4" class="headerlink" title="$$B(u)"></a>$$<br>B(u)</h1><p>\frac{\mu_0 N_{\text{outer}} I}{2R}<br>\left[<br>\frac{1}{\left(1+(u-0.76005)^2\right)^{3&#x2F;2}}<br>+<br>\frac{1}{\left(1+(u+0.76005)^2\right)^{3&#x2F;2}}<br>+<br>0.5315<br>\frac{1}{\left(1+u^2\right)^{3&#x2F;2}}<br>\right]<br>$$</p>
+<hr>
+<h2 id="10-三线圈中心磁场"><a href="#10-三线圈中心磁场" class="headerlink" title="10. 三线圈中心磁场"></a>10. 三线圈中心磁场</h2><p>三线圈中心场为：</p>
+<h1 id="B-0-6"><a href="#B-0-6" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>\frac{\mu_0 N_{\text{outer}} I}{2R}<br>\left[<br>\frac{2}{(1+h^2)^{3&#x2F;2}}<br>+<br>m<br>\right]<br>$$</p>
+<p>代入：</p>
+<p>$$<br>h&#x3D;0.76005,\qquad m&#x3D;0.5315<br>$$</p>
+<p>得到：</p>
+<p>$$<br>B_0<br>\approx<br>\frac{\mu_0 N_{\text{outer}} I}{2R}<br>(1.5408)<br>$$</p>
+<p>即：</p>
+<p>$$<br>B_0<br>\approx<br>0.7704<br>\frac{\mu_0 N_{\text{outer}} I}{R}<br>$$</p>
+<p>需要注意的是，这里的 $N_{\text{outer}}$ 是外侧线圈匝数。由于三线圈系统比双线圈多了一个中心线圈，所以不能只比较系数，还应考虑总匝数、电阻、功耗和发热。</p>
+<hr>
+<h2 id="11-双线圈与三线圈的比较"><a href="#11-双线圈与三线圈的比较" class="headerlink" title="11. 双线圈与三线圈的比较"></a>11. 双线圈与三线圈的比较</h2><table>
+<thead>
+<tr>
+<th>结构</th>
+<th>线圈位置</th>
+<th>安匝比</th>
+<th>中心展开主导误差</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单线圈</td>
+<td>$z&#x3D;0$</td>
+<td>1</td>
+<td>二阶</td>
+<td>中心场强，但均匀区小</td>
+</tr>
+<tr>
+<td>赫姆霍兹双线圈</td>
+<td>$z&#x3D;\pm0.5R$</td>
+<td>$1:1$</td>
+<td>四阶</td>
+<td>结构简单，均匀性较好</td>
+</tr>
+<tr>
+<td>优化三线圈</td>
+<td>$z&#x3D;0,\pm0.76005R$</td>
+<td>$0.5315:1:1$</td>
+<td>六阶</td>
+<td>均匀区更大，结构稍复杂</td>
+</tr>
+<tr>
+<td>Maxwell 三线圈</td>
+<td>半径、间距、匝数均可变</td>
+<td>优化设计</td>
+<td>可进一步优化</td>
+<td>设计自由度更高</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="12-工程设计时需要考虑的问题"><a href="#12-工程设计时需要考虑的问题" class="headerlink" title="12. 工程设计时需要考虑的问题"></a>12. 工程设计时需要考虑的问题</h2><h3 id="12-1-匝数与电流"><a href="#12-1-匝数与电流" class="headerlink" title="12.1 匝数与电流"></a>12.1 匝数与电流</h3><p>磁场大小与安匝数成正比：</p>
+<p>$$<br>B\propto NI<br>$$</p>
+<p>如果希望增大磁场，可以增加匝数或电流。但这会带来更多电阻、发热和电源负载。</p>
+<h3 id="12-2-发热问题"><a href="#12-2-发热问题" class="headerlink" title="12.2 发热问题"></a>12.2 发热问题</h3><p>线圈功耗为：</p>
+<p>$$<br>P&#x3D;I^2R_{\text{coil}}<br>$$</p>
+<p>长时间工作时需要考虑：</p>
+<ul>
+<li>导线直径；</li>
+<li>散热条件；</li>
+<li>允许温升；</li>
+<li>电源输出能力；</li>
+<li>线圈支架材料的耐热性。</li>
+</ul>
+<h3 id="12-3-几何误差"><a href="#12-3-几何误差" class="headerlink" title="12.3 几何误差"></a>12.3 几何误差</h3><p>均匀磁场设计对几何对准较敏感。常见误差包括：</p>
+<ul>
+<li>两个外线圈不完全同轴；</li>
+<li>线圈间距偏离设计值；</li>
+<li>线圈半径不一致；</li>
+<li>线圈绕制不均匀；</li>
+<li>中心线圈匝数比不准确。</li>
+</ul>
+<h3 id="12-4-外界磁场"><a href="#12-4-外界磁场" class="headerlink" title="12.4 外界磁场"></a>12.4 外界磁场</h3><p>实验中还要考虑地磁场和周围铁磁材料的影响。赫姆霍兹线圈不仅可以产生均匀磁场，也常用于抵消背景磁场。</p>
+<hr>
+<h2 id="13-数值计算方法"><a href="#13-数值计算方法" class="headerlink" title="13. 数值计算方法"></a>13. 数值计算方法</h2><p>如果要计算任意多线圈系统的轴向场，可以直接写成：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+mu0 <span class="token operator">=</span> <span class="token number">4</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi <span class="token operator">*</span> <span class="token number">1e-7</span>
+
+<span class="token keyword">def</span> <span class="token function">axial_field</span><span class="token punctuation">(</span>z<span class="token punctuation">,</span> coils<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    B <span class="token operator">=</span> <span class="token number">0.0</span>
+    <span class="token keyword">for</span> coil <span class="token keyword">in</span> coils<span class="token punctuation">:</span>
+        R <span class="token operator">=</span> coil<span class="token punctuation">[</span><span class="token string">"radius"</span><span class="token punctuation">]</span>
+        N <span class="token operator">=</span> coil<span class="token punctuation">[</span><span class="token string">"turns"</span><span class="token punctuation">]</span>
+        I <span class="token operator">=</span> coil<span class="token punctuation">[</span><span class="token string">"current"</span><span class="token punctuation">]</span>
+        z0 <span class="token operator">=</span> coil<span class="token punctuation">[</span><span class="token string">"z"</span><span class="token punctuation">]</span>
+        B <span class="token operator">+=</span> mu0 <span class="token operator">*</span> N <span class="token operator">*</span> I <span class="token operator">*</span> R<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> <span class="token punctuation">(</span>R<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">+</span> <span class="token punctuation">(</span>z <span class="token operator">-</span> z0<span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">1.5</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> B
+
+R <span class="token operator">=</span> <span class="token number">1.0</span>
+I <span class="token operator">=</span> <span class="token number">1.0</span>
+N <span class="token operator">=</span> <span class="token number">100</span>
+
+<span class="token comment"># Helmholtz 双线圈</span>
+helmholtz <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">&#123;</span><span class="token string">"radius"</span><span class="token punctuation">:</span> R<span class="token punctuation">,</span> <span class="token string">"turns"</span><span class="token punctuation">:</span> N<span class="token punctuation">,</span> <span class="token string">"current"</span><span class="token punctuation">:</span> I<span class="token punctuation">,</span> <span class="token string">"z"</span><span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">0.5</span> <span class="token operator">*</span> R<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#123;</span><span class="token string">"radius"</span><span class="token punctuation">:</span> R<span class="token punctuation">,</span> <span class="token string">"turns"</span><span class="token punctuation">:</span> N<span class="token punctuation">,</span> <span class="token string">"current"</span><span class="token punctuation">:</span> I<span class="token punctuation">,</span> <span class="token string">"z"</span><span class="token punctuation">:</span> <span class="token operator">+</span><span class="token number">0.5</span> <span class="token operator">*</span> R<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+<span class="token comment"># 优化三线圈</span>
+triple <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">&#123;</span><span class="token string">"radius"</span><span class="token punctuation">:</span> R<span class="token punctuation">,</span> <span class="token string">"turns"</span><span class="token punctuation">:</span> N<span class="token punctuation">,</span> <span class="token string">"current"</span><span class="token punctuation">:</span> I<span class="token punctuation">,</span> <span class="token string">"z"</span><span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">0.76005</span> <span class="token operator">*</span> R<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#123;</span><span class="token string">"radius"</span><span class="token punctuation">:</span> R<span class="token punctuation">,</span> <span class="token string">"turns"</span><span class="token punctuation">:</span> <span class="token number">0.5315</span> <span class="token operator">*</span> N<span class="token punctuation">,</span> <span class="token string">"current"</span><span class="token punctuation">:</span> I<span class="token punctuation">,</span> <span class="token string">"z"</span><span class="token punctuation">:</span> <span class="token number">0.0</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#123;</span><span class="token string">"radius"</span><span class="token punctuation">:</span> R<span class="token punctuation">,</span> <span class="token string">"turns"</span><span class="token punctuation">:</span> N<span class="token punctuation">,</span> <span class="token string">"current"</span><span class="token punctuation">:</span> I<span class="token punctuation">,</span> <span class="token string">"z"</span><span class="token punctuation">:</span> <span class="token operator">+</span><span class="token number">0.76005</span> <span class="token operator">*</span> R<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+
+zs <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.5</span> <span class="token operator">*</span> R<span class="token punctuation">,</span> <span class="token number">1.5</span> <span class="token operator">*</span> R<span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+
+B_helmholtz <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span>axial_field<span class="token punctuation">(</span>z<span class="token punctuation">,</span> helmholtz<span class="token punctuation">)</span> <span class="token keyword">for</span> z <span class="token keyword">in</span> zs<span class="token punctuation">]</span><span class="token punctuation">)</span>
+B_triple <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span>axial_field<span class="token punctuation">(</span>z<span class="token punctuation">,</span> triple<span class="token punctuation">)</span> <span class="token keyword">for</span> z <span class="token keyword">in</span> zs<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+B_helmholtz_norm <span class="token operator">=</span> B_helmholtz <span class="token operator">/</span> axial_field<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> helmholtz<span class="token punctuation">)</span>
+B_triple_norm <span class="token operator">=</span> B_triple <span class="token operator">/</span> axial_field<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> triple<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>归一化后可以比较：</p>
+<p>$$<br>\frac{B(z)}{B(0)}<br>$$</p>
+<p>越接近 1，说明该位置磁场越接近中心磁场。</p>
+<hr>
+<h2 id="14-与可视化程序的对应关系"><a href="#14-与可视化程序的对应关系" class="headerlink" title="14. 与可视化程序的对应关系"></a>14. 与可视化程序的对应关系</h2><p>在交互式 HTML 可视化中，可以使用下面的通用表达式计算轴线场：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">axialB</span><span class="token punctuation">(</span><span class="token parameter">z<span class="token punctuation">,</span> coils</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">let</span> <span class="token constant">B</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> coil <span class="token keyword">of</span> coils<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">const</span> <span class="token constant">R</span> <span class="token operator">=</span> coil<span class="token punctuation">.</span>radius<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token constant">N</span> <span class="token operator">=</span> coil<span class="token punctuation">.</span>turns<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> <span class="token constant">I</span> <span class="token operator">=</span> coil<span class="token punctuation">.</span>current<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> z0 <span class="token operator">=</span> coil<span class="token punctuation">.</span>z<span class="token punctuation">;</span>
+    <span class="token constant">B</span> <span class="token operator">+=</span> mu0 <span class="token operator">*</span> <span class="token constant">N</span> <span class="token operator">*</span> <span class="token constant">I</span> <span class="token operator">*</span> <span class="token constant">R</span> <span class="token operator">*</span> <span class="token constant">R</span> <span class="token operator">/</span>
+      <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token constant">R</span> <span class="token operator">*</span> <span class="token constant">R</span> <span class="token operator">+</span> <span class="token punctuation">(</span>z <span class="token operator">-</span> z0<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>z <span class="token operator">-</span> z0<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> <span class="token constant">B</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>对于三维空间任意点，则应使用毕奥-萨伐尔定律进行数值积分：</p>
+<p>$$<br>\mathbf{B}(\mathbf{r})<br>\approx<br>\frac{\mu_0 I}{4\pi}<br>\sum_j<br>\frac{<br>\Delta\boldsymbol{\ell}_j<br>\times<br>(\mathbf{r}-\mathbf{r}_j)<br>}<br>{<br>|\mathbf{r}-\mathbf{r}_j|^3<br>}<br>$$</p>
+<p>这个方法适合：</p>
+<ul>
+<li>单线圈；</li>
+<li>赫姆霍兹双线圈；</li>
+<li>三线圈；</li>
+<li>多线圈阵列；</li>
+<li>非标准间距；</li>
+<li>不同匝数；</li>
+<li>不同电流；</li>
+<li>任意空间点磁场可视化。</li>
+</ul>
+<hr>
+<h2 id="15-小结"><a href="#15-小结" class="headerlink" title="15. 小结"></a>15. 小结</h2><p>赫姆霍兹线圈的核心思想是利用两个对称线圈的磁场叠加，使中心区域的低阶非均匀项相互抵消。</p>
+<p>标准赫姆霍兹双线圈满足：</p>
+<p>$$<br>s&#x3D;R<br>$$</p>
+<p>中心磁场为：</p>
+<h1 id="B-0-7"><a href="#B-0-7" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>\left(\frac{4}{5}\right)^{3&#x2F;2}<br>\frac{\mu_0 N I}{R}<br>$$</p>
+<p>三线圈结构通过加入中心补偿线圈，进一步扩大均匀磁场区域。一个常见同半径优化结构为：</p>
+<p>$$<br>z&#x3D;0,\quad z&#x3D;\pm0.76005R<br>$$</p>
+<p>$$<br>(NI)<em>{\text{center}}<br>\approx<br>0.5315<br>(NI)</em>{\text{outer}}<br>$$</p>
+<p>它可以使中心附近的磁场变化项进一步降低，从而获得比普通赫姆霍兹线圈更宽的均匀磁场平台。</p>
+<hr>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><p>J. B. Tatum, <em>Electricity and Magnetism</em>, LibreTexts: Helmholtz Coils<br><a target="_blank" rel="noopener" href="https://phys.libretexts.org/Bookshelves/Electricity_and_Magnetism/Electricity_and_Magnetism_%28Tatum%29/06%3A_The_Magnetic_Effect_of_an_Electric_Current/6.07%3A_Helmholtz_Coils">https://phys.libretexts.org/Bookshelves/Electricity_and_Magnetism/Electricity_and_Magnetism_%28Tatum%29/06%3A_The_Magnetic_Effect_of_an_Electric_Current/6.07%3A_Helmholtz_Coils</a></p>
+</li>
+<li><p>OpenStax University Physics, Magnetic Field of a Current Loop<br><a target="_blank" rel="noopener" href="https://openstax.org/books/university-physics-volume-2/pages/12-4-magnetic-field-of-a-current-loop">https://openstax.org/books/university-physics-volume-2/pages/12-4-magnetic-field-of-a-current-loop</a></p>
+</li>
+<li><p>J. Wang, S. She, and S. Zhang, “An improved Helmholtz coil and analysis of its magnetic field homogeneity,” <em>Review of Scientific Instruments</em>, 73, 2175 (2002).<br><a target="_blank" rel="noopener" href="https://pubs.aip.org/aip/rsi/article-pdf/73/5/2175/19262939/2175_1_online.pdf">https://pubs.aip.org/aip/rsi/article-pdf/73/5/2175/19262939/2175_1_online.pdf</a></p>
+</li>
+<li><p>Helmholtz coil overview<br><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Helmholtz_coil">https://en.wikipedia.org/wiki/Helmholtz_coil</a></p>
+</li>
+</ol>
 
                 
             </div>
@@ -500,7 +754,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">ustc-haidi</a>
+                    <a href="/about" rel="external nofollow noreferrer">haidi-ustc</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -510,7 +764,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://haidi-ustc.github.io/2026/05/02/materials/umlip/">https://haidi-ustc.github.io/2026/05/02/materials/umlip/</a>
+                    <a href="https://haidi-ustc.github.io/2026/05/20/physics/hemlholtz-coil/">https://haidi-ustc.github.io/2026/05/20/physics/hemlholtz-coil/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -523,7 +777,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">ustc-haidi</a>
+                    <a href="/about" target="_blank">haidi-ustc</a>
                     !
                 </span>
             </div>
@@ -548,16 +802,24 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/dft/">
-                                    <span class="chip bg-color">dft</span>
+                                <a href="/tags/Helmholtz-Coil/">
+                                    <span class="chip bg-color">Helmholtz Coil</span>
                                 </a>
                             
-                                <a href="/tags/machine-learning/">
-                                    <span class="chip bg-color">machine learning</span>
+                                <a href="/tags/Biot-Savart-Law/">
+                                    <span class="chip bg-color">Biot-Savart Law</span>
                                 </a>
                             
-                                <a href="/tags/atomistic-simulation/">
-                                    <span class="chip bg-color">atomistic simulation</span>
+                                <a href="/tags/Magnetic-Field/">
+                                    <span class="chip bg-color">Magnetic Field</span>
+                                </a>
+                            
+                                <a href="/tags/Three-Coil-System/">
+                                    <span class="chip bg-color">Three-Coil System</span>
+                                </a>
+                            
+                                <a href="/tags/Uniform-Magnetic-Field/">
+                                    <span class="chip bg-color">Uniform Magnetic Field</span>
                                 </a>
                             
                         </div>
@@ -727,9 +989,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2026/05/20/physics/hemlholtz-coil/">
                     <div class="card-image">
@@ -748,9 +1011,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-05-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-05-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -763,6 +1026,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -797,13 +1061,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/05/02/algorithm/mech2d/">
+                <a href="/2026/05/02/materials/umlip/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Mech2d：二维弹性高通量计算框架">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="通用势能模型笔记">
                         
-                        <span class="card-title">Mech2d：二维弹性高通量计算框架</span>
+                        <span class="card-title">通用势能模型笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -820,8 +1084,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/algorithm/" class="post-category">
-                                    algorithm
+                            <a href="/categories/materials/" class="post-category">
+                                    materials
                                 </a>
                             
                             
@@ -831,16 +1095,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/material/">
-                        <span class="chip bg-color">material</span>
-                    </a>
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
                     <a href="/tags/dft/">
                         <span class="chip bg-color">dft</span>
+                    </a>
+                    
+                    <a href="/tags/machine-learning/">
+                        <span class="chip bg-color">machine learning</span>
+                    </a>
+                    
+                    <a href="/tags/atomistic-simulation/">
+                        <span class="chip bg-color">atomistic simulation</span>
                     </a>
                     
                 </div>
