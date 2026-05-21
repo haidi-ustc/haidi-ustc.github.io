@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2026-05-21T10:51:57.744Z</updated>
+  <updated>2026-05-21T11:14:08.871Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>离子键、共价键与金属键</title>
+    <link href="https://haidi-ustc.github.io/2026/05/21/chemistry/bond/"/>
+    <id>https://haidi-ustc.github.io/2026/05/21/chemistry/bond/</id>
+    <published>2026-05-21T06:30:00.000Z</published>
+    <updated>2026-05-21T11:14:08.871Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;原子通过化学键结合成分子、离子晶体、金属晶体或共价网络晶体。宏观上，化学键决定了物质的结构、熔点、硬度、电导率、延展性和化学反应活性；微观上，化学键的主要来源是带电粒子之间的电磁相互作用，尤其是电子与原子核之间的吸引、电子之间的排斥以及原子核之间的排斥。&lt;/p&gt;
+&lt;p&gt;如果</summary>
+        
+      
+    
+    
+    
+    <category term="chemistry" scheme="https://haidi-ustc.github.io/categories/chemistry/"/>
+    
+    
+    <category term="离子键" scheme="https://haidi-ustc.github.io/tags/%E7%A6%BB%E5%AD%90%E9%94%AE/"/>
+    
+    <category term="共价键" scheme="https://haidi-ustc.github.io/tags/%E5%85%B1%E4%BB%B7%E9%94%AE/"/>
+    
+    <category term="金属键" scheme="https://haidi-ustc.github.io/tags/%E9%87%91%E5%B1%9E%E9%94%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>通电螺线管磁场的完整推导</title>
