@@ -88,11 +88,11 @@
     <category term="materials" scheme="https://haidi-ustc.github.io/categories/materials/"/>
     
     
+    <category term="dft" scheme="https://haidi-ustc.github.io/tags/dft/"/>
+    
     <category term="machine learning" scheme="https://haidi-ustc.github.io/tags/machine-learning/"/>
     
     <category term="atomistic simulation" scheme="https://haidi-ustc.github.io/tags/atomistic-simulation/"/>
-    
-    <category term="dft" scheme="https://haidi-ustc.github.io/tags/dft/"/>
     
   </entry>
   
