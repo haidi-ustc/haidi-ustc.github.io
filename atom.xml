@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2026-05-21T10:12:45.149Z</updated>
+  <updated>2026-05-21T10:47:15.103Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通电螺线管磁场的完整推导</title>
+    <link href="https://haidi-ustc.github.io/2026/05/21/physics/solenoid/"/>
+    <id>https://haidi-ustc.github.io/2026/05/21/physics/solenoid/</id>
+    <published>2026-05-21T02:30:00.000Z</published>
+    <updated>2026-05-21T10:47:15.103Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我们考虑一个半径为 $a$、总长度为 $L$ 的密绕螺线管。导线沿圆柱面以等距螺旋线方式缠绕，螺距为 $h$（相邻两匝之间的轴向距离），总匝数 $N &amp;#x3D; L&amp;#x2F;h$。设导线中通有恒定电流</summary>
+        
+      
+    
+    
+    
+    <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
+    
+    
+    <category term="电磁学" scheme="https://haidi-ustc.github.io/tags/%E7%94%B5%E7%A3%81%E5%AD%A6/"/>
+    
+    <category term="螺线管" scheme="https://haidi-ustc.github.io/tags/%E8%9E%BA%E7%BA%BF%E7%AE%A1/"/>
+    
+    <category term="Biot-Savart定律" scheme="https://haidi-ustc.github.io/tags/Biot-Savart%E5%AE%9A%E5%BE%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>赫姆霍兹线圈与三线圈均匀磁场原理</title>
