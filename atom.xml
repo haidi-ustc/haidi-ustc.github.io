@@ -67,11 +67,11 @@
     <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
     
     
+    <category term="Biot-Savart定律" scheme="https://haidi-ustc.github.io/tags/Biot-Savart%E5%AE%9A%E5%BE%8B/"/>
+    
     <category term="电磁学" scheme="https://haidi-ustc.github.io/tags/%E7%94%B5%E7%A3%81%E5%AD%A6/"/>
     
     <category term="螺线管" scheme="https://haidi-ustc.github.io/tags/%E8%9E%BA%E7%BA%BF%E7%AE%A1/"/>
-    
-    <category term="Biot-Savart定律" scheme="https://haidi-ustc.github.io/tags/Biot-Savart%E5%AE%9A%E5%BE%8B/"/>
     
   </entry>
   
@@ -80,7 +80,7 @@
     <link href="https://haidi-ustc.github.io/2026/05/20/physics/hemlholtz-coil/"/>
     <id>https://haidi-ustc.github.io/2026/05/20/physics/hemlholtz-coil/</id>
     <published>2026-05-20T13:00:00.000Z</published>
-    <updated>2026-05-21T10:12:45.149Z</updated>
+    <updated>2026-05-21T11:17:12.634Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;赫姆霍兹线圈与三线圈均匀磁场原理&quot;&gt;&lt;a href=&quot;#赫姆霍兹线圈与三线圈均匀磁场原理&quot; class=&quot;headerlink&quot; title=&quot;赫姆霍兹线圈与三线圈均匀磁场原理&quot;&gt;&lt;/a&gt;赫姆霍兹线圈与三线圈均匀磁场原理&lt;/h1&gt;&lt;p&gt;赫姆霍兹线圈是一种用于产生近似均匀磁场的经典结构。它由两个完全相同的同轴圆形线圈组成，两个线圈通以相同方向、相同大小的电流。当两个线圈中心间距等于线圈半径时，中心区域的磁场会变得非常平坦。&lt;/p&gt;
@@ -91,9 +91,9 @@
     <category term="physics" scheme="https://haidi-ustc.github.io/categories/physics/"/>
     
     
-    <category term="Helmholtz Coil" scheme="https://haidi-ustc.github.io/tags/Helmholtz-Coil/"/>
+    <category term="Helmholtz线圈" scheme="https://haidi-ustc.github.io/tags/Helmholtz%E7%BA%BF%E5%9C%88/"/>
     
-    <category term="Biot-Savart Law" scheme="https://haidi-ustc.github.io/tags/Biot-Savart-Law/"/>
+    <category term="Biot-Savart定律" scheme="https://haidi-ustc.github.io/tags/Biot-Savart%E5%AE%9A%E5%BE%8B/"/>
     
   </entry>
   
