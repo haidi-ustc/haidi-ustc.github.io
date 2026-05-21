@@ -377,18 +377,6 @@
                                 <span class="chip bg-color">Biot-Savart Law</span>
                             </a>
                         
-                            <a href="/tags/Magnetic-Field/">
-                                <span class="chip bg-color">Magnetic Field</span>
-                            </a>
-                        
-                            <a href="/tags/Three-Coil-System/">
-                                <span class="chip bg-color">Three-Coil System</span>
-                            </a>
-                        
-                            <a href="/tags/Uniform-Magnetic-Field/">
-                                <span class="chip bg-color">Uniform Magnetic Field</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -419,14 +407,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    7 分
                 </div>
                 
 
@@ -450,146 +438,36 @@
 <p>如果进一步加入第三个线圈，合理选择线圈位置和安匝比，可以比普通赫姆霍兹线圈获得更大的均匀磁场区域。本文从单个圆线圈的轴向磁场出发，推导赫姆霍兹双线圈的均匀性条件，并说明三线圈结构的改进原理。</p>
 <span id="more"></span>
 
-<hr>
-<h2 id="1-单个圆形载流线圈的轴向磁场"><a href="#1-单个圆形载流线圈的轴向磁场" class="headerlink" title="1. 单个圆形载流线圈的轴向磁场"></a>1. 单个圆形载流线圈的轴向磁场</h2><p>设一个圆形线圈半径为 $R$，匝数为 $N$，电流为 $I$。线圈位于 $xy$ 平面，圆心在原点，轴线为 $z$ 轴。</p>
+<h2 id="单线圈轴向磁场"><a href="#单线圈轴向磁场" class="headerlink" title="单线圈轴向磁场"></a>单线圈轴向磁场</h2><p>设一个圆形线圈半径为 $R$，匝数为 $N$，电流为 $I$。线圈位于 $xy$ 平面，圆心在原点，轴线为 $z$ 轴。</p>
 <p>由毕奥-萨伐尔定律：</p>
-<h1 id="d-mathbf-B"><a href="#d-mathbf-B" class="headerlink" title="$$d\mathbf{B}"></a>$$<br>d\mathbf{B}</h1><p>\frac{\mu_0 I}{4\pi}<br>\frac{d\boldsymbol{\ell}\times \mathbf{r}}{r^3}<br>$$</p>
+<p>$d\mathbf{B} &#x3D; \frac{\mu_0 I}{4\pi} \frac{d\boldsymbol{\ell}\times \mathbf{r}}{r^3} $</p>
 <p>对于圆形线圈，在轴线上距离圆心为 $z$ 的点，磁场方向沿 $z$ 轴。积分后得到单个圆线圈的轴向磁场：</p>
-<h1 id="B-z"><a href="#B-z" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>\frac{\mu_0 N I R^2}{2(R^2+z^2)^{3&#x2F;2}}<br>$$</p>
-<p>其中：</p>
-<ul>
-<li>$\mu_0$ 是真空磁导率；</li>
-<li>$N$ 是线圈匝数；</li>
-<li>$I$ 是电流；</li>
-<li>$R$ 是线圈半径；</li>
-<li>$z$ 是观察点到线圈中心的轴向距离。</li>
-</ul>
-<p>在线圈中心 $z&#x3D;0$ 处：</p>
-<h1 id="B-0"><a href="#B-0" class="headerlink" title="$$B(0)"></a>$$<br>B(0)</h1><p>\frac{\mu_0 N I}{2R}<br>$$</p>
-<p>这个公式是分析赫姆霍兹线圈和多线圈系统的基础。</p>
-<hr>
-<h2 id="2-两个线圈的叠加：赫姆霍兹线圈"><a href="#2-两个线圈的叠加：赫姆霍兹线圈" class="headerlink" title="2. 两个线圈的叠加：赫姆霍兹线圈"></a>2. 两个线圈的叠加：赫姆霍兹线圈</h2><p>设两个相同线圈同轴放置，线圈半径均为 $R$，匝数均为 $N$，电流均为 $I$。两个线圈中心分别位于：</p>
-<p>$$<br>z &#x3D; -\frac{s}{2},<br>\qquad<br>z &#x3D; +\frac{s}{2}<br>$$</p>
-<p>其中 $s$ 是两个线圈中心之间的距离。</p>
-<p>根据磁场叠加原理，轴线上任意点 $z$ 处的总磁场为：</p>
-<h1 id="B-z-1"><a href="#B-z-1" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>\frac{\mu_0 N I R^2}{2}<br>\left[<br>\frac{1}{\left(R^2+(z-s&#x2F;2)^2\right)^{3&#x2F;2}}<br>+<br>\frac{1}{\left(R^2+(z+s&#x2F;2)^2\right)^{3&#x2F;2}}<br>\right]<br>$$</p>
-<p>由于系统关于 $z&#x3D;0$ 对称，中心附近的磁场展开只包含偶次项：</p>
-<h1 id="B-z-2"><a href="#B-z-2" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>B_0<br>+<br>A_2z^2<br>+<br>A_4z^4<br>+<br>A_6z^6<br>+<br>\cdots<br>$$</p>
-<p>如果希望中心区域磁场尽量均匀，就要尽量消除低阶变化项。由于一阶项因对称性自动为零，下一步就是令二阶项为零：</p>
-<p>$$<br>A_2 &#x3D; 0<br>$$</p>
-<p>解这个条件可以得到：</p>
-<p>$$<br>s &#x3D; R<br>$$</p>
-<p>这就是赫姆霍兹线圈的经典条件：<strong>两个线圈的中心间距等于线圈半径</strong>。</p>
-<hr>
-<h2 id="3-赫姆霍兹条件下的中心磁场"><a href="#3-赫姆霍兹条件下的中心磁场" class="headerlink" title="3. 赫姆霍兹条件下的中心磁场"></a>3. 赫姆霍兹条件下的中心磁场</h2><p>当：</p>
-<p>$$<br>s&#x3D;R<br>$$</p>
-<p>两个线圈分别位于：</p>
-<p>$$<br>z&#x3D;-\frac{R}{2},<br>\qquad<br>z&#x3D;+\frac{R}{2}<br>$$</p>
-<p>中心点 $z&#x3D;0$ 处的磁场为：</p>
-<h1 id="B-0-1"><a href="#B-0-1" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>2\cdot<br>\frac{\mu_0 N I R^2}{2\left(R^2+(R&#x2F;2)^2\right)^{3&#x2F;2}}<br>$$</p>
-<p>化简：</p>
-<h1 id="B-0-2"><a href="#B-0-2" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>\frac{\mu_0 N I R^2}<br>{\left(R^2+\frac{R^2}{4}\right)^{3&#x2F;2}}<br>$$</p>
-<h1 id="B-0-3"><a href="#B-0-3" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>\frac{\mu_0 N I R^2}<br>{\left(\frac{5}{4}R^2\right)^{3&#x2F;2}}<br>$$</p>
-<h1 id="B-0-4"><a href="#B-0-4" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>\left(\frac{4}{5}\right)^{3&#x2F;2}<br>\frac{\mu_0 N I}{R}<br>$$</p>
-<p>数值上：</p>
-<p>$$<br>\left(\frac{4}{5}\right)^{3&#x2F;2}<br>\approx 0.7155<br>$$</p>
-<p>所以：</p>
-<p>$$<br>B_0<br>\approx<br>0.7155<br>\frac{\mu_0 N I}{R}<br>$$</p>
-<hr>
-<h2 id="4-为什么赫姆霍兹线圈更均匀？"><a href="#4-为什么赫姆霍兹线圈更均匀？" class="headerlink" title="4. 为什么赫姆霍兹线圈更均匀？"></a>4. 为什么赫姆霍兹线圈更均匀？</h2><p>对于一般双线圈系统，中心附近磁场可以展开为：</p>
-<h1 id="B-z-3"><a href="#B-z-3" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>B_0<br>+<br>A_2z^2<br>+<br>A_4z^4<br>+<br>\cdots<br>$$</p>
-<p>当两个线圈的间距满足：</p>
-<p>$$<br>s&#x3D;R<br>$$</p>
-<p>时，有：</p>
-<p>$$<br>A_2&#x3D;0<br>$$</p>
-<p>于是中心附近变为：</p>
-<h1 id="B-z-4"><a href="#B-z-4" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>B_0<br>+<br>A_4z^4<br>+<br>A_6z^6<br>+<br>\cdots<br>$$</p>
-<p>也就是说，磁场偏离中心值的主导项从二阶变成四阶。因为 $z^4$ 在中心附近比 $z^2$ 小得多，所以磁场曲线会在中心附近形成一个更宽的“平台”。</p>
-<p>这就是赫姆霍兹线圈能够产生近似均匀磁场的根本原因。</p>
-<hr>
-<h2 id="5-用无量纲形式表示赫姆霍兹线圈"><a href="#5-用无量纲形式表示赫姆霍兹线圈" class="headerlink" title="5. 用无量纲形式表示赫姆霍兹线圈"></a>5. 用无量纲形式表示赫姆霍兹线圈</h2><p>令：</p>
-<p>$$<br>u&#x3D;\frac{z}{R}<br>$$</p>
-<p>对标准赫姆霍兹线圈，两个线圈位于：</p>
-<p>$$<br>u&#x3D;\pm \frac{1}{2}<br>$$</p>
-<p>轴向磁场可以写成：</p>
-<h1 id="B-u"><a href="#B-u" class="headerlink" title="$$B(u)"></a>$$<br>B(u)</h1><p>\frac{\mu_0 N I}{2R}<br>\left[<br>\frac{1}{\left(1+(u-1&#x2F;2)^2\right)^{3&#x2F;2}}<br>+<br>\frac{1}{\left(1+(u+1&#x2F;2)^2\right)^{3&#x2F;2}}<br>\right]<br>$$</p>
-<p>中心场为：</p>
-<h1 id="B-0-5"><a href="#B-0-5" class="headerlink" title="$$B(0)"></a>$$<br>B(0)</h1><p>\left(\frac{4}{5}\right)^{3&#x2F;2}<br>\frac{\mu_0 N I}{R}<br>$$</p>
-<p>归一化磁场为：</p>
-<p>$$<br>\frac{B(u)}{B(0)}<br>$$</p>
-<p>在中心附近，如果系统设计良好，这个值应尽量接近 1。</p>
-<hr>
-<h2 id="6-从两个线圈推广到多个线圈"><a href="#6-从两个线圈推广到多个线圈" class="headerlink" title="6. 从两个线圈推广到多个线圈"></a>6. 从两个线圈推广到多个线圈</h2><p>对于任意多个同轴圆线圈，只要线圈半径相同，都可以用叠加原理计算轴向磁场。</p>
-<p>设第 $i$ 个线圈位于 $z&#x3D;z_i$，半径为 $R$，匝数为 $N_i$，电流为 $I_i$，则轴线上总磁场为：</p>
-<h1 id="B-z-z"><a href="#B-z-z" class="headerlink" title="$$B_z(z)"></a>$$<br>B_z(z)</h1><p>\sum_i<br>\frac{\mu_0 N_i I_i R^2}<br>{2\left[R^2+(z-z_i)^2\right]^{3&#x2F;2}}<br>$$</p>
-<p>如果不同线圈半径不同，则推广为：</p>
-<h1 id="B-z-z-1"><a href="#B-z-z-1" class="headerlink" title="$$B_z(z)"></a>$$<br>B_z(z)</h1><p>\sum_i<br>\frac{\mu_0 N_i I_i R_i^2}<br>{2\left[R_i^2+(z-z_i)^2\right]^{3&#x2F;2}}<br>$$</p>
-<p>这就是多线圈系统轴向磁场分析的基本公式。</p>
-<hr>
-<h2 id="7-三线圈结构的基本思想"><a href="#7-三线圈结构的基本思想" class="headerlink" title="7. 三线圈结构的基本思想"></a>7. 三线圈结构的基本思想</h2><p>如果在赫姆霍兹双线圈中间再加入一个线圈，就得到一种三线圈系统。</p>
-<p>最常见的同半径三线圈模型为：</p>
-<p>$$<br>z&#x3D;-hR,\qquad z&#x3D;0,\qquad z&#x3D;+hR<br>$$</p>
-<p>其中：</p>
-<ul>
-<li>两个外侧线圈位于 $z&#x3D;\pm hR$；</li>
-<li>中心线圈位于 $z&#x3D;0$；</li>
-<li>三个线圈半径均为 $R$；</li>
-<li>外侧线圈安匝数为 $NI$；</li>
-<li>中心线圈安匝数为 $mNI$。</li>
-</ul>
-<p>这里 $m$ 是中心线圈相对于外侧线圈的安匝比。</p>
-<p>轴向磁场为：</p>
-<h1 id="B-z-5"><a href="#B-z-5" class="headerlink" title="$$B(z)"></a>$$<br>B(z)</h1><p>\frac{\mu_0 N I R^2}{2}<br>\left[<br>\frac{1}{\left(R^2+(z-hR)^2\right)^{3&#x2F;2}}<br>+<br>\frac{1}{\left(R^2+(z+hR)^2\right)^{3&#x2F;2}}<br>+<br>m<br>\frac{1}{\left(R^2+z^2\right)^{3&#x2F;2}}<br>\right]<br>$$</p>
-<p>写成无量纲形式，令：</p>
-<p>$$<br>u&#x3D;\frac{z}{R}<br>$$</p>
-<p>得到：</p>
-<h1 id="B-u-1"><a href="#B-u-1" class="headerlink" title="$$B(u)"></a>$$<br>B(u)</h1><p>\frac{\mu_0 N I}{2R}<br>\left[<br>\frac{1}{\left(1+(u-h)^2\right)^{3&#x2F;2}}<br>+<br>\frac{1}{\left(1+(u+h)^2\right)^{3&#x2F;2}}<br>+<br>m<br>\frac{1}{\left(1+u^2\right)^{3&#x2F;2}}<br>\right]<br>$$</p>
-<hr>
-<h2 id="8-三线圈为什么可以更均匀？"><a href="#8-三线圈为什么可以更均匀？" class="headerlink" title="8. 三线圈为什么可以更均匀？"></a>8. 三线圈为什么可以更均匀？</h2><p>三线圈系统仍然关于中心对称，因此中心附近展开为：</p>
-<h1 id="B-u-2"><a href="#B-u-2" class="headerlink" title="$$B(u)"></a>$$<br>B(u)</h1><p>B_0<br>+<br>C_2u^2<br>+<br>C_4u^4<br>+<br>C_6u^6<br>+<br>\cdots<br>$$</p>
-<p>赫姆霍兹双线圈只有一个主要几何参数，即线圈间距，所以通常只能令：</p>
-<p>$$<br>C_2&#x3D;0<br>$$</p>
-<p>而三线圈系统多了两个可调参数：</p>
-<p>$$<br>h,\qquad m<br>$$</p>
-<p>因此可以进一步令：</p>
-<p>$$<br>C_2&#x3D;0<br>$$</p>
-<p>并且：</p>
-<p>$$<br>C_4&#x3D;0<br>$$</p>
-<p>这样磁场展开变成：</p>
-<h1 id="B-u-3"><a href="#B-u-3" class="headerlink" title="$$B(u)"></a>$$<br>B(u)</h1><p>B_0<br>+<br>C_6u^6<br>+<br>C_8u^8<br>+<br>\cdots<br>$$</p>
-<p>这意味着中心附近磁场误差的主导项从四阶进一步提高到六阶。中心平台会更宽，均匀区更大。</p>
-<hr>
-<h2 id="9-一种常见的优化三线圈参数"><a href="#9-一种常见的优化三线圈参数" class="headerlink" title="9. 一种常见的优化三线圈参数"></a>9. 一种常见的优化三线圈参数</h2><p>对于三个同半径线圈，一种常见的优化结果是：</p>
-<p>$$<br>h\approx 0.76005<br>$$</p>
-<p>$$<br>m\approx 0.5315<br>$$</p>
-<p>也就是：</p>
-<p>$$<br>z&#x3D;\pm 0.76005R,\qquad z&#x3D;0<br>$$</p>
-<p>中心线圈安匝数约为外侧线圈的：</p>
-<p>$$<br>0.5315<br>$$</p>
-<p>如果三个线圈串联、流过相同电流，则可以通过匝数比实现：</p>
-<p>$$<br>\frac{N_{\text{center}}}{N_{\text{outer}}}<br>\approx<br>0.5315<br>$$</p>
-<p>一个整数近似是：</p>
-<h1 id="N-text-center-N-text-outer"><a href="#N-text-center-N-text-outer" class="headerlink" title="$$N_{\text{center}}:N_{\text{outer}}"></a>$$<br>N_{\text{center}}:N_{\text{outer}}</h1><p>59:111<br>$$</p>
-<p>此时三线圈轴向磁场为：</p>
-<h1 id="B-u-4"><a href="#B-u-4" class="headerlink" title="$$B(u)"></a>$$<br>B(u)</h1><p>\frac{\mu_0 N_{\text{outer}} I}{2R}<br>\left[<br>\frac{1}{\left(1+(u-0.76005)^2\right)^{3&#x2F;2}}<br>+<br>\frac{1}{\left(1+(u+0.76005)^2\right)^{3&#x2F;2}}<br>+<br>0.5315<br>\frac{1}{\left(1+u^2\right)^{3&#x2F;2}}<br>\right]<br>$$</p>
-<hr>
-<h2 id="10-三线圈中心磁场"><a href="#10-三线圈中心磁场" class="headerlink" title="10. 三线圈中心磁场"></a>10. 三线圈中心磁场</h2><p>三线圈中心场为：</p>
-<h1 id="B-0-6"><a href="#B-0-6" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>\frac{\mu_0 N_{\text{outer}} I}{2R}<br>\left[<br>\frac{2}{(1+h^2)^{3&#x2F;2}}<br>+<br>m<br>\right]<br>$$</p>
-<p>代入：</p>
-<p>$$<br>h&#x3D;0.76005,\qquad m&#x3D;0.5315<br>$$</p>
-<p>得到：</p>
-<p>$$<br>B_0<br>\approx<br>\frac{\mu_0 N_{\text{outer}} I}{2R}<br>(1.5408)<br>$$</p>
-<p>即：</p>
-<p>$$<br>B_0<br>\approx<br>0.7704<br>\frac{\mu_0 N_{\text{outer}} I}{R}<br>$$</p>
-<p>需要注意的是，这里的 $N_{\text{outer}}$ 是外侧线圈匝数。由于三线圈系统比双线圈多了一个中心线圈，所以不能只比较系数，还应考虑总匝数、电阻、功耗和发热。</p>
-<hr>
-<h2 id="11-双线圈与三线圈的比较"><a href="#11-双线圈与三线圈的比较" class="headerlink" title="11. 双线圈与三线圈的比较"></a>11. 双线圈与三线圈的比较</h2><table>
+<p>$B(z)&#x3D;\frac{\mu_0 N I R^2}{2(R^2+z^2)^{3&#x2F;2}}$</p>
+<p>其中 $\mu_0$ 为真空磁导率，$N$ 为匝数，$I$ 为电流，$R$ 为半径，$z$ 为观察点到线圈中心的轴向距离。在线圈中心 $z&#x3D;0$ 处：</p>
+<p>$ B(0) &#x3D; \frac{\mu_0 N I}{2R} $</p>
+<p>这是分析赫姆霍兹线圈和多线圈系统的基础。</p>
+<h2 id="赫姆霍兹双线圈"><a href="#赫姆霍兹双线圈" class="headerlink" title="赫姆霍兹双线圈"></a>赫姆霍兹双线圈</h2><p>设两个相同线圈同轴放置，半径均为 $R$，匝数均为 $N$，电流均为 $I$，中心分别位于 $ z &#x3D; -\frac{s}{2} $ 与 $ z &#x3D; +\frac{s}{2} $，$s$ 为两线圈中心间距。轴线上总磁场为：</p>
+<p>$ B(z) &#x3D; \frac{\mu_0 N I R^2}{2} \left[ \frac{1}{\left(R^2+(z-s&#x2F;2)^2\right)^{3&#x2F;2}}+ \frac{1}{\left(R^2+(z+s&#x2F;2)^2\right)^{3&#x2F;2}}\right] $</p>
+<p>系统关于 $z&#x3D;0$ 对称，中心附近可展开为 $ B(z) &#x3D; B_0 + A_2z^2 + A_4z^4 + A_6z^6 + \cdots $。一阶项因对称性为零；令 $ A_2 &#x3D; 0 $ 可得经典条件 <strong>$ s &#x3D; R $</strong>（间距等于半径）。</p>
+<p>当 $ s&#x3D;R $ 时，两线圈位于 $ z&#x3D;-\frac{R}{2} $、$ z&#x3D;+\frac{R}{2} $。中心磁场经化简为：</p>
+<p>$ B_0 &#x3D; \left(\frac{4}{5}\right)^{3&#x2F;2} \frac{\mu_0 N I}{R} \approx 0.7155 \frac{\mu_0 N I}{R} $</p>
+<p>此时 $ A_2&#x3D;0 $，展开主导项变为四阶：$ B(z) &#x3D; B_0 + A_4z^4 + A_6z^6 + \cdots $，中心附近磁场曲线更平坦，即赫姆霍兹线圈近似均匀磁场的根本原因。</p>
+<p>引入无量纲坐标 $ u&#x3D;z&#x2F;R $，标准双线圈位于 $ u&#x3D;\pm \frac{1}{2} $，轴向场可写为：</p>
+<p>$ B(u) &#x3D; \frac{\mu_0 N I}{2R} \left[ \frac{1}{\left(1+(u-1&#x2F;2)^2\right)^{3&#x2F;2}} + \frac{1}{\left(1+(u+1&#x2F;2)^2\right)^{3&#x2F;2}} \right] $</p>
+<p>中心场 $ B(0) &#x3D; \left(\frac{4}{5}\right)^{3&#x2F;2} \frac{\mu_0 N I}{R} $；归一化 $ B(u)&#x2F;B(0) $ 在中心附近应尽量接近 1。</p>
+<h2 id="三线圈系统"><a href="#三线圈系统" class="headerlink" title="三线圈系统"></a>三线圈系统</h2><p>任意多个同轴圆线圈可用叠加原理。第 $i$ 个线圈位于 $z&#x3D;z_i$、半径 $R_i$、匝数 $N_i$、电流 $I_i$ 时：</p>
+<p>$ B_z(z) &#x3D; \sum_i \frac{\mu_0 N_i I_i R_i^2} {2\left[R_i^2+(z-z_i)^2\right]^{3&#x2F;2}} $</p>
+<p>在赫姆霍兹双线圈中间加入中心线圈，即常见的同半径三线圈：外侧位于 $z&#x3D;\pm hR$，中心位于 $z&#x3D;0$，外侧安匝 $NI$，中心安匝 $mNI$（$m$ 为安匝比）。轴向场为：</p>
+<p>$ B(u) &#x3D; \frac{\mu_0 N I}{2R} \left[ \frac{1}{\left(1+(u-h)^2\right)^{3&#x2F;2}} + \frac{1}{\left(1+(u+h)^2\right)^{3&#x2F;2}} + m \frac{1}{\left(1+u^2\right)^{3&#x2F;2}} \right] $</p>
+<p>双线圈仅可调间距，通常只能令 $ C_2&#x3D;0 $；三线圈另有 $ h $、$ m $，可同时令 $ C_2&#x3D;0 $ 且 $ C_4&#x3D;0 $，使展开变为 $ B(u) &#x3D; B_0 + C_6u^6 + \cdots $，均匀区更宽。</p>
+<p>一种常见优化参数为 $ h\approx 0.76005 $、$ m\approx 0.5315 $，即 $ z&#x3D;\pm 0.76005R $ 与中心 $ z&#x3D;0 $，匝数比约 $59:111$。中心场约为 $ B_0 \approx 0.7704 , \mu_0 N_o I &#x2F; R $（$N_o$ 为外侧匝数；比较场强时还需考虑总匝数、电阻与发热）。</p>
+<table>
 <thead>
 <tr>
 <th>结构</th>
 <th>线圈位置</th>
 <th>安匝比</th>
-<th>中心展开主导误差</th>
+<th>主导误差</th>
 <th>特点</th>
 </tr>
 </thead>
@@ -598,55 +476,25 @@
 <td>$z&#x3D;0$</td>
 <td>1</td>
 <td>二阶</td>
-<td>中心场强，但均匀区小</td>
+<td>中心场强，均匀区小</td>
 </tr>
 <tr>
 <td>赫姆霍兹双线圈</td>
 <td>$z&#x3D;\pm0.5R$</td>
 <td>$1:1$</td>
 <td>四阶</td>
-<td>结构简单，均匀性较好</td>
+<td>结构简单</td>
 </tr>
 <tr>
 <td>优化三线圈</td>
 <td>$z&#x3D;0,\pm0.76005R$</td>
 <td>$0.5315:1:1$</td>
 <td>六阶</td>
-<td>均匀区更大，结构稍复杂</td>
-</tr>
-<tr>
-<td>Maxwell 三线圈</td>
-<td>半径、间距、匝数均可变</td>
-<td>优化设计</td>
-<td>可进一步优化</td>
-<td>设计自由度更高</td>
+<td>均匀区更大</td>
 </tr>
 </tbody></table>
-<hr>
-<h2 id="12-工程设计时需要考虑的问题"><a href="#12-工程设计时需要考虑的问题" class="headerlink" title="12. 工程设计时需要考虑的问题"></a>12. 工程设计时需要考虑的问题</h2><h3 id="12-1-匝数与电流"><a href="#12-1-匝数与电流" class="headerlink" title="12.1 匝数与电流"></a>12.1 匝数与电流</h3><p>磁场大小与安匝数成正比：</p>
-<p>$$<br>B\propto NI<br>$$</p>
-<p>如果希望增大磁场，可以增加匝数或电流。但这会带来更多电阻、发热和电源负载。</p>
-<h3 id="12-2-发热问题"><a href="#12-2-发热问题" class="headerlink" title="12.2 发热问题"></a>12.2 发热问题</h3><p>线圈功耗为：</p>
-<p>$$<br>P&#x3D;I^2R_{\text{coil}}<br>$$</p>
-<p>长时间工作时需要考虑：</p>
-<ul>
-<li>导线直径；</li>
-<li>散热条件；</li>
-<li>允许温升；</li>
-<li>电源输出能力；</li>
-<li>线圈支架材料的耐热性。</li>
-</ul>
-<h3 id="12-3-几何误差"><a href="#12-3-几何误差" class="headerlink" title="12.3 几何误差"></a>12.3 几何误差</h3><p>均匀磁场设计对几何对准较敏感。常见误差包括：</p>
-<ul>
-<li>两个外线圈不完全同轴；</li>
-<li>线圈间距偏离设计值；</li>
-<li>线圈半径不一致；</li>
-<li>线圈绕制不均匀；</li>
-<li>中心线圈匝数比不准确。</li>
-</ul>
-<h3 id="12-4-外界磁场"><a href="#12-4-外界磁场" class="headerlink" title="12.4 外界磁场"></a>12.4 外界磁场</h3><p>实验中还要考虑地磁场和周围铁磁材料的影响。赫姆霍兹线圈不仅可以产生均匀磁场，也常用于抵消背景磁场。</p>
-<hr>
-<h2 id="13-数值计算方法"><a href="#13-数值计算方法" class="headerlink" title="13. 数值计算方法"></a>13. 数值计算方法</h2><p>如果要计算任意多线圈系统的轴向场，可以直接写成：</p>
+<h2 id="工程与数值计算"><a href="#工程与数值计算" class="headerlink" title="工程与数值计算"></a>工程与数值计算</h2><p>磁场与安匝数成正比：$ B\propto NI $。功耗 $ P&#x3D;I^2 R_c $（$R_c$ 为线圈电阻），长时间运行需考虑导线直径、散热、温升与电源能力。几何对准误差（间距、半径、匝数比、同轴度）会明显影响均匀性；实验中还须注意地磁场与铁磁干扰。</p>
+<p>任意多线圈轴向场可用 Python 计算，例如：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
 mu0 <span class="token operator">=</span> <span class="token number">4</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>pi <span class="token operator">*</span> <span class="token number">1e-7</span>
@@ -661,82 +509,26 @@ mu0 <span class="token operator">=</span> <span class="token number">4</span> <s
         B <span class="token operator">+=</span> mu0 <span class="token operator">*</span> N <span class="token operator">*</span> I <span class="token operator">*</span> R<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> <span class="token punctuation">(</span>R<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">+</span> <span class="token punctuation">(</span>z <span class="token operator">-</span> z0<span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">1.5</span><span class="token punctuation">)</span>
     <span class="token keyword">return</span> B
 
-R <span class="token operator">=</span> <span class="token number">1.0</span>
-I <span class="token operator">=</span> <span class="token number">1.0</span>
-N <span class="token operator">=</span> <span class="token number">100</span>
-
-<span class="token comment"># Helmholtz 双线圈</span>
+R<span class="token punctuation">,</span> I<span class="token punctuation">,</span> N <span class="token operator">=</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">100</span>
 helmholtz <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">&#123;</span><span class="token string">"radius"</span><span class="token punctuation">:</span> R<span class="token punctuation">,</span> <span class="token string">"turns"</span><span class="token punctuation">:</span> N<span class="token punctuation">,</span> <span class="token string">"current"</span><span class="token punctuation">:</span> I<span class="token punctuation">,</span> <span class="token string">"z"</span><span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">0.5</span> <span class="token operator">*</span> R<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span><span class="token string">"radius"</span><span class="token punctuation">:</span> R<span class="token punctuation">,</span> <span class="token string">"turns"</span><span class="token punctuation">:</span> N<span class="token punctuation">,</span> <span class="token string">"current"</span><span class="token punctuation">:</span> I<span class="token punctuation">,</span> <span class="token string">"z"</span><span class="token punctuation">:</span> <span class="token operator">+</span><span class="token number">0.5</span> <span class="token operator">*</span> R<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span>
-
-<span class="token comment"># 优化三线圈</span>
 triple <span class="token operator">=</span> <span class="token punctuation">[</span>
     <span class="token punctuation">&#123;</span><span class="token string">"radius"</span><span class="token punctuation">:</span> R<span class="token punctuation">,</span> <span class="token string">"turns"</span><span class="token punctuation">:</span> N<span class="token punctuation">,</span> <span class="token string">"current"</span><span class="token punctuation">:</span> I<span class="token punctuation">,</span> <span class="token string">"z"</span><span class="token punctuation">:</span> <span class="token operator">-</span><span class="token number">0.76005</span> <span class="token operator">*</span> R<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span><span class="token string">"radius"</span><span class="token punctuation">:</span> R<span class="token punctuation">,</span> <span class="token string">"turns"</span><span class="token punctuation">:</span> <span class="token number">0.5315</span> <span class="token operator">*</span> N<span class="token punctuation">,</span> <span class="token string">"current"</span><span class="token punctuation">:</span> I<span class="token punctuation">,</span> <span class="token string">"z"</span><span class="token punctuation">:</span> <span class="token number">0.0</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#123;</span><span class="token string">"radius"</span><span class="token punctuation">:</span> R<span class="token punctuation">,</span> <span class="token string">"turns"</span><span class="token punctuation">:</span> N<span class="token punctuation">,</span> <span class="token string">"current"</span><span class="token punctuation">:</span> I<span class="token punctuation">,</span> <span class="token string">"z"</span><span class="token punctuation">:</span> <span class="token operator">+</span><span class="token number">0.76005</span> <span class="token operator">*</span> R<span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-<span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-zs <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.5</span> <span class="token operator">*</span> R<span class="token punctuation">,</span> <span class="token number">1.5</span> <span class="token operator">*</span> R<span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
-
-B_helmholtz <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span>axial_field<span class="token punctuation">(</span>z<span class="token punctuation">,</span> helmholtz<span class="token punctuation">)</span> <span class="token keyword">for</span> z <span class="token keyword">in</span> zs<span class="token punctuation">]</span><span class="token punctuation">)</span>
-B_triple <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span>axial_field<span class="token punctuation">(</span>z<span class="token punctuation">,</span> triple<span class="token punctuation">)</span> <span class="token keyword">for</span> z <span class="token keyword">in</span> zs<span class="token punctuation">]</span><span class="token punctuation">)</span>
-
-B_helmholtz_norm <span class="token operator">=</span> B_helmholtz <span class="token operator">/</span> axial_field<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> helmholtz<span class="token punctuation">)</span>
-B_triple_norm <span class="token operator">=</span> B_triple <span class="token operator">/</span> axial_field<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> triple<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>归一化后可以比较：</p>
-<p>$$<br>\frac{B(z)}{B(0)}<br>$$</p>
-<p>越接近 1，说明该位置磁场越接近中心磁场。</p>
-<hr>
-<h2 id="14-与可视化程序的对应关系"><a href="#14-与可视化程序的对应关系" class="headerlink" title="14. 与可视化程序的对应关系"></a>14. 与可视化程序的对应关系</h2><p>在交互式 HTML 可视化中，可以使用下面的通用表达式计算轴线场：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">axialB</span><span class="token punctuation">(</span><span class="token parameter">z<span class="token punctuation">,</span> coils</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">let</span> <span class="token constant">B</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> coil <span class="token keyword">of</span> coils<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">const</span> <span class="token constant">R</span> <span class="token operator">=</span> coil<span class="token punctuation">.</span>radius<span class="token punctuation">;</span>
-    <span class="token keyword">const</span> <span class="token constant">N</span> <span class="token operator">=</span> coil<span class="token punctuation">.</span>turns<span class="token punctuation">;</span>
-    <span class="token keyword">const</span> <span class="token constant">I</span> <span class="token operator">=</span> coil<span class="token punctuation">.</span>current<span class="token punctuation">;</span>
-    <span class="token keyword">const</span> z0 <span class="token operator">=</span> coil<span class="token punctuation">.</span>z<span class="token punctuation">;</span>
-    <span class="token constant">B</span> <span class="token operator">+=</span> mu0 <span class="token operator">*</span> <span class="token constant">N</span> <span class="token operator">*</span> <span class="token constant">I</span> <span class="token operator">*</span> <span class="token constant">R</span> <span class="token operator">*</span> <span class="token constant">R</span> <span class="token operator">/</span>
-      <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token constant">R</span> <span class="token operator">*</span> <span class="token constant">R</span> <span class="token operator">+</span> <span class="token punctuation">(</span>z <span class="token operator">-</span> z0<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>z <span class="token operator">-</span> z0<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">&#125;</span>
-  <span class="token keyword">return</span> <span class="token constant">B</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>对于三维空间任意点，则应使用毕奥-萨伐尔定律进行数值积分：</p>
-<p>$$<br>\mathbf{B}(\mathbf{r})<br>\approx<br>\frac{\mu_0 I}{4\pi}<br>\sum_j<br>\frac{<br>\Delta\boldsymbol{\ell}_j<br>\times<br>(\mathbf{r}-\mathbf{r}_j)<br>}<br>{<br>|\mathbf{r}-\mathbf{r}_j|^3<br>}<br>$$</p>
-<p>这个方法适合：</p>
-<ul>
-<li>单线圈；</li>
-<li>赫姆霍兹双线圈；</li>
-<li>三线圈；</li>
-<li>多线圈阵列；</li>
-<li>非标准间距；</li>
-<li>不同匝数；</li>
-<li>不同电流；</li>
-<li>任意空间点磁场可视化。</li>
-</ul>
-<hr>
-<h2 id="15-小结"><a href="#15-小结" class="headerlink" title="15. 小结"></a>15. 小结</h2><p>赫姆霍兹线圈的核心思想是利用两个对称线圈的磁场叠加，使中心区域的低阶非均匀项相互抵消。</p>
-<p>标准赫姆霍兹双线圈满足：</p>
-<p>$$<br>s&#x3D;R<br>$$</p>
-<p>中心磁场为：</p>
-<h1 id="B-0-7"><a href="#B-0-7" class="headerlink" title="$$B_0"></a>$$<br>B_0</h1><p>\left(\frac{4}{5}\right)^{3&#x2F;2}<br>\frac{\mu_0 N I}{R}<br>$$</p>
-<p>三线圈结构通过加入中心补偿线圈，进一步扩大均匀磁场区域。一个常见同半径优化结构为：</p>
-<p>$$<br>z&#x3D;0,\quad z&#x3D;\pm0.76005R<br>$$</p>
-<p>$$<br>(NI)<em>{\text{center}}<br>\approx<br>0.5315<br>(NI)</em>{\text{outer}}<br>$$</p>
-<p>它可以使中心附近的磁场变化项进一步降低，从而获得比普通赫姆霍兹线圈更宽的均匀磁场平台。</p>
-<hr>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
-<li><p>J. B. Tatum, <em>Electricity and Magnetism</em>, LibreTexts: Helmholtz Coils<br><a target="_blank" rel="noopener" href="https://phys.libretexts.org/Bookshelves/Electricity_and_Magnetism/Electricity_and_Magnetism_%28Tatum%29/06%3A_The_Magnetic_Effect_of_an_Electric_Current/6.07%3A_Helmholtz_Coils">https://phys.libretexts.org/Bookshelves/Electricity_and_Magnetism/Electricity_and_Magnetism_%28Tatum%29/06%3A_The_Magnetic_Effect_of_an_Electric_Current/6.07%3A_Helmholtz_Coils</a></p>
-</li>
-<li><p>OpenStax University Physics, Magnetic Field of a Current Loop<br><a target="_blank" rel="noopener" href="https://openstax.org/books/university-physics-volume-2/pages/12-4-magnetic-field-of-a-current-loop">https://openstax.org/books/university-physics-volume-2/pages/12-4-magnetic-field-of-a-current-loop</a></p>
-</li>
-<li><p>J. Wang, S. She, and S. Zhang, “An improved Helmholtz coil and analysis of its magnetic field homogeneity,” <em>Review of Scientific Instruments</em>, 73, 2175 (2002).<br><a target="_blank" rel="noopener" href="https://pubs.aip.org/aip/rsi/article-pdf/73/5/2175/19262939/2175_1_online.pdf">https://pubs.aip.org/aip/rsi/article-pdf/73/5/2175/19262939/2175_1_online.pdf</a></p>
-</li>
-<li><p>Helmholtz coil overview<br><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Helmholtz_coil">https://en.wikipedia.org/wiki/Helmholtz_coil</a></p>
-</li>
+<p>归一化 $ B(z)&#x2F;B(0) $ 越接近 1，该处磁场越接近中心值。交互可视化中轴线场可用 JavaScript 的 <code>axialB(z, coils)</code> 累加各线圈贡献；空间任意点则用毕奥-萨伐尔数值积分：</p>
+<p>$ \mathbf{B}(\mathbf{r}) \approx \frac{\mu_0 I}{4\pi} \sum_j \frac{ \Delta\boldsymbol{\ell}_j \times (\mathbf{r}-\mathbf{r}_j) } { |\mathbf{r}-\mathbf{r}_j|^3 } $</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>赫姆霍兹线圈通过对称叠加使 $ A_2&#x3D;0 $，在 $ s&#x3D;R $ 时 $ B_0 &#x3D; \left(\frac{4}{5}\right)^{3&#x2F;2} \mu_0 N I &#x2F; R $。三线圈在 $ z&#x3D;0,\pm0.76005R $、安匝比 $ m \approx 0.5315 $ 下可进一步压低低阶误差，获得更宽的均匀磁场平台。</p>
+<p><strong>参考资料</strong></p>
+<ol>
+<li>J. B. Tatum, <em>Electricity and Magnetism</em>, LibreTexts: Helmholtz Coils<br><a target="_blank" rel="noopener" href="https://phys.libretexts.org/Bookshelves/Electricity_and_Magnetism/Electricity_and_Magnetism_%28Tatum%29/06%3A_The_Magnetic_Effect_of_an_Electric_Current/6.07%3A_Helmholtz_Coils">https://phys.libretexts.org/Bookshelves/Electricity_and_Magnetism/Electricity_and_Magnetism_%28Tatum%29/06%3A_The_Magnetic_Effect_of_an_Electric_Current/6.07%3A_Helmholtz_Coils</a></li>
+<li>OpenStax University Physics, Magnetic Field of a Current Loop<br><a target="_blank" rel="noopener" href="https://openstax.org/books/university-physics-volume-2/pages/12-4-magnetic-field-of-a-current-loop">https://openstax.org/books/university-physics-volume-2/pages/12-4-magnetic-field-of-a-current-loop</a></li>
+<li>J. Wang, S. She, and S. Zhang, “An improved Helmholtz coil and analysis of its magnetic field homogeneity,” <em>Review of Scientific Instruments</em>, 73, 2175 (2002).<br><a target="_blank" rel="noopener" href="https://pubs.aip.org/aip/rsi/article-pdf/73/5/2175/19262939/2175_1_online.pdf">https://pubs.aip.org/aip/rsi/article-pdf/73/5/2175/19262939/2175_1_online.pdf</a></li>
+<li>Helmholtz coil overview<br><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Helmholtz_coil">https://en.wikipedia.org/wiki/Helmholtz_coil</a></li>
 </ol>
 
                 
@@ -808,18 +600,6 @@ B_triple_norm <span class="token operator">=</span> B_triple <span class="token 
                             
                                 <a href="/tags/Biot-Savart-Law/">
                                     <span class="chip bg-color">Biot-Savart Law</span>
-                                </a>
-                            
-                                <a href="/tags/Magnetic-Field/">
-                                    <span class="chip bg-color">Magnetic Field</span>
-                                </a>
-                            
-                                <a href="/tags/Three-Coil-System/">
-                                    <span class="chip bg-color">Three-Coil System</span>
-                                </a>
-                            
-                                <a href="/tags/Uniform-Magnetic-Field/">
-                                    <span class="chip bg-color">Uniform Magnetic Field</span>
                                 </a>
                             
                         </div>
@@ -1036,18 +816,6 @@ B_triple_norm <span class="token operator">=</span> B_triple <span class="token 
                     
                     <a href="/tags/Biot-Savart-Law/">
                         <span class="chip bg-color">Biot-Savart Law</span>
-                    </a>
-                    
-                    <a href="/tags/Magnetic-Field/">
-                        <span class="chip bg-color">Magnetic Field</span>
-                    </a>
-                    
-                    <a href="/tags/Three-Coil-System/">
-                        <span class="chip bg-color">Three-Coil System</span>
-                    </a>
-                    
-                    <a href="/tags/Uniform-Magnetic-Field/">
-                        <span class="chip bg-color">Uniform Magnetic Field</span>
                     </a>
                     
                 </div>
@@ -1311,7 +1079,7 @@ B_triple_norm <span class="token operator">=</span> B_triple <span class="token 
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">35.1k</span>&nbsp;字
+                class="white-color">33.7k</span>&nbsp;字
             
             
             

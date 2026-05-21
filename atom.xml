@@ -6,7 +6,7 @@
   <link href="https://haidi-ustc.github.io/atom.xml" rel="self"/>
   
   <link href="https://haidi-ustc.github.io/"/>
-  <updated>2026-05-21T10:00:12.502Z</updated>
+  <updated>2026-05-21T10:12:45.149Z</updated>
   <id>https://haidi-ustc.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://haidi-ustc.github.io/2026/05/20/physics/hemlholtz-coil/"/>
     <id>https://haidi-ustc.github.io/2026/05/20/physics/hemlholtz-coil/</id>
     <published>2026-05-20T13:00:00.000Z</published>
-    <updated>2026-05-21T10:00:12.502Z</updated>
+    <updated>2026-05-21T10:12:45.149Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;赫姆霍兹线圈与三线圈均匀磁场原理&quot;&gt;&lt;a href=&quot;#赫姆霍兹线圈与三线圈均匀磁场原理&quot; class=&quot;headerlink&quot; title=&quot;赫姆霍兹线圈与三线圈均匀磁场原理&quot;&gt;&lt;/a&gt;赫姆霍兹线圈与三线圈均匀磁场原理&lt;/h1&gt;&lt;p&gt;赫姆霍兹线圈是一种用于产生近似均匀磁场的经典结构。它由两个完全相同的同轴圆形线圈组成，两个线圈通以相同方向、相同大小的电流。当两个线圈中心间距等于线圈半径时，中心区域的磁场会变得非常平坦。&lt;/p&gt;
@@ -35,12 +35,6 @@
     <category term="Helmholtz Coil" scheme="https://haidi-ustc.github.io/tags/Helmholtz-Coil/"/>
     
     <category term="Biot-Savart Law" scheme="https://haidi-ustc.github.io/tags/Biot-Savart-Law/"/>
-    
-    <category term="Magnetic Field" scheme="https://haidi-ustc.github.io/tags/Magnetic-Field/"/>
-    
-    <category term="Three-Coil System" scheme="https://haidi-ustc.github.io/tags/Three-Coil-System/"/>
-    
-    <category term="Uniform Magnetic Field" scheme="https://haidi-ustc.github.io/tags/Uniform-Magnetic-Field/"/>
     
   </entry>
   
